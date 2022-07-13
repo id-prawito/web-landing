@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
   :root{
     // Color
     --dark-background: #1A1D29;
-    --light-background: #f0f8ff;
+    --light-background: #fff;
     --mediumSlateBlue: #6C62E2;
     --dark-components: #7C3AED; // Ungu
     --darkCardComponent : #7C3AED; // Ungu

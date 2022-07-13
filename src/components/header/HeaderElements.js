@@ -20,6 +20,7 @@ export const HeaderSite = styled.header`
             theme === themeList.light ? "#ffffff" : "rgba(10, 17, 26, 0.9)"};
         height: 70px;
         transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        box-shadow: 0px 4px 14px rgb(0 0 0 / 7%);
     }
 `;
 

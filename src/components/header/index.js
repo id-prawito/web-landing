@@ -107,7 +107,7 @@ const Header = () => {
                     </div>
                   </li>
                 ))}
-                <li>
+                {/* <li>
                   <div className="closing">
                     <div className="header__item">
                       <div className="resume">
@@ -117,7 +117,7 @@ const Header = () => {
                       </div>
                     </div>
                   </div>
-                </li>
+                </li> */}
               </ul>
             </nav>
 
