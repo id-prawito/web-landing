@@ -1,0 +1,127 @@
+import styled from "styled-components";
+import React from "react";
+import { FiChevronDown } from "react-icons/fi";
+
+const AccordionSite = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 80vh;
+  padding: 0px;
+
+  .accordion_container {
+    padding: 0 100px;
+    width: 100%;
+  }
+
+  .accordion_pembungkus {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .accordion_bungkus {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .content_accordion {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #969696;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgb(185 185 185 / 25%);
+    width: 500px;
+    height: max-content;
+
+    &:hover {
+      border: 1px solid #7c3aed;
+    }
+  }
+
+  .pembungkus_gambar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+`;
+
+const AccordionContainer = styled.div`
+  overflow: hidden;
+  /* width: 500px; */
+`;
+
+const Inner = styled.div`
+  position: absolute;
+  padding: 16px;
+  color: #222;
+`;
+
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 64px;
+  padding: 0 16px;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+  color: ${(props) => (props.isActive ? "#7c3aed" : "#222")};
+  font-weight: 500;
+`;
+
+const HeaderIcon = styled.span`
+  transform: rotate(${(props) => (props.isActive ? -180 : 0)}deg);
+  transition: all 0.2s;
+`;
+
+const Content = styled.div`
+  position: relative;
+  overflow: hidden;
+  height: ${(props) => {
+    const inner = document.getElementById(props.itemName);
+    return `${props.isActive && inner ? inner.clientHeight : 0}px`;
+  }};
+  transition: height 0.35s;
+  font-size: 12px;
+  font-weight: 400;
+`;
+
+const Gambar = styled.div`
+  display: ${(props) => (props.isActive ? "initial" : "none")};
+  height: 350px;
+  transition: height 0.35s;
+`;
+
+const AccordionContent = ({ onClick, itemName, itemContent, isActive }) => {
+  return (
+    <React.Fragment>
+      <div className="content_accordion">
+        <Header onClick={onClick} isActive={isActive}>
+          {itemName}
+          <HeaderIcon isActive={isActive} className="material-icons">
+            <FiChevronDown />
+          </HeaderIcon>
+        </Header>
+        <Content itemName={itemName} isActive={isActive}>
+          <Inner id={itemName}>{itemContent}</Inner>
+        </Content>
+      </div>
+    </React.Fragment>
+  );
+};
+
+const AccordionImg = ({ isActive, itemImg }) => {
+  return (
+    <Gambar isActive={isActive}>
+      <img style={{ width: "300px" }} src={itemImg} alt="item_gamnbar" />
+    </Gambar>
+  );
+};
+
+export { AccordionContainer, AccordionContent, AccordionSite, AccordionImg };

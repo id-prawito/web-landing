@@ -12,6 +12,10 @@ const SimpleSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+    arrows: false,
   };
 
   return (
