@@ -119,7 +119,6 @@ export const FooterSite = styled.footer`
   }
 
   .footer {
-    border-top: 1px solid #f1f2f3;
     z-index: 1;
     height: 100%;
     background-color: #7c3aed;
