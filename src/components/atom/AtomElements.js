@@ -67,7 +67,6 @@ export const CardComponents = styled.div`
   .card {
     gap: 10px;
     border-radius: 8px;
-    background-color: #fff;
     box-shadow: 0 0 15px rgb(0 0 0 / 15%);
     /* height: 200px; */
     position: relative;

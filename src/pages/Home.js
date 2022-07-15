@@ -5,6 +5,7 @@ import Hero from "../components/hero";
 import Accordion from "../components/accordion";
 import Footer from "../components/footer";
 import { Card, Informasi } from "../components/atom";
+import FormKpr from "../components/form";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
           <Card />
         </div>
       </section>
+      <FormKpr />
       <Footer />
     </div>
   );

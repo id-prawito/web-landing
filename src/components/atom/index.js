@@ -24,10 +24,6 @@ const Informasi = () => {
   );
 };
 
-const Button = () => {
-  return <div>Button</div>;
-};
-
 const Card = () => {
   return (
     <CardComponents>
@@ -114,4 +110,4 @@ const Card = () => {
   );
 };
 
-export { Informasi, Button, Card };
+export { Informasi, Card };
