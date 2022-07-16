@@ -1,5 +1,5 @@
 import React from "react";
-import SimpleSlider from "../components/carousel";
+import SimpleSlider, { SimpleSliderFicture } from "../components/carousel";
 import Header from "../components/header";
 import Hero from "../components/hero";
 import Accordion from "../components/accordion";
@@ -11,7 +11,6 @@ const Home = () => {
   return (
     <div>
       <Header />
-      {/* <Hero /> */}
       <SimpleSlider />
       <section>
         <div style={{ padding: "0 100px" }} className="container_info">
@@ -23,6 +22,7 @@ const Home = () => {
           <OjkInformasi />
         </div>
       </section>
+      <SimpleSliderFicture />
       <Hero />
       <Accordion />
       <Hero />
