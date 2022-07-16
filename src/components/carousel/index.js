@@ -4,7 +4,7 @@ import imgTry from "../../assets/img/jago.jpeg";
 import imgTry2 from "../../assets/img/jago-2.jpeg";
 import Slider from "react-slick";
 import SliderWrapper from "./_SlickSliderStyle";
-import { Detail } from "../atom";
+import { Detail, HeadingComponent } from "../atom";
 
 const SimpleSlider = () => {
   const settings = {
@@ -68,6 +68,10 @@ export const SimpleSliderFicture = () => {
 
   return (
     <CorouselSectionFicture>
+      <HeadingComponent
+        Heading="Produk dan Layanan Kami"
+        Text="Kami percaya bahwa pengalaman transaksi perbankan yang pada produk unggulan kami."
+      />
       <SliderWrapper>
         <Slider {...settings}>
           <Detail />

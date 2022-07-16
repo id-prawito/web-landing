@@ -250,3 +250,26 @@ export const ButtonComponent = styled.div`
   border-radius: 8px;
   background-color: aliceblue;
 `;
+
+export const ButtonAll = styled.div`
+  display: initial;
+  .button_my-course {
+    display: flex;
+    align-items: center;
+    background-color: var(--colorMain);
+    padding: 14px 20px;
+    border-radius: 6px;
+    max-height: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ffffff;
+    gap: 10px;
+    transition: 0.3s all ease;
+
+    &:hover {
+      background-color: #7227f3;
+      transition: 0.3s all ease;
+      transform: scale(1.05);
+    }
+  }
+`;

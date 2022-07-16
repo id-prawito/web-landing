@@ -67,7 +67,7 @@ export const CardComponents = styled.div`
   .card {
     gap: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 15px rgb(0 0 0 / 15%);
+    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
     /* height: 200px; */
     position: relative;
     display: flex;
@@ -76,8 +76,13 @@ export const CardComponents = styled.div`
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
-    border: 0 solid rgba(0, 0, 0, 0.125);
     overflow: hidden;
+    border: 1px solid transparent;
+
+    :hover {
+      border: 1px solid #a606ae;
+      box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+    }
 
     &_img {
       position: relative;
@@ -210,6 +215,48 @@ export const OjkComponents = styled.div`
       img {
         width: 150px;
       }
+    }
+  }
+`;
+
+export const HeadingAll = styled.div`
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding: 40px 0px;
+    width: 80%;
+
+    h2 {
+      font-size: 42px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+`;
+
+export const FocusComponentSite = styled.section`
+  padding: 100px 0px;
+  max-width: 100%;
+
+  .focus_container {
+    background-color: aliceblue;
+    padding: 0;
+
+    .gambar_bg {
+      overflow: hidden;
+      height: 380px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      place-items: center;
+      display: grid;
     }
   }
 `;

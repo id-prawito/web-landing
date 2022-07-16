@@ -2,6 +2,8 @@ import React from "react";
 import {
   CardComponents,
   DetailComponents,
+  FocusComponentSite,
+  HeadingAll,
   InformasiSite,
   OjkComponents,
 } from "./AtomElements";
@@ -12,6 +14,9 @@ import imgOjk from "../../assets/img/ojk.png";
 import imgLps from "../../assets/img/lps.1.png";
 import imgBpr from "../../assets/img/bpr.png";
 import imgAyo from "../../assets/img/ayobank.png";
+import bgGopay from "../../assets/img/kemudahan-gopay-bg.png";
+import { Button } from "../form";
+import { FaAccusoft } from "react-icons/fa";
 
 const Informasi = () => {
   return (
@@ -151,13 +156,11 @@ const Detail = () => {
 const OjkInformasi = () => {
   return (
     <OjkComponents>
-      <div className="heading">
-        <h2>Terdaftar dan Diawasi oleh</h2>
-        <p>
-          Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada
-          kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh.
-        </p>
-      </div>
+      <HeadingComponent
+        Heading="Terdaftar dan Diawasi oleh"
+        Text="Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada
+          kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh."
+      />
       <div className="ojk_content">
         <div className="ojk_img">
           <img src={imgOjk} alt="imgOjk" />
@@ -176,4 +179,50 @@ const OjkInformasi = () => {
   );
 };
 
-export { Informasi, Card, Detail, OjkInformasi };
+const HeadingComponent = (item) => {
+  return (
+    <HeadingAll>
+      <div className="heading" style={item.Style}>
+        <h2>{item.Heading}</h2>
+        <p>{item.Text}</p>
+      </div>
+    </HeadingAll>
+  );
+};
+
+const FocusComponent = () => {
+  return (
+    <FocusComponentSite>
+      <div className="focus_container">
+        <div
+          className="gambar_bg"
+          style={{ backgroundImage: `url(${bgGopay})` }}
+        >
+          <HeadingComponent
+            Style={{ textAlign: "center", width: "100%", color: "#fff" }}
+            Heading="Coba simulasi kredit sekarang!"
+            Text="Untuk mengetahui berapa biaya yang harus digunakan untuk melakukan kredit KPR."
+          />
+          <Button
+            style={{
+              padding: "20px 50px",
+              fontSize: "20px",
+              fontWeight: "600",
+            }}
+            icon={FaAccusoft}
+            label="Hitung KPR"
+          />
+        </div>
+      </div>
+    </FocusComponentSite>
+  );
+};
+
+export {
+  Informasi,
+  Card,
+  Detail,
+  OjkInformasi,
+  HeadingComponent,
+  FocusComponent,
+};

@@ -4,7 +4,13 @@ import Header from "../components/header";
 import Hero from "../components/hero";
 import Accordion from "../components/accordion";
 import Footer from "../components/footer";
-import { Card, Detail, Informasi, OjkInformasi } from "../components/atom";
+import {
+  Card,
+  Detail,
+  FocusComponent,
+  Informasi,
+  OjkInformasi,
+} from "../components/atom";
 import FormKpr from "../components/form";
 
 const Home = () => {
@@ -23,9 +29,9 @@ const Home = () => {
         </div>
       </section>
       <SimpleSliderFicture />
+      <FocusComponent />
       <Hero />
       <Accordion />
-      <Hero />
       {/* TEST COMPONENTS */}
       <section>
         <div style={{ padding: "0 100px" }} className="container_info">

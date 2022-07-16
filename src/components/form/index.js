@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormContent, FormSite } from "./FormElements";
+import { ButtonAll, FormContent, FormSite } from "./FormElements";
 import CurrencyInput from "react-currency-input-field";
 import gambarPemanis from "../../assets/img/banner.png";
 import { FaAccusoft } from "react-icons/fa";
@@ -42,12 +42,19 @@ const FormInputSelect = (item) => {
   );
 };
 
-const Button = (item) => {
+export const Button = (item) => {
   return (
-    <button onClick={item.onClick} id={item.id} className="button_my-course">
-      <item.icon />
-      {item.label}
-    </button>
+    <ButtonAll>
+      <button
+        style={item.style}
+        onClick={item.onClick}
+        id={item.id}
+        className="button_my-course"
+      >
+        <item.icon />
+        {item.label}
+      </button>
+    </ButtonAll>
   );
 };
 
