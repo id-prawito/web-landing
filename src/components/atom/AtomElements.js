@@ -35,7 +35,7 @@ export const CardComponents = styled.div`
   display: initial;
   width: 100%;
 
-  .heading_card {
+  .heading {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -121,6 +121,95 @@ export const CardComponents = styled.div`
       font-size: 12px;
       font-weight: 400;
       background-color: #f8f9fa;
+    }
+  }
+`;
+
+export const DetailComponents = styled.div`
+  .detail {
+    &_content {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    &_img {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      justify-content: center;
+      overflow: hidden;
+      padding: 10px;
+    }
+    &_text {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 10px;
+      gap: 40px;
+
+      .visi_misi {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      &_heading {
+        font-size: 26px;
+        font-weight: 500;
+      }
+
+      &_p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+  }
+`;
+
+export const OjkComponents = styled.div`
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding: 40px 0px;
+    width: 80%;
+
+    h2 {
+      font-size: 42px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+  }
+
+  .ojk {
+    &_content {
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    &_img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 8px;
+      img {
+        width: 150px;
+      }
     }
   }
 `;

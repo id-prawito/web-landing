@@ -1,7 +1,17 @@
 import React from "react";
-import { CardComponents, InformasiSite } from "./AtomElements";
+import {
+  CardComponents,
+  DetailComponents,
+  InformasiSite,
+  OjkComponents,
+} from "./AtomElements";
 import imgwbs from "../../assets/img/wbs-icon.png";
 import blogImg from "../../assets/img/blog.jpg";
+import imgDetail from "../../assets/img/2.png";
+import imgOjk from "../../assets/img/ojk.png";
+import imgLps from "../../assets/img/lps.1.png";
+import imgBpr from "../../assets/img/bpr.png";
+import imgAyo from "../../assets/img/ayobank.png";
 
 const Informasi = () => {
   return (
@@ -27,7 +37,7 @@ const Informasi = () => {
 const Card = () => {
   return (
     <CardComponents>
-      <div className="heading_card">
+      <div className="heading">
         <h2>Berita Kami</h2>
         <p>
           Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada
@@ -110,4 +120,60 @@ const Card = () => {
   );
 };
 
-export { Informasi, Card };
+const Detail = () => {
+  return (
+    <DetailComponents>
+      <div className="detail_content">
+        <div className="detail_img">
+          <img src={imgDetail} alt="imgDetail" />
+        </div>
+        <div className="detail_text">
+          <div className="visi_misi">
+            <div className="detail_text_heading">Visi</div>
+            <div className="detail_text_p">
+              Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
+              seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
+            </div>
+          </div>
+          <div className="visi_misi">
+            <div className="detail_text_heading">Misi</div>
+            <div className="detail_text_p">
+              Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
+              seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
+            </div>
+          </div>
+        </div>
+      </div>
+    </DetailComponents>
+  );
+};
+
+const OjkInformasi = () => {
+  return (
+    <OjkComponents>
+      <div className="heading">
+        <h2>Terdaftar dan Diawasi oleh</h2>
+        <p>
+          Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada
+          kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh.
+        </p>
+      </div>
+      <div className="ojk_content">
+        <div className="ojk_img">
+          <img src={imgOjk} alt="imgOjk" />
+        </div>
+        <div className="ojk_img">
+          <img src={imgLps} alt="imgLps" />
+        </div>
+        <div className="ojk_img">
+          <img src={imgBpr} alt="imgBpr" style={{ width: "50px" }} />
+        </div>
+        <div className="ojk_img">
+          <img src={imgAyo} alt="imgAyo" />
+        </div>
+      </div>
+    </OjkComponents>
+  );
+};
+
+export { Informasi, Card, Detail, OjkInformasi };
