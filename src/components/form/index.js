@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { ButtonAll, FormContent, FormSite } from "./FormElements";
+import {
+  ButtonAll,
+  ButtonTransparentAll,
+  FormContent,
+  FormSite,
+} from "./FormElements";
 import CurrencyInput from "react-currency-input-field";
 import gambarPemanis from "../../assets/img/banner.png";
 import { FaAccusoft } from "react-icons/fa";
@@ -55,6 +60,22 @@ export const Button = (item) => {
         {item.label}
       </button>
     </ButtonAll>
+  );
+};
+
+export const ButtonTransparent = (item) => {
+  return (
+    <ButtonTransparentAll>
+      <button
+        style={item.style}
+        onClick={item.onClick}
+        id={item.id}
+        className={`button_my-course ${item.active}`}
+      >
+        <item.icon />
+        {item.label}
+      </button>
+    </ButtonTransparentAll>
   );
 };
 

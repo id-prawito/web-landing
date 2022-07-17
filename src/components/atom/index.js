@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   CardComponents,
   DetailComponents,
@@ -6,6 +6,8 @@ import {
   HeadingAll,
   InformasiSite,
   OjkComponents,
+  OrganisasiSite,
+  PimpinanComponent,
 } from "./AtomElements";
 import imgwbs from "../../assets/img/wbs-icon.png";
 import blogImg from "../../assets/img/blog.jpg";
@@ -15,8 +17,10 @@ import imgLps from "../../assets/img/lps.1.png";
 import imgBpr from "../../assets/img/bpr.png";
 import imgAyo from "../../assets/img/ayobank.png";
 import bgGopay from "../../assets/img/kemudahan-gopay-bg.png";
-import { Button } from "../form";
+import { Button, ButtonTransparent } from "../form";
 import { FaAccusoft } from "react-icons/fa";
+import { ORGANISASI } from "../../config/Data";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Informasi = () => {
   return (
@@ -218,6 +222,85 @@ const FocusComponent = () => {
   );
 };
 
+const Organisasi = ({ item }) => {
+  return (
+    <OrganisasiSite>
+      <motion.div className="informasi" layout>
+        <div className="gambar_img">
+          <img src={item.img} alt={item.label} />
+        </div>
+        <div className="text_nama">
+          <h1>{item.label}</h1>
+          <p>{item.jabatan}</p>
+        </div>
+      </motion.div>
+    </OrganisasiSite>
+  );
+};
+
+const ButtonFilter = ({ filter, button, active }) => {
+  return (
+    <>
+      {button.map((buttonItem, i) => (
+        <ButtonTransparent
+          active={active === buttonItem ? "active" : ""}
+          key={i}
+          style={{ fontWeight: "400", border: "2px solid var(--colorMain)" }}
+          icon={FaAccusoft}
+          label={buttonItem}
+          onClick={() => filter(buttonItem)}
+        />
+      ))}
+    </>
+  );
+};
+
+const DetailOrganisasi = () => {
+  const allOrganisasi = [
+    "All",
+    ...new Set(ORGANISASI.map((item) => item.jabatan)),
+  ];
+
+  const [organisasi, setOrganisasi] = useState(ORGANISASI);
+  const [buttons, setButtons] = useState(allOrganisasi);
+
+  // console.log(setButtons);
+
+  const [active, setActive] = useState("All");
+
+  const filter = (button) => {
+    if (button === "All") {
+      setOrganisasi(ORGANISASI);
+      setActive(button);
+      return;
+    }
+    const filteredData = ORGANISASI.filter((item) => item.jabatan === button);
+    setOrganisasi(filteredData);
+    setActive(button);
+  };
+
+  return (
+    <PimpinanComponent>
+      <HeadingComponent
+        Heading="Pimpinan Kami"
+        Text="Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh."
+      />
+      <div className="organisasi_all">
+        <div className="organisasi_button">
+          <ButtonFilter filter={filter} button={buttons} active={active} />
+        </div>
+        <motion.div className="organisasi_content" layout>
+          <AnimatePresence>
+            {organisasi.map((item, i) => (
+              <Organisasi key={i} item={item} />
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+    </PimpinanComponent>
+  );
+};
+
 export {
   Informasi,
   Card,
@@ -225,4 +308,5 @@ export {
   OjkInformasi,
   HeadingComponent,
   FocusComponent,
+  DetailOrganisasi,
 };

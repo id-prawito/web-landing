@@ -7,6 +7,7 @@ import Footer from "../components/footer";
 import {
   Card,
   Detail,
+  DetailOrganisasi,
   FocusComponent,
   Informasi,
   OjkInformasi,
@@ -41,6 +42,11 @@ const Home = () => {
       <section>
         <div style={{ padding: "0 100px" }} className="container_info">
           <Card />
+        </div>
+      </section>
+      <section>
+        <div style={{ padding: "0 100px" }} className="container_info">
+          <DetailOrganisasi />
         </div>
       </section>
       <FormKpr />

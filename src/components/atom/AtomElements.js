@@ -260,3 +260,66 @@ export const FocusComponentSite = styled.section`
     }
   }
 `;
+
+export const OrganisasiSite = styled.div`
+  display: grid;
+  place-items: center;
+
+  .informasi {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .gambar_img {
+    padding: 10px;
+    overflow: hidden;
+    max-width: 280px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .text_nama {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+`;
+
+export const PimpinanComponent = styled.div`
+  .organisasi {
+    &_all {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &_button {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+    }
+  }
+`;
