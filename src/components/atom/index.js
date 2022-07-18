@@ -253,7 +253,7 @@ const FocusComponent = () => {
             Heading="Coba simulasi kredit sekarang!"
             Text="Untuk mengetahui berapa biaya yang harus digunakan untuk melakukan kredit KPR."
           />
-          <Button icon={FaAccusoft} label="Hitung KPR" />
+          <Button icon={FaAccusoft} label="Hitung KPR" to="./berita-kami" />
         </div>
       </div>
     </FocusComponentSite>

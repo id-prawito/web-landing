@@ -55,10 +55,11 @@ export const Button = (item) => {
         style={item.style}
         onClick={item.onClick}
         id={item.id}
+        to={item.to}
         className="button_my-course"
       >
         <item.icon />
-        {item.label}
+        <a href={item.to}>{item.label}</a>
       </button>
     </ButtonAll>
   );
