@@ -30,6 +30,11 @@ const Header = () => {
     window.matchMedia("(max-width: 768px)").matches
   );
 
+  const humberHandle = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsNavOpen(false);
+  };
+
   useEffect(() => {
     function disableScroll() {
       document.body.style.overflow = "hidden";
@@ -98,7 +103,9 @@ const Header = () => {
                     <div className="closing">
                       <div className="header__item">
                         <div className="text_menu">
-                          <NavLink to={item.to}>{item.name}</NavLink>
+                          <NavLink onClick={() => humberHandle()} to={item.to}>
+                            {item.name}
+                          </NavLink>
                         </div>
                       </div>
                     </div>
