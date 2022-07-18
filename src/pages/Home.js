@@ -3,6 +3,7 @@ import SimpleSlider, { SimpleSliderFicture } from "../components/carousel";
 import Header from "../components/header";
 import Accordion from "../components/accordion";
 import Footer from "../components/footer";
+import { BERITA } from "../config/Data";
 import {
   Card,
   Detail,
@@ -24,7 +25,7 @@ const Home = () => {
       <FocusComponent />
       <Accordion />
       <Informasi />
-      <Card />
+      <Card itemBerita={BERITA} />
       <DetailOrganisasi />
       <FormKpr />
       <Footer />
