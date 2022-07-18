@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   CardComponents,
+  CardItemComponents,
   DetailComponents,
   FocusComponentSite,
   HeadingAll,
@@ -10,7 +11,6 @@ import {
   PimpinanComponent,
 } from "./AtomElements";
 import imgwbs from "../../assets/img/wbs-icon.png";
-import blogImg from "../../assets/img/blog.jpg";
 import imgDetail from "../../assets/img/2.png";
 import imgOjk from "../../assets/img/ojk.png";
 import imgLps from "../../assets/img/lps.1.png";
@@ -47,7 +47,31 @@ const Informasi = () => {
   );
 };
 
-const Card = () => {
+const CardItem = ({ item }) => {
+  let text = item.judul;
+  let result = text.toLowerCase();
+  const judulBerita = result.split(" ").join("-");
+  return (
+    <CardItemComponents>
+      <a href={`./berita-kami/${judulBerita}`} className="card_item">
+        <div className="card_img">
+          <img src={item.img} alt="blog_img" />
+        </div>
+        <div className="card_body">
+          <h4>{item.judul}</h4>
+          <p>{item.kontenBerita}</p>
+        </div>
+        <div className="card_footer">{item.date}</div>
+      </a>
+    </CardItemComponents>
+  );
+};
+
+const Card = ({ itemBerita }) => {
+  const items = itemBerita;
+
+  console.log(items);
+
   return (
     <CardComponents>
       <div className="card_container">
@@ -57,76 +81,15 @@ const Card = () => {
           kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh."
         />
         <div className="card_content">
-          <a href="#try" className="card">
-            <div className="card_img">
-              <img src={blogImg} alt="blog_img" />
-            </div>
-            <div className="card_body">
-              <h4>
-                Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
-                Jagonya
-              </h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
-                laborum blanditiis non mollitia? Dolor veniam dicta a nobis
-                sapiente quos quae dolores iusto suscipit quisquam ullam,
-                necessitatibus incidunt laborum voluptatibus.
-              </p>
-            </div>
-            <div className="card_footer">Footer</div>
-          </a>
-          <a href="#try" className="card">
-            <div className="card_img">
-              <img src={blogImg} alt="blog_img" />
-            </div>
-            <div className="card_body">
-              <h4>
-                Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
-                Jagonya
-              </h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
-                laborum blanditiis non mollitia? Dolor veniam dicta a nobis
-              </p>
-            </div>
-            <div className="card_footer">Footer</div>
-          </a>
-          <a href="#try" className="card">
-            <div className="card_img">
-              <img src={blogImg} alt="blog_img" />
-            </div>
-            <div className="card_body">
-              <h4>
-                Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
-                Jagonya
-              </h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
-                laborum blanditiis non mollitia? Dolor veniam dicta a nobis
-                sapiente quos quae dolores iusto suscipit quisquam ullam,
-                necessitatibus incidunt laborum voluptatibus.
-              </p>
-            </div>
-            <div className="card_footer">Footer</div>
-          </a>
-          <a href="#try" className="card">
-            <div className="card_img">
-              <img src={blogImg} alt="blog_img" />
-            </div>
-            <div className="card_body">
-              <h4>
-                Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
-                Jagonya
-              </h4>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
-                laborum blanditiis non mollitia? Dolor veniam dicta a nobis
-                sapiente quos quae dolores iusto suscipit quisquam ullam,
-                necessitatibus incidunt laborum voluptatibus.
-              </p>
-            </div>
-            <div className="card_footer">Footer</div>
-          </a>
+          {items ? (
+            <>
+              {items.map((item, i) => (
+                <CardItem key={i} item={item} />
+              ))}
+            </>
+          ) : (
+            "Tidak ada data"
+          )}
         </div>
       </div>
     </CardComponents>

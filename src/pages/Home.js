@@ -1,7 +1,6 @@
 import React from "react";
 import SimpleSlider, { SimpleSliderFicture } from "../components/carousel";
 import Header from "../components/header";
-import Hero from "../components/hero";
 import Accordion from "../components/accordion";
 import Footer from "../components/footer";
 import {

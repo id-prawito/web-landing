@@ -1,6 +1,7 @@
 import { FiGithub, FiLinkedin, FiPhone, FiTwitter } from "react-icons/fi";
 import { FaEllipsisV, FaInstagram } from "react-icons/fa";
 import organisasiImg from "../assets/img/organisasi.png";
+import blogImg from "../assets/img/blog.jpg";
 
 export const NAVLINKS = [
   {
@@ -111,5 +112,40 @@ export const ORGANISASI = [
     label: "Github",
     img: organisasiImg,
     jabatan: "Komisaris",
+  },
+];
+
+export const BERITA = [
+  {
+    id: 1,
+    judul: "Membuat adonan kue 1",
+    date: "17 Juli 2020",
+    img: blogImg,
+    kontenBerita:
+      "Bikin anggaran, baik anggaran jangka pendek maupun jangka panjang, itu gampang-gampang susah. Gampang jika tahu apa yang mesti dilakukan, susah karena ada tantangan seperti konsistensi dan kedisiplinan. Kali ini, Jagomin mau bagikan 4 cara yang bisa diikuti supaya kamu jadi selangkah lebih jago membuat anggaran jangka panjang.",
+  },
+  {
+    id: 2,
+    judul: "Membuat adonan kue 2",
+    date: "17 Juli 2020",
+    img: blogImg,
+    kontenBerita:
+      "<div>Bikin anggaran, baik anggaran jangka pendek maupun jangka panjang, itu gampang-gampang susah. Gampang jika tahu apa yang mesti dilakukan, susah karena ada tantangan seperti konsistensi dan kedisiplinan. Kali ini, Jagomin mau bagikan 4 cara yang bisa diikuti supaya kamu jadi selangkah lebih jago membuat anggaran jangka panjang.<br><br>Bikin anggaran, baik anggaran jangka pendek <b>Bank Jago</b> maupun jangka panjang, itu gampang-gampang susah. Gampang jika tahu apa yang mesti dilakukan, susah karena ada tantangan seperti konsistensi dan kedisiplinan. Kali ini, Jagomin mau bagikan 4 cara yang bisa diikuti supaya kamu jadi selangkah lebih jago membuat anggaran jangka panjang. <br><br>Bikin anggaran, baik anggaran jangka pendek <b>Bank Jago</b> maupun jangka panjang, itu gampang-gampang susah. Gampang jika tahu apa yang mesti dilakukan, susah karena ada tantangan seperti konsistensi dan kedisiplinan. Kali ini, Jagomin mau bagikan 4 cara yang bisa diikuti supaya kamu jadi selangkah lebih jago membuat anggaran jangka panjang. <br><br>Bikin anggaran, baik anggaran jangka pendek <b>Bank Jago</b> maupun jangka panjang, itu gampang-gampang susah. Gampang jika tahu apa yang mesti dilakukan, susah karena ada tantangan seperti konsistensi dan kedisiplinan. Kali ini, Jagomin mau bagikan 4 cara yang bisa diikuti supaya kamu jadi selangkah lebih jago membuat anggaran jangka panjang.</div>",
+  },
+  {
+    id: 3,
+    judul: "Membuat adonan kue 3",
+    date: "17 Juli 2020",
+    img: blogImg,
+    kontenBerita:
+      "Bikin anggaran, baik anggaran jangka pendek maupun jangka panjang, itu gampang-gampang susah. Gampang jika tahu apa yang mesti dilakukan, susah karena ada tantangan seperti konsistensi dan kedisiplinan. Kali ini, Jagomin mau bagikan 4 cara yang bisa diikuti supaya kamu jadi selangkah lebih jago membuat anggaran jangka panjang.",
+  },
+  {
+    id: 4,
+    judul: "Membuat adonan kue 4",
+    date: "17 Juli 2020",
+    img: blogImg,
+    kontenBerita:
+      "Bikin anggaran, baik anggaran jangka pendek maupun jangka panjang, itu gampang-gampang susah. Gampang jika tahu apa yang mesti dilakukan, susah karena ada tantangan seperti konsistensi dan kedisiplinan. Kali ini, Jagomin mau bagikan 4 cara yang bisa diikuti supaya kamu jadi selangkah lebih jago membuat anggaran jangka panjang.",
   },
 ];

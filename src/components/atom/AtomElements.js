@@ -62,71 +62,28 @@ export const InformasiSite = styled.section`
   }
 `;
 
-export const CardComponents = styled.section`
-  ${devices.smartphone} {
-    padding: 50px 0;
-  }
-  .card_container {
-    padding: 0 100px;
-
-    ${devices.smartphone} {
-      padding: 0 25px;
-    }
-  }
-
-  .heading {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: left;
-    padding: 40px 0px;
-    width: 80%;
-
-    h2 {
-      font-size: 42px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 1.5;
-    }
-  }
-
-  .card_content {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    gap: 30px;
-
-    ${devices.smartphone} {
-      grid-template-columns: repeat(1, auto);
-    }
-  }
-
+export const CardItemComponents = styled.div`
   .card {
-    gap: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgb(0 0 0 / 10%);
-    /* height: 200px; */
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    overflow: hidden;
-    border: 1px solid transparent;
+    &_item {
+      gap: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgb(0 0 0 / 10%);
+      /* height: 200px; */
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      overflow: hidden;
+      border: 1px solid transparent;
 
-    :hover {
-      border: 1px solid #a606ae;
-      box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+      :hover {
+        border: 1px solid #a606ae;
+        box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+      }
     }
-
     &_img {
       position: relative;
       width: 100%;
@@ -169,6 +126,52 @@ export const CardComponents = styled.section`
       font-size: 12px;
       font-weight: 400;
       background-color: #f8f9fa;
+    }
+  }
+`;
+
+export const CardComponents = styled.section`
+  ${devices.smartphone} {
+    padding: 50px 0;
+  }
+  .card_container {
+    padding: 0 100px;
+
+    ${devices.smartphone} {
+      padding: 0 25px;
+    }
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    padding: 40px 0px;
+    width: 80%;
+
+    h2 {
+      font-size: 42px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+  }
+
+  .card_content {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    gap: 30px;
+
+    ${devices.smartphone} {
+      grid-template-columns: repeat(1, auto);
     }
   }
 `;
