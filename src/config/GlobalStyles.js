@@ -22,9 +22,9 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background-color: ${({ theme: { theme } }) =>
-        theme === themeList.light
-            ? "var(--light-background)"
-            : "var(--dark-background)"};
+      theme === themeList.light
+        ? "var(--light-background)"
+        : "var(--dark-background)"};
   }
   
   html {
@@ -46,7 +46,7 @@ const GlobalStyles = createGlobalStyle`
   }
   ::-webkit-scrollbar-track {
     background: ${({ theme: { theme } }) =>
-        theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
+      theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
   }
   a {
     text-decoration: none;

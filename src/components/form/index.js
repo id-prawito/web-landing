@@ -8,6 +8,7 @@ import {
 import CurrencyInput from "react-currency-input-field";
 import gambarPemanis from "../../assets/img/banner.png";
 import { FaAccusoft } from "react-icons/fa";
+import { HeadingComponent } from "../atom";
 
 const FormInputCurrency = (item) => {
   return (
@@ -193,14 +194,12 @@ const FormKpr = () => {
   return (
     <FormSite>
       <div className="form_container">
-        <div className="heading_form">
-          <h2>Simulasi Kredit Standar</h2>
-          <p>
-            Simulasi ini untuk memudahkan calon kreditur mengetahui besaran
+        <HeadingComponent
+          Heading="Simulasi Kredit Standar!"
+          Text="Simulasi ini untuk memudahkan calon kreditur mengetahui besaran
             angsuran per-bulan yang harus dibayarkan dan besarannya sudah sesuai
-            aturan bunga yang ditetapkan perusahaan per tanggal 01 Januari 2021.
-          </p>
-        </div>
+            aturan bunga yang ditetapkan perusahaan per tanggal 01 Januari 2021."
+        />
         <FormContent>
           <div className="card_form">
             <div className="content">
@@ -321,35 +320,39 @@ const FormKpr = () => {
                     </li>
                   </ul>
                 </div>
-                <table>
-                  <thead>
-                    <tr style={{ background: "#7c3aed" }}>
-                      <th>Bulan</th>
-                      <th>Pokok</th>
-                      <th>Bunga</th>
-                      <th>Angsuran</th>
-                      <th>Sisa Pinjaman</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {items.map((item, i) => (
-                      <tr key={i}>
-                        <td>{i + 1}</td>
-                        <td>{item.angsuranpokok}</td>
-                        <td>{item.angsuranBungaPerBulan}</td>
-                        <td>{item.totalAngsuranPerBulan}</td>
-                        <td>{item.sisaPinjaman}</td>
+                <div className="class_table">
+                  <table>
+                    <thead>
+                      <tr style={{ background: "#7c3aed" }}>
+                        <th>Bulan</th>
+                        <th>Pokok</th>
+                        <th>Bunga</th>
+                        <th>Angsuran</th>
+                        <th>Sisa Pinjaman</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {items.map((item, i) => (
+                        <tr key={i}>
+                          <td>{i + 1}</td>
+                          <td>{item.angsuranpokok}</td>
+                          <td>{item.angsuranBungaPerBulan}</td>
+                          <td>{item.totalAngsuranPerBulan}</td>
+                          <td>{item.sisaPinjaman}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           ) : (
-            <div className="content">
-              <p style={{ borderBottom: "none" }}>
-                <b>Keteragan : </b>Lakukan Perihitungan Terlebih Dahulu.
-              </p>
+            <div className="card_form">
+              <div className="content">
+                <p style={{ borderBottom: "none" }}>
+                  <b>Keteragan : </b>Lakukan Perihitungan Terlebih Dahulu.
+                </p>
+              </div>
             </div>
           )}
         </FormContent>

@@ -19,36 +19,15 @@ const Home = () => {
     <div>
       <Header />
       <SimpleSlider />
-      <section>
-        <div style={{ padding: "0 100px" }} className="container_info">
-          <Detail />
-        </div>
-      </section>
-      <section>
-        <div style={{ padding: "0 100px" }} className="container_info">
-          <OjkInformasi />
-        </div>
-      </section>
+      <Detail />
+      <OjkInformasi />
       <SimpleSliderFicture />
       <FocusComponent />
       <Hero />
       <Accordion />
-      {/* TEST COMPONENTS */}
-      <section>
-        <div style={{ padding: "0 100px" }} className="container_info">
-          <Informasi />
-        </div>
-      </section>
-      <section>
-        <div style={{ padding: "0 100px" }} className="container_info">
-          <Card />
-        </div>
-      </section>
-      <section>
-        <div style={{ padding: "0 100px" }} className="container_info">
-          <DetailOrganisasi />
-        </div>
-      </section>
+      <Informasi />
+      <Card />
+      <DetailOrganisasi />
       <FormKpr />
       <Footer />
     </div>

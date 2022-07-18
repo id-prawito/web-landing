@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../assets/_respondTo";
 
 export const CorouselSection = styled.section`
   max-width: 100%;
@@ -23,10 +24,9 @@ export const CorouselSection = styled.section`
 `;
 
 export const CorouselSectionFicture = styled.section`
-  max-width: 100%;
-  padding: 100px 220px;
-  height: 100%;
-
+  ${devices.smartphone} {
+    padding: 50px 0;
+  }
   .section_carousel {
     display: flex;
     justify-content: center;
@@ -38,7 +38,15 @@ export const CorouselSectionFicture = styled.section`
   .carousel {
     &_container {
       padding: 0 100px;
-      background-color: url() #ffa825 center center repeat-x;
+
+      ${devices.smartphone} {
+        padding: 0px 25px;
+      }
+    }
+    &_container_slide {
+      ${devices.smartphone} {
+        padding: 0px 25px;
+      }
     }
   }
 `;

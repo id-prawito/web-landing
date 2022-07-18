@@ -7,6 +7,7 @@ import {
 } from "./AccordionElements";
 import img1 from "../../assets/img/img-1.png";
 import img2 from "../../assets/img/img-2.png";
+import { HeadingComponent } from "../atom";
 
 const render = () => {
   let items = [
@@ -46,6 +47,10 @@ const AccordionComponent = ({ items }) => {
   const gambarPertama = items[0].img;
   return (
     <AccordionContainer>
+      <HeadingComponent
+        Heading="Coba simulasi kredit sekarang!"
+        Text="Untuk mengetahui berapa biaya yang harus digunakan untuk melakukan kredit KPR."
+      />
       <div className="accordion_bungkus">
         <div className="pembungkus">
           {items.map((item, i) => {

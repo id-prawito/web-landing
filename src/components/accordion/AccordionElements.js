@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
+import { devices } from "../../assets/_respondTo";
 
 const AccordionSite = styled.section`
   display: flex;
@@ -13,6 +14,10 @@ const AccordionSite = styled.section`
   .accordion_container {
     padding: 0 100px;
     width: 100%;
+
+    ${devices.smartphone} {
+      padding: 0px 25px;
+    }
   }
 
   .accordion_pembungkus {
@@ -26,6 +31,11 @@ const AccordionSite = styled.section`
     display: flex;
     flex-direction: row;
     gap: 40px;
+    padding: 50px 0;
+
+    ${devices.smartphone} {
+      flex-direction: column-reverse;
+    }
   }
 
   .content_accordion {
@@ -36,6 +46,10 @@ const AccordionSite = styled.section`
     box-shadow: 0 8px 24px rgb(185 185 185 / 25%);
     width: 500px;
     height: max-content;
+
+    ${devices.smartphone} {
+      width: 100%;
+    }
 
     &:hover {
       border: 1px solid #7c3aed;

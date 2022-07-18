@@ -1,6 +1,10 @@
 import styled from "styled-components";
+import { devices } from "../../assets/_respondTo";
 
-export const InformasiSite = styled.div`
+export const InformasiSite = styled.section`
+  ${devices.smartphone} {
+    padding: 50px 0;
+  }
   .informasi {
     display: flex;
     flex-direction: row;
@@ -9,6 +13,27 @@ export const InformasiSite = styled.div`
     width: 100%;
     border-radius: 8px;
     gap: 20px;
+
+    ${devices.smartphone} {
+      flex-direction: column;
+    }
+
+    .img {
+      overflow: hidden;
+      height: 150px;
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    &_container {
+      padding: 0 100px;
+
+      ${devices.smartphone} {
+        padding: 0px 25px;
+      }
+    }
   }
 
   .text_content {
@@ -24,16 +49,30 @@ export const InformasiSite = styled.div`
     display: flex;
     gap: 20px;
     flex-direction: column;
+
+    ${devices.smartphone} {
+      width: 100%;
+    }
   }
 
   .text_p {
     font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
   }
 `;
 
-export const CardComponents = styled.div`
-  display: initial;
-  width: 100%;
+export const CardComponents = styled.section`
+  ${devices.smartphone} {
+    padding: 50px 0;
+  }
+  .card_container {
+    padding: 0 100px;
+
+    ${devices.smartphone} {
+      padding: 0 25px;
+    }
+  }
 
   .heading {
     display: flex;
@@ -62,6 +101,10 @@ export const CardComponents = styled.div`
     justify-content: center;
     height: 100%;
     gap: 30px;
+
+    ${devices.smartphone} {
+      grid-template-columns: repeat(1, auto);
+    }
   }
 
   .card {
@@ -130,12 +173,28 @@ export const CardComponents = styled.div`
   }
 `;
 
-export const DetailComponents = styled.div`
+export const DetailComponents = styled.section`
+  padding: 50px 0;
+  ${devices.smartphone} {
+    padding: 20px 0;
+  }
+
   .detail {
+    &_container {
+      padding: 0 100px;
+
+      ${devices.smartphone} {
+        padding: 0px 25px;
+      }
+    }
     &_content {
       display: flex;
       flex-direction: row;
       gap: 20px;
+
+      ${devices.smartphone} {
+        flex-direction: column;
+      }
     }
 
     &_img {
@@ -145,6 +204,10 @@ export const DetailComponents = styled.div`
       justify-content: center;
       overflow: hidden;
       padding: 10px;
+
+      ${devices.smartphone} {
+        width: 100%;
+      }
     }
     &_text {
       display: flex;
@@ -154,6 +217,10 @@ export const DetailComponents = styled.div`
       flex-direction: column;
       padding: 10px;
       gap: 40px;
+
+      ${devices.smartphone} {
+        width: 100%;
+      }
 
       .visi_misi {
         text-align: left;
@@ -176,28 +243,19 @@ export const DetailComponents = styled.div`
   }
 `;
 
-export const OjkComponents = styled.div`
-  .heading {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: left;
-    padding: 40px 0px;
-    width: 80%;
-
-    h2 {
-      font-size: 42px;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 1.5;
-    }
+export const OjkComponents = styled.section`
+  ${devices.smartphone} {
+    padding: 50px 0;
   }
-
   .ojk {
+    &_container {
+      padding: 0 100px;
+
+      ${devices.smartphone} {
+        padding: 0px 25px;
+      }
+    }
+
     &_content {
       display: grid;
       grid-template-columns: repeat(4, auto);
@@ -212,8 +270,20 @@ export const OjkComponents = styled.div`
       justify-content: center;
       overflow: hidden;
       border-radius: 8px;
+      width: 100%;
+
+      ${devices.smartphone} {
+        display: flex !important;
+        height: 20vh;
+      }
+
       img {
         width: 150px;
+
+        ${devices.smartphone} {
+          width: 200px !important;
+          object-fit: contain;
+        }
       }
     }
   }
@@ -228,9 +298,17 @@ export const HeadingAll = styled.div`
     padding: 40px 0px;
     width: 80%;
 
+    ${devices.smartphone} {
+      width: 100%;
+    }
+
     h2 {
       font-size: 42px;
       font-weight: 600;
+
+      ${devices.smartphone} {
+        font-size: 30px;
+      }
     }
 
     p {
@@ -244,6 +322,10 @@ export const HeadingAll = styled.div`
 export const FocusComponentSite = styled.section`
   padding: 100px 0px;
   max-width: 100%;
+
+  ${devices.smartphone} {
+    padding: 50px 0;
+  }
 
   .focus_container {
     background-color: aliceblue;
@@ -299,8 +381,19 @@ export const OrganisasiSite = styled.div`
   }
 `;
 
-export const PimpinanComponent = styled.div`
+export const PimpinanComponent = styled.section`
+  ${devices.smartphone} {
+    padding: 50px 0;
+  }
   .organisasi {
+    &_container {
+      padding: 0 100px;
+
+      ${devices.smartphone} {
+        padding: 0 25px;
+      }
+    }
+
     &_all {
       display: flex;
       flex-direction: column;
@@ -313,6 +406,22 @@ export const PimpinanComponent = styled.div`
       gap: 20px;
       justify-content: center;
       align-items: center;
+
+      ${devices.smartphone} {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+      }
+    }
+
+    &_content_active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+
+      ${devices.smartphone} {
+        grid-template-columns: repeat(1, auto);
+      }
     }
 
     &_content {
@@ -320,6 +429,25 @@ export const PimpinanComponent = styled.div`
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       grid-column-gap: 20px;
       grid-row-gap: 20px;
+
+      ${devices.smartphone} {
+        grid-template-columns: repeat(2, auto);
+      }
+    }
+  }
+
+  .download {
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #f4f4f4;
+    padding: 8px 15px;
+    border-radius: 8px;
+    width: max-content;
+    color: #a606ae;
+    margin: auto;
+    margin-top: 60px;
+    a:hover {
+      text-decoration: underline;
     }
   }
 `;

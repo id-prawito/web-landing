@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   CardComponents,
   DetailComponents,
@@ -21,21 +21,25 @@ import { Button, ButtonTransparent } from "../form";
 import { FaAccusoft } from "react-icons/fa";
 import { ORGANISASI } from "../../config/Data";
 import { motion, AnimatePresence } from "framer-motion";
+import Slider from "react-slick";
+import SliderWrapper from "../carousel/_SlickSliderStyle";
 
 const Informasi = () => {
   return (
     <InformasiSite>
-      <div className="informasi">
-        <div className="img">
-          <img src={imgwbs} alt="imgwbs" />
-        </div>
-        <div className="text_content">
-          <div className="content">
-            <h1>LAPORKAN!</h1>
-            <p className="text_p">
-              Jika anda melihat dan mendengar Pelanggaran/Kecurangan yang
-              dilakukan oleh Pejabat/Pegawai di lingkungan Bank Jago.
-            </p>
+      <div className="informasi_container">
+        <div className="informasi">
+          <div className="img">
+            <img src={imgwbs} alt="imgwbs" />
+          </div>
+          <div className="text_content">
+            <div className="content">
+              <h1>LAPORKAN!</h1>
+              <p className="text_p">
+                Jika anda melihat dan mendengar Pelanggaran/Kecurangan yang
+                dilakukan oleh Pejabat/Pegawai di lingkungan Bank Jago.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -46,84 +50,84 @@ const Informasi = () => {
 const Card = () => {
   return (
     <CardComponents>
-      <div className="heading">
-        <h2>Berita Kami</h2>
-        <p>
-          Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada
-          kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh.
-        </p>
-      </div>
-      <div className="card_content">
-        <a href="#try" className="card">
-          <div className="card_img">
-            <img src={blogImg} alt="blog_img" />
-          </div>
-          <div className="card_body">
-            <h4>
-              Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
-              Jagonya
-            </h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
-              laborum blanditiis non mollitia? Dolor veniam dicta a nobis
-              sapiente quos quae dolores iusto suscipit quisquam ullam,
-              necessitatibus incidunt laborum voluptatibus.
-            </p>
-          </div>
-          <div className="card_footer">Footer</div>
-        </a>
-        <a href="#try" className="card">
-          <div className="card_img">
-            <img src={blogImg} alt="blog_img" />
-          </div>
-          <div className="card_body">
-            <h4>
-              Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
-              Jagonya
-            </h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
-              laborum blanditiis non mollitia? Dolor veniam dicta a nobis
-            </p>
-          </div>
-          <div className="card_footer">Footer</div>
-        </a>
-        <a href="#try" className="card">
-          <div className="card_img">
-            <img src={blogImg} alt="blog_img" />
-          </div>
-          <div className="card_body">
-            <h4>
-              Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
-              Jagonya
-            </h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
-              laborum blanditiis non mollitia? Dolor veniam dicta a nobis
-              sapiente quos quae dolores iusto suscipit quisquam ullam,
-              necessitatibus incidunt laborum voluptatibus.
-            </p>
-          </div>
-          <div className="card_footer">Footer</div>
-        </a>
-        <a href="#try" className="card">
-          <div className="card_img">
-            <img src={blogImg} alt="blog_img" />
-          </div>
-          <div className="card_body">
-            <h4>
-              Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
-              Jagonya
-            </h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
-              laborum blanditiis non mollitia? Dolor veniam dicta a nobis
-              sapiente quos quae dolores iusto suscipit quisquam ullam,
-              necessitatibus incidunt laborum voluptatibus.
-            </p>
-          </div>
-          <div className="card_footer">Footer</div>
-        </a>
+      <div className="card_container">
+        <HeadingComponent
+          Heading="Berita Kami"
+          Text="Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada
+          kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh."
+        />
+        <div className="card_content">
+          <a href="#try" className="card">
+            <div className="card_img">
+              <img src={blogImg} alt="blog_img" />
+            </div>
+            <div className="card_body">
+              <h4>
+                Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
+                Jagonya
+              </h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                laborum blanditiis non mollitia? Dolor veniam dicta a nobis
+                sapiente quos quae dolores iusto suscipit quisquam ullam,
+                necessitatibus incidunt laborum voluptatibus.
+              </p>
+            </div>
+            <div className="card_footer">Footer</div>
+          </a>
+          <a href="#try" className="card">
+            <div className="card_img">
+              <img src={blogImg} alt="blog_img" />
+            </div>
+            <div className="card_body">
+              <h4>
+                Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
+                Jagonya
+              </h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                laborum blanditiis non mollitia? Dolor veniam dicta a nobis
+              </p>
+            </div>
+            <div className="card_footer">Footer</div>
+          </a>
+          <a href="#try" className="card">
+            <div className="card_img">
+              <img src={blogImg} alt="blog_img" />
+            </div>
+            <div className="card_body">
+              <h4>
+                Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
+                Jagonya
+              </h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                laborum blanditiis non mollitia? Dolor veniam dicta a nobis
+                sapiente quos quae dolores iusto suscipit quisquam ullam,
+                necessitatibus incidunt laborum voluptatibus.
+              </p>
+            </div>
+            <div className="card_footer">Footer</div>
+          </a>
+          <a href="#try" className="card">
+            <div className="card_img">
+              <img src={blogImg} alt="blog_img" />
+            </div>
+            <div className="card_body">
+              <h4>
+                Sering jadi bendahara lupaan ? Bela punya solusi selangkah lebih
+                Jagonya
+              </h4>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
+                laborum blanditiis non mollitia? Dolor veniam dicta a nobis
+                sapiente quos quae dolores iusto suscipit quisquam ullam,
+                necessitatibus incidunt laborum voluptatibus.
+              </p>
+            </div>
+            <div className="card_footer">Footer</div>
+          </a>
+        </div>
       </div>
     </CardComponents>
   );
@@ -132,13 +136,43 @@ const Card = () => {
 const Detail = () => {
   return (
     <DetailComponents>
+      <div className="detail_container">
+        <div className="detail_content">
+          <div className="detail_img">
+            <img src={imgDetail} alt="imgDetail" />
+          </div>
+          <div className="detail_text">
+            <div className="visi_misi">
+              <div className="detail_text_heading">Visi</div>
+              <div className="detail_text_p">
+                Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
+                seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
+              </div>
+            </div>
+            <div className="visi_misi">
+              <div className="detail_text_heading">Misi</div>
+              <div className="detail_text_p">
+                Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
+                seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </DetailComponents>
+  );
+};
+
+const DetailLayanan = (item) => {
+  return (
+    <DetailComponents>
       <div className="detail_content">
         <div className="detail_img">
           <img src={imgDetail} alt="imgDetail" />
         </div>
         <div className="detail_text">
           <div className="visi_misi">
-            <div className="detail_text_heading">Visi</div>
+            <div className="detail_text_heading">Visi {item.item}</div>
             <div className="detail_text_p">
               Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
               seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
@@ -158,26 +192,75 @@ const Detail = () => {
 };
 
 const OjkInformasi = () => {
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia("(max-width: 768px)").matches
+  );
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+    });
+  }, []);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+    arrows: false,
+    appendDots: (dots) => <ul>{dots}</ul>,
+    customPaging: (i) => (
+      <div className="ft-slick__dots--custom">
+        <div className="loading" />
+      </div>
+    ),
+  };
   return (
     <OjkComponents>
-      <HeadingComponent
-        Heading="Terdaftar dan Diawasi oleh"
-        Text="Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada
+      <div className="ojk_container">
+        <HeadingComponent
+          Heading="Terdaftar dan Diawasi oleh"
+          Text="Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada
           kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh."
-      />
-      <div className="ojk_content">
-        <div className="ojk_img">
-          <img src={imgOjk} alt="imgOjk" />
-        </div>
-        <div className="ojk_img">
-          <img src={imgLps} alt="imgLps" />
-        </div>
-        <div className="ojk_img">
-          <img src={imgBpr} alt="imgBpr" style={{ width: "50px" }} />
-        </div>
-        <div className="ojk_img">
-          <img src={imgAyo} alt="imgAyo" />
-        </div>
+        />
+
+        {isMobile ? (
+          <SliderWrapper>
+            <Slider {...settings}>
+              <div className="ojk_img">
+                <img src={imgOjk} alt="imgOjk" />
+              </div>
+              <div className="ojk_img">
+                <img src={imgLps} alt="imgLps" />
+              </div>
+              <div className="ojk_img">
+                <img src={imgBpr} alt="imgBpr" style={{ width: "50px" }} />
+              </div>
+              <div className="ojk_img">
+                <img src={imgAyo} alt="imgAyo" />
+              </div>
+            </Slider>
+          </SliderWrapper>
+        ) : (
+          <div className="ojk_content">
+            <div className="ojk_img">
+              <img src={imgOjk} alt="imgOjk" />
+            </div>
+            <div className="ojk_img">
+              <img src={imgLps} alt="imgLps" />
+            </div>
+            <div className="ojk_img">
+              <img src={imgBpr} alt="imgBpr" style={{ width: "50px" }} />
+            </div>
+            <div className="ojk_img">
+              <img src={imgAyo} alt="imgAyo" />
+            </div>
+          </div>
+        )}
       </div>
     </OjkComponents>
   );
@@ -207,15 +290,7 @@ const FocusComponent = () => {
             Heading="Coba simulasi kredit sekarang!"
             Text="Untuk mengetahui berapa biaya yang harus digunakan untuk melakukan kredit KPR."
           />
-          <Button
-            style={{
-              padding: "20px 50px",
-              fontSize: "20px",
-              fontWeight: "600",
-            }}
-            icon={FaAccusoft}
-            label="Hitung KPR"
-          />
+          <Button icon={FaAccusoft} label="Hitung KPR" />
         </div>
       </div>
     </FocusComponentSite>
@@ -262,9 +337,9 @@ const DetailOrganisasi = () => {
   ];
 
   const [organisasi, setOrganisasi] = useState(ORGANISASI);
-  const [buttons, setButtons] = useState(allOrganisasi);
+  // const [buttons, setButtons] = useState(allOrganisasi);
 
-  // console.log(setButtons);
+  const buttons = allOrganisasi;
 
   const [active, setActive] = useState("All");
 
@@ -281,21 +356,38 @@ const DetailOrganisasi = () => {
 
   return (
     <PimpinanComponent>
-      <HeadingComponent
-        Heading="Pimpinan Kami"
-        Text="Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh."
-      />
-      <div className="organisasi_all">
-        <div className="organisasi_button">
-          <ButtonFilter filter={filter} button={buttons} active={active} />
+      <div className="organisasi_container">
+        <HeadingComponent
+          Heading="Pimpinan Kami"
+          Text="Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh."
+        />
+
+        <div className="organisasi_all">
+          <div className="organisasi_button">
+            <ButtonFilter filter={filter} button={buttons} active={active} />
+          </div>
+
+          {organisasi.length === 1 ? (
+            <motion.div className="organisasi_content_active" layout>
+              <AnimatePresence>
+                {organisasi.map((item, i) => (
+                  <Organisasi key={i} item={item} />
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          ) : (
+            <motion.div className="organisasi_content" layout>
+              <AnimatePresence>
+                {organisasi.map((item, i) => (
+                  <Organisasi key={i} item={item} />
+                ))}
+              </AnimatePresence>
+            </motion.div>
+          )}
         </div>
-        <motion.div className="organisasi_content" layout>
-          <AnimatePresence>
-            {organisasi.map((item, i) => (
-              <Organisasi key={i} item={item} />
-            ))}
-          </AnimatePresence>
-        </motion.div>
+        <div className="download">
+          <a href="#try">Download Struktur Organisasi</a>
+        </div>
       </div>
     </PimpinanComponent>
   );
@@ -309,4 +401,5 @@ export {
   HeadingComponent,
   FocusComponent,
   DetailOrganisasi,
+  DetailLayanan,
 };

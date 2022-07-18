@@ -70,6 +70,7 @@ const Footer = () => {
               maiores libero quas ipsa. Et error sed, nulla necessitatibus vel
               in similique corporis.
             </div>
+
             <div className="footer_desc_kebijakan">
               <a className="end" href="#22">
                 Kebijakan Privasi

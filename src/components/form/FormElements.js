@@ -1,8 +1,16 @@
 import styled from "styled-components";
+import { devices } from "../../assets/_respondTo";
 
 export const FormSite = styled.section`
+  ${devices.smartphone} {
+    padding: 50px 0;
+  }
   .form_container {
     padding: 0 100px;
+
+    ${devices.smartphone} {
+      padding: 0 25px;
+    }
   }
 
   .heading_form {
@@ -74,6 +82,10 @@ export const FormSite = styled.section`
     justify-content: center;
     overflow: hidden;
     padding: 20px;
+
+    ${devices.smartphone} {
+      display: none;
+    }
   }
 `;
 
@@ -181,6 +193,12 @@ export const FormContent = styled.div`
         li {
           display: flex;
           flex-direction: row;
+
+          ${devices.smartphone} {
+            flex-direction: column;
+            gap: 10px;
+          }
+
           b {
             font-size: 13px;
             font-weight: 400;
@@ -191,6 +209,17 @@ export const FormContent = styled.div`
           }
         }
       }
+    }
+  }
+
+  .class_table {
+    overflow-x: auto;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    ${devices.smartphone} {
+      overflow-x: auto;
     }
   }
 
@@ -215,14 +244,21 @@ export const FormContent = styled.div`
     overflow: hidden;
     border-radius: 8px;
     border: 1px solid #fff;
+    ${devices.smartphone} {
+      width: 600px;
+    }
 
-    th {
-      padding: 0.75rem;
-      border: 1px solid #fff !important;
-      font-size: 14px;
-      font-weight: 400;
-      text-align: center;
-      color: #fff;
+    thead {
+      tr {
+        th {
+          padding: 0.75rem;
+          border: 1px solid #fff !important;
+          font-size: 14px;
+          font-weight: 400;
+          text-align: center;
+          color: #fff;
+        }
+      }
     }
   }
 
@@ -241,6 +277,19 @@ export const FormContent = styled.div`
       color: #000;
       line-height: 1.3;
       font-weight: 500;
+      text-align: center;
+
+      ${devices.smartphone} {
+        text-align: left;
+      }
+
+      :nth-child(1) {
+        text-align: center;
+
+        ${devices.smartphone} {
+          text-align: center;
+        }
+      }
     }
   }
 `;

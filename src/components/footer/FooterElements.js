@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../assets/_respondTo";
 
 export const FooterSite = styled.footer`
   .footer {
@@ -8,6 +9,12 @@ export const FooterSite = styled.footer`
       width: 100%;
       align-items: center;
       justify-content: space-between;
+
+      ${devices.smartphone} {
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+      }
 
       &_content {
         display: flex;
@@ -25,6 +32,12 @@ export const FooterSite = styled.footer`
             display: flex;
             flex-direction: row;
             align-items: center;
+
+            ${devices.smartphone} {
+              display: grid;
+              grid-template-columns: repeat(2, auto);
+              gap: 15px;
+            }
           }
         }
       }
@@ -39,6 +52,11 @@ export const FooterSite = styled.footer`
       height: 100%;
       width: 100%;
       gap: 8px;
+
+      ${devices.smartphone} {
+        padding: 0;
+        justify-content: flex-start;
+      }
 
       .text_menu {
         font-size: 13px;
@@ -58,6 +76,10 @@ export const FooterSite = styled.footer`
       align-items: center;
       justify-content: flex-end;
       width: 100%;
+
+      ${devices.smartphone} {
+        justify-content: flex-start;
+      }
     }
 
     &_desc {
@@ -66,6 +88,12 @@ export const FooterSite = styled.footer`
       align-items: center;
       justify-content: space-between;
       width: 100%;
+
+      ${devices.smartphone} {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
 
       &_img {
         display: flex;
@@ -87,6 +115,14 @@ export const FooterSite = styled.footer`
         padding: 0 10px;
         align-items: center;
         font-size: 12px;
+
+        ${devices.smartphone} {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          gap: 10px;
+          place-items: baseline;
+          padding: 0;
+        }
 
         .end {
           display: initial;
@@ -114,6 +150,12 @@ export const FooterSite = styled.footer`
         font-weight: 300;
         width: 50%;
         text-align: left;
+
+        ${devices.smartphone} {
+          width: 100%;
+          line-height: 1.5;
+          font-size: 12px;
+        }
       }
     }
   }
@@ -133,6 +175,10 @@ export const FooterSite = styled.footer`
     align-items: center;
     justify-content: space-between;
     height: 100%;
+
+    ${devices.smartphone} {
+      gap: 40px;
+    }
   }
 `;
 
