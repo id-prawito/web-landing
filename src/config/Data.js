@@ -5,7 +5,7 @@ import blogImg from "../assets/img/blog.jpg";
 
 export const NAVLINKS = [
   {
-    to: "about",
+    to: "",
     icon: FaEllipsisV,
     name: "HOME",
   },
@@ -20,17 +20,17 @@ export const NAVLINKS = [
     name: "SIMULASI KPR",
   },
   {
-    to: "project",
+    to: "/berita-kami",
     icon: FaEllipsisV,
     name: "BERITA KAMI",
   },
   {
-    to: "project",
+    to: "/project",
     icon: FaEllipsisV,
     name: "PUBLIKASI",
   },
   {
-    to: "project",
+    to: "/tentang",
     icon: FaEllipsisV,
     name: "TENTANG KAMI",
   },

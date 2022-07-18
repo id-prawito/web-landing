@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import { HeaderContainer, HeaderSite, NavLinks } from "./HeaderElements";
+import { HeaderContainer, HeaderSite } from "./HeaderElements";
 import { FiMenu, FiX } from "react-icons/fi";
 import { NAVLINKS } from "../../config/Data";
 import logoSite from "../../assets/img/logo_site.png";
 import ThemeSwitcher from "../../config/ThemeSwitcher";
-// import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const headerRef = useRef(null);
@@ -56,11 +56,15 @@ const Header = () => {
       <HeaderContainer>
         <div className="header__logo_link">
           <div className="header__logo">
-            <div className="try">
-              <NavLinks to="home" smooth activeClass="active" spy={true}>
-                <img alt="logo_header" src={logoSite} className="logo__img" />
-              </NavLinks>
-            </div>
+            <NavLink
+              to="/"
+              style={({ isActive }) => {
+                return { color: isActive ? "red" : "grey" };
+              }}
+            >
+              <img alt="logo_header" src={logoSite} className="logo__img" />
+            </NavLink>
+
             <ThemeSwitcher />
           </div>
           {isMobile && (
@@ -94,30 +98,12 @@ const Header = () => {
                     <div className="closing">
                       <div className="header__item">
                         <div className="text_menu">
-                          <NavLinks
-                            to={item.to}
-                            smooth
-                            activeClass="active"
-                            spy={true}
-                          >
-                            {item.name}
-                          </NavLinks>
+                          <NavLink to={item.to}>{item.name}</NavLink>
                         </div>
                       </div>
                     </div>
                   </li>
                 ))}
-                {/* <li>
-                  <div className="closing">
-                    <div className="header__item">
-                      <div className="resume">
-                        <a href="#try" target="_blank" rel="noopener noreferrer">
-                          Resume
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </li> */}
               </ul>
             </nav>
 
@@ -162,10 +148,14 @@ export const Header404 = () => {
       <HeaderContainer>
         <div initial="hidden" animate="visible" className="header__logo_link">
           <div className="header__logo">
-            <NavLinks to="home" smooth activeClass="active" spy={true}>
+            <NavLink
+              to="/"
+              style={({ isActive }) => {
+                return { color: isActive ? "red" : "grey" };
+              }}
+            >
               <img alt="logo_header" src={logoSite} className="logo__img" />
-            </NavLinks>
-
+            </NavLink>
             <ThemeSwitcher />
           </div>
         </div>

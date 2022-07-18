@@ -11,10 +11,10 @@ import DetailBerita from "../pages/DetailBerita";
 export const RouteSite = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/berita-kami" element={<Berita />} />
-      <Route path="/berita-kami/:id" element={<DetailBerita />} />
-      <Route path="/not-found" element={<NotFound />} />
+      <Route index element={<Home />} />
+      <Route exact path="/berita-kami" element={<Berita />} />
+      <Route exact path="/berita-kami/:id" element={<DetailBerita />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
