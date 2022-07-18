@@ -23,7 +23,6 @@ const Home = () => {
       <OjkInformasi />
       <SimpleSliderFicture />
       <FocusComponent />
-      <Hero />
       <Accordion />
       <Informasi />
       <Card />
