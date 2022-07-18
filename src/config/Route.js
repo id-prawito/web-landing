@@ -7,11 +7,13 @@ import {
 import NotFound from "../pages/404";
 import Berita from "../pages/Berita";
 import DetailBerita from "../pages/DetailBerita";
+import ContactUs from "../pages/ContactUs";
 
 export const RouteSite = () => {
   return (
     <Routes>
       <Route index element={<Home />} />
+      <Route exact path="/we-contact-us" element={<ContactUs />} />
       <Route exact path="/berita-kami" element={<Berita />} />
       <Route exact path="/berita-kami/:id" element={<DetailBerita />} />
       <Route path="*" element={<NotFound />} />

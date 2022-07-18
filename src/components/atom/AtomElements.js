@@ -293,6 +293,7 @@ export const OjkComponents = styled.section`
 `;
 
 export const HeadingAll = styled.div`
+  width: 100%;
   .heading {
     display: flex;
     flex-direction: column;
@@ -303,6 +304,7 @@ export const HeadingAll = styled.div`
 
     ${devices.smartphone} {
       width: 100%;
+      padding: 30px 0px;
     }
 
     h2 {
@@ -342,6 +344,86 @@ export const FocusComponentSite = styled.section`
       background-size: cover;
       place-items: center;
       display: grid;
+    }
+
+    .gambar_bg_tentang {
+      overflow: hidden;
+      height: 380px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      place-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 0 25px;
+
+      .gambar_img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        justify-content: center;
+        overflow: hidden;
+        height: 100%;
+
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+`;
+
+export const FocusComponentSiteContact = styled.section`
+  padding: 0;
+  max-width: 100%;
+
+  ${devices.smartphone} {
+    padding: 0px 0;
+  }
+
+  .focus_container {
+    background-color: aliceblue;
+    padding: 0;
+
+    .gambar_bg_tentang {
+      overflow: hidden;
+      height: 380px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      place-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding: 0 50px;
+
+      ${devices.smartphone} {
+        padding: 0 25px;
+        flex-direction: column-reverse;
+        height: 450px;
+        gap: 0px;
+      }
+
+      .gambar_img {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 30px;
+        justify-content: center;
+        overflow: hidden;
+        height: 100%;
+
+        ${devices.smartphone} {
+          margin-top: 35px;
+          padding: 0;
+        }
+
+        img {
+          object-fit: contain;
+        }
+      }
     }
   }
 `;

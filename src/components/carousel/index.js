@@ -72,7 +72,7 @@ const SimpleSlider = () => {
   );
 };
 
-export const SimpleSliderFicture = () => {
+export const SimpleSliderFicture = (itemNew) => {
   const settings = {
     dots: false,
     infinite: true,
@@ -95,10 +95,7 @@ export const SimpleSliderFicture = () => {
   return (
     <CorouselSectionFicture>
       <div className="carousel_container">
-        <HeadingComponent
-          Heading="Produk dan Layanan Kami"
-          Text="Kami percaya bahwa pengalaman transaksi perbankan yang pada produk unggulan kami."
-        />
+        <HeadingComponent Heading={itemNew.judul} Text={itemNew.deskripsi} />
         <div className="carousel_container_slide">
           <SliderWrapper>
             <Slider {...settings}>

@@ -16,9 +16,16 @@ const Home = () => {
   return (
     <div>
       <SimpleSlider />
-      <Detail />
+      <Detail
+        judul="Visi"
+        deskripsi="Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
+                seluruh wilayah kerja Kabupaten Pati dan sekitarnya."
+      />
       <OjkInformasi />
-      <SimpleSliderFicture />
+      <SimpleSliderFicture
+        judul="Produk dan Layanan Kami"
+        deskripsi="Kami percaya bahwa pengalaman transaksi perbankan yang pada produk unggulan kami."
+      />
       <FocusComponent />
       <Accordion />
       <Informasi />

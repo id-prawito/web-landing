@@ -4,6 +4,7 @@ import {
   CardItemComponents,
   DetailComponents,
   FocusComponentSite,
+  FocusComponentSiteContact,
   HeadingAll,
   InformasiSite,
   OjkComponents,
@@ -96,7 +97,7 @@ const Card = ({ itemBerita }) => {
   );
 };
 
-const Detail = () => {
+const Detail = (item) => {
   return (
     <DetailComponents>
       <div className="detail_container">
@@ -106,19 +107,16 @@ const Detail = () => {
           </div>
           <div className="detail_text">
             <div className="visi_misi">
-              <div className="detail_text_heading">Visi</div>
-              <div className="detail_text_p">
-                Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
-                seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
-              </div>
+              <div className="detail_text_heading">{item.judul}</div>
+              <div className="detail_text_p">{item.deskripsi}</div>
             </div>
-            <div className="visi_misi">
+            {/* <div className="visi_misi">
               <div className="detail_text_heading">Misi</div>
               <div className="detail_text_p">
                 Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
                 seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -260,6 +258,32 @@ const FocusComponent = () => {
   );
 };
 
+const FocusComponentContactUs = ({ img }) => {
+  return (
+    <FocusComponentSiteContact>
+      <div className="focus_container">
+        <div
+          className="gambar_bg_tentang"
+          style={{ backgroundImage: `url(${bgGopay})` }}
+        >
+          <HeadingComponent
+            Style={{
+              textAlign: "start",
+              width: "100%",
+              color: "#fff",
+            }}
+            Heading="Coba simulasi kredit sekarang!"
+            Text="Untuk mengetahui berapa biaya yang harus digunakan untuk melakukan kredit KPR."
+          />
+          <div className="gambar_img">
+            <img src={img} alt="imgContact" />
+          </div>
+        </div>
+      </div>
+    </FocusComponentSiteContact>
+  );
+};
+
 const Organisasi = ({ item }) => {
   return (
     <OrganisasiSite>
@@ -365,4 +389,5 @@ export {
   FocusComponent,
   DetailOrganisasi,
   DetailLayanan,
+  FocusComponentContactUs,
 };

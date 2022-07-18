@@ -307,7 +307,7 @@ export const ButtonAll = styled.div`
     align-items: center;
     background-color: var(--colorMain);
     padding: 14px 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     max-height: 100%;
     cursor: pointer;
     font-size: 14px;
@@ -331,7 +331,7 @@ export const ButtonTransparentAll = styled.div`
     background-color: transparent;
     border: 1px solid var(--colorMain);
     padding: 14px 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     max-height: 100%;
     cursor: pointer;
     font-size: 14px;

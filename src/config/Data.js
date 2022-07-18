@@ -30,7 +30,7 @@ export const NAVLINKS = [
     name: "PUBLIKASI",
   },
   {
-    to: "/tentang",
+    to: "/we-contact-us",
     icon: FaEllipsisV,
     name: "TENTANG KAMI",
   },

@@ -166,6 +166,10 @@ export const FooterSite = styled.footer`
     background-color: #7c3aed;
     color: #fff;
     padding: 40px 50px;
+
+    ${devices.smartphone} {
+      padding: 40px 25px;
+    }
   }
 
   .footer_content {
