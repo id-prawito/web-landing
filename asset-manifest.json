@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web-landing/static/css/main.80ff91d4.css",
-    "main.js": "/web-landing/static/js/main.2a2c8913.js",
+    "main.js": "/web-landing/static/js/main.4d8a5144.js",
     "static/media/blog.jpg": "/web-landing/static/media/blog.490bef791b07bdd7f7d8.jpg",
     "static/media/jago-2.jpeg": "/web-landing/static/media/jago-2.40254e148c07e8c3b7fd.jpeg",
     "static/media/bpr.png": "/web-landing/static/media/bpr.08e1e7bff4d9b0631ce5.png",
@@ -12,6 +12,7 @@
     "static/media/jago-mobile.jpg": "/web-landing/static/media/jago-mobile.97206cf25897d41397a9.jpg",
     "static/media/organisasi.png": "/web-landing/static/media/organisasi.88263fa02c6eebf89038.png",
     "static/media/jago-3-mobile.jpg": "/web-landing/static/media/jago-3-mobile.dac5971b3de2ef15bb0f.jpg",
+    "static/media/contact-us.png": "/web-landing/static/media/contact-us.9665044e2f32fad67f86.png",
     "static/media/img-2.png": "/web-landing/static/media/img-2.e7c6588d2a4432cd3351.png",
     "static/media/img-1.png": "/web-landing/static/media/img-1.854a2cdc9fd2535cb8bd.png",
     "static/media/banner.png": "/web-landing/static/media/banner.9fe475d22f5bbbbeefa6.png",
@@ -26,10 +27,10 @@
     "static/media/slick.woff": "/web-landing/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/web-landing/index.html",
     "main.80ff91d4.css.map": "/web-landing/static/css/main.80ff91d4.css.map",
-    "main.2a2c8913.js.map": "/web-landing/static/js/main.2a2c8913.js.map"
+    "main.4d8a5144.js.map": "/web-landing/static/js/main.4d8a5144.js.map"
   },
   "entrypoints": [
     "static/css/main.80ff91d4.css",
-    "static/js/main.2a2c8913.js"
+    "static/js/main.4d8a5144.js"
   ]
 }
