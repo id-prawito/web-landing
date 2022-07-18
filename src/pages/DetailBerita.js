@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import DetailBeritaComponents from "../components/detailberita";
-import Header from "../components/header";
 import { BERITA } from "../config/Data";
 
 const DetailBerita = () => {
@@ -15,12 +14,7 @@ const DetailBerita = () => {
     return id.includes(judulBerita);
   });
 
-  return (
-    <div>
-      <Header />
-      <DetailBeritaComponents item={id} newItem={activeServiceList} />
-    </div>
-  );
+  return <DetailBeritaComponents item={id} newItem={activeServiceList} />;
 };
 
 export default DetailBerita;

@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import "./app.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -15,7 +17,9 @@ function App() {
     <BrowserRouter basename="web-landing">
       <ThemeProvider theme={{ theme }}>
         <GlobalStyles />
+        <Header />
         <RouteSite />
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   );

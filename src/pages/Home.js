@@ -1,8 +1,6 @@
 import React from "react";
 import SimpleSlider, { SimpleSliderFicture } from "../components/carousel";
-import Header from "../components/header";
 import Accordion from "../components/accordion";
-import Footer from "../components/footer";
 import { BERITA } from "../config/Data";
 import {
   Card,
@@ -17,7 +15,6 @@ import FormKpr from "../components/form";
 const Home = () => {
   return (
     <div>
-      <Header />
       <SimpleSlider />
       <Detail />
       <OjkInformasi />
@@ -28,7 +25,6 @@ const Home = () => {
       <Card itemBerita={BERITA} />
       <DetailOrganisasi />
       <FormKpr />
-      <Footer />
     </div>
   );
 };
