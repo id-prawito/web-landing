@@ -320,6 +320,15 @@ export const Tabs = styled.div`
       border-radius: 0px;
       transition: all 0.3s ease-in-out;
 
+      .button {
+        text-decoration: none;
+        cursor: pointer;
+        color: unset;
+        font-size: 16px;
+        font-weight: 600;
+        background-color: transparent;
+      }
+
       :hover {
         color: #7c3aed;
       }
@@ -349,6 +358,15 @@ export const Tabs = styled.div`
     border-radius: 8px 8px 0px 0px;
     transition: all 0.3s ease-in-out;
 
+    .button {
+      text-decoration: none;
+      cursor: pointer;
+      color: unset;
+      font-size: 16px;
+      font-weight: 600;
+      background-color: transparent;
+    }
+
     :hover {
       color: #fff;
     }
@@ -362,5 +380,76 @@ export const Tabs = styled.div`
   }
   .text {
     transition: all 3s ease-in-out;
+  }
+`;
+
+export const ContentTabSite = styled.div`
+  .tab_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px;
+
+    .judul {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .value {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+
+      h1 {
+        font-size: 24px;
+        font-weight: 500;
+      }
+
+      p {
+        font-weight: 14px;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+    .value_b {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .value_all {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+
+      h1 {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      ol {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 40px;
+        list-style-type: decimal;
+
+        li {
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 1.5;
+          display: list-item;
+          list-style: decimal;
+          text-align: left;
+        }
+      }
+    }
   }
 `;

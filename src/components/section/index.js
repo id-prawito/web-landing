@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { FaAccusoft, FaPhone } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { ORGANISASI, TABS } from "../../config/Data";
+import { DATA_LAYANAN, ORGANISASI } from "../../config/Data";
 import { HeadingComponent } from "../atom";
 import { ButtonTransparent } from "../form";
 import {
+  ContentTabSite,
   LayananSite,
   OrganisasiSite,
   Tabs,
@@ -124,7 +125,6 @@ const ButtonFilter = ({ filter, button, active }) => {
 };
 
 const Card = (item) => {
-  console.log(item.items);
   return (
     <motion.div
       className="padding"
@@ -199,7 +199,7 @@ const OrganisasiSection = () => {
   );
 };
 
-const Tab = ({ children, active = 0 }) => {
+const Tab = ({ children, active }) => {
   const [activeTab, setActiveTab] = useState(active);
   const [tabsData, setTabsData] = useState([]);
 
@@ -226,40 +226,53 @@ const Tab = ({ children, active = 0 }) => {
             className={`tabs_nav ${idx === activeTab ? "active" : ""}`}
             key={idx}
           >
-            <a href="#try" onClick={() => setActiveTab(idx)}>
+            <button className="button" onClick={() => setActiveTab(idx)}>
               {tabs.tab}
-            </a>
+            </button>
           </li>
         ))}
       </ul>
 
       <div className="tabs_content">
         <div className="tabs_content_text">
-          {/* {tabsData[activeTab] && tabsData[activeTab].children}
-          {console.log(activeTab)} */}
-          {activeTab === 0 ? (
-            <ContentTab
-              item={tabsData[activeTab] && tabsData[activeTab].children}
-            />
-          ) : activeTab === 1 ? (
-            <ContentTab
-              item={tabsData[activeTab] && tabsData[activeTab].children}
-            />
-          ) : activeTab === 2 ? (
-            <ContentTab
-              item={tabsData[activeTab] && tabsData[activeTab].children}
-            />
-          ) : (
-            "Data Tidak Ditemukan"
-          )}
+          <ContentTab
+            item={tabsData[activeTab] && tabsData[activeTab].children}
+            judul={tabsData[activeTab] && tabsData[activeTab].tab}
+          />
         </div>
       </div>
     </Tabs>
   );
 };
 
-const ContentTab = ({ item }) => {
-  return <div>{item}</div>;
+const ContentTab = (item) => {
+  return (
+    <ContentTabSite>
+      <div className="tab_content">
+        <div className="judul">{item.judul}</div>
+        <div className="value">
+          <h1>Apa yang Dimaksud dengan {item.judul} ?</h1>
+          <p>{item.p}</p>
+          <div className="value_b">
+            {item.item &&
+              item.item.fitur.map((item, i) => (
+                <div key={i} className="value_all">
+                  <h1>{item.judul}</h1>
+                  <p>{item.text_a}</p>
+                  <ol>
+                    {item.text.map((item, i) => (
+                      <div key={i}>
+                        <li>{item}</li>
+                      </div>
+                    ))}
+                  </ol>
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+    </ContentTabSite>
+  );
 };
 
 const TabPanel = ({ children }) => {
@@ -269,6 +282,8 @@ const TabPanel = ({ children }) => {
 Tab.TabPanel = TabPanel;
 
 const LayananSection = ({ judul }) => {
+  const TABS = DATA_LAYANAN;
+
   return (
     <LayananSite>
       <div className="layanan_container">
@@ -279,7 +294,7 @@ const LayananSection = ({ judul }) => {
           />
           <div className="layanan_tabs">
             <div className="content">
-              <Tab active={1}>
+              <Tab active={0}>
                 {TABS.map((tab, idx) => (
                   <Tab.TabPanel key={`Tab-${idx}`} tab={tab.judul}>
                     {tab.content}
