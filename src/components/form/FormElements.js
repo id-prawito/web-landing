@@ -330,7 +330,7 @@ export const ButtonTransparentAll = styled.div`
     align-items: center;
     background-color: transparent;
     border: 1px solid var(--colorMain);
-    padding: 14px 20px;
+    padding: 12px 20px;
     border-radius: 20px;
     max-height: 100%;
     cursor: pointer;

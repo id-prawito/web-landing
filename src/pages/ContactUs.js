@@ -1,12 +1,8 @@
 import React from "react";
-import {
-  Detail,
-  DetailOrganisasi,
-  FocusComponentContactUs,
-} from "../components/atom";
+import { Detail, FocusComponentContactUs } from "../components/atom";
 import imgContact from "../assets/img/contact-us.png";
 import { SimpleSliderFicture } from "../components/carousel";
-import { TentangKami } from "../components/section";
+import { OrganisasiSection, TentangKami } from "../components/section";
 
 const ContactUs = () => {
   return (
@@ -20,7 +16,7 @@ const ContactUs = () => {
         judul="Foto dan Informasi Tentang Kami"
         deskripsi="Koperasi BPR Wedarijaksa Kabupaten Pati (KBPR Wedarijaksa) berlokasi"
       />
-      <DetailOrganisasi />
+      <OrganisasiSection />
       <TentangKami />
     </>
   );

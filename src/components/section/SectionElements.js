@@ -149,3 +149,116 @@ export const TentangKamiSite = styled.section`
     }
   }
 `;
+
+export const OrganisasiSite = styled.section`
+  ${devices.smartphone} {
+    padding: 50px 0;
+  }
+  .organisasi {
+    &_container {
+      padding: 0 100px;
+
+      ${devices.smartphone} {
+        padding: 0 25px;
+      }
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &_page {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .button_organisasi {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: flex-start;
+        align-items: center;
+
+        ${devices.smartphone} {
+          gap: 20px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      .card_organisasi {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        ${devices.smartphone} {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          place-items: center;
+        }
+
+        .padding {
+          padding: 0px;
+        }
+
+        .card_component {
+          background: #fff;
+          max-width: 320px;
+          height: auto;
+          border-radius: 20px;
+          color: #000;
+          padding: 1rem;
+          overflow: hidden;
+
+          ${devices.smartphone} {
+            padding: 2px;
+          }
+
+          .gambar_img {
+            padding: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+
+            img {
+              object-fit: cover;
+              width: 100%;
+            }
+          }
+          .text_nama {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            h1 {
+              font-size: 18px;
+              font-weight: 600;
+            }
+
+            p {
+              font-size: 12px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+
+    &_download {
+      font-size: 13px;
+      font-weight: 400;
+      background-color: #f4f4f4;
+      padding: 8px 15px;
+      border-radius: 8px;
+      width: max-content;
+      color: #a606ae;
+      margin: auto;
+      margin-top: 60px;
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+`;

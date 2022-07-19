@@ -324,7 +324,6 @@ const DetailOrganisasi = () => {
   ];
 
   const [organisasi, setOrganisasi] = useState(ORGANISASI);
-  // const [buttons, setButtons] = useState(allOrganisasi);
 
   const buttons = allOrganisasi;
 

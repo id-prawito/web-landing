@@ -5,12 +5,12 @@ import { BERITA } from "../config/Data";
 import {
   Card,
   Detail,
-  DetailOrganisasi,
   FocusComponent,
   Informasi,
   OjkInformasi,
 } from "../components/atom";
 import FormKpr from "../components/form";
+import { OrganisasiSection } from "../components/section";
 
 const Home = () => {
   return (
@@ -30,7 +30,7 @@ const Home = () => {
       <Accordion />
       <Informasi />
       <Card itemBerita={BERITA} />
-      <DetailOrganisasi />
+      <OrganisasiSection />
       <FormKpr />
     </div>
   );

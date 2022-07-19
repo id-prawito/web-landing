@@ -102,6 +102,12 @@ export const ORGANISASI = [
     jabatan: "Anggota",
   },
   {
+    id: 8,
+    label: "Github",
+    img: organisasiImg,
+    jabatan: "Anggota",
+  },
+  {
     id: 5,
     label: "Github",
     img: organisasiImg,

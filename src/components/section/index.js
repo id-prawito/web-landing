@@ -1,8 +1,11 @@
-import React from "react";
-import { FaPhone } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaAccusoft, FaPhone } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+import { ORGANISASI } from "../../config/Data";
 import { HeadingComponent } from "../atom";
-import { TentangKamiSite } from "./SectionElements";
+import { ButtonTransparent } from "../form";
+import { OrganisasiSite, TentangKamiSite } from "./SectionElements";
+import { motion, AnimatePresence } from "framer-motion";
 
 const HubungiKami = () => {
   return <div>Hubungi Kami</div>;
@@ -98,4 +101,97 @@ const TentangKami = () => {
   );
 };
 
-export { HubungiKami, TentangKami };
+const ButtonFilter = ({ filter, button, active }) => {
+  return (
+    <>
+      {button.map((buttonItem, i) => (
+        <ButtonTransparent
+          active={active === buttonItem ? "active" : ""}
+          key={i}
+          style={{ fontWeight: "400", border: "2px solid var(--colorMain)" }}
+          icon={FaAccusoft}
+          label={buttonItem}
+          onClick={() => filter(buttonItem)}
+        />
+      ))}
+    </>
+  );
+};
+
+const Card = (item) => {
+  console.log(item.items);
+  return (
+    <motion.div
+      className="padding"
+      layout
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ type: "easeInOut", duration: 0.8 }}
+    >
+      <div className="card_component">
+        <div className="gambar_img">
+          <img src={item.items.img} alt={item.items.label} />
+        </div>
+        <div className="text_nama">
+          <h1>{item.items.label}</h1>
+          <p>{item.items.jabatan}</p>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
+const OrganisasiSection = () => {
+  const allOrganisasi = [
+    "All",
+    ...new Set(ORGANISASI.map((item) => item.jabatan)),
+  ];
+
+  const [organisasi, setOrganisasi] = useState(ORGANISASI);
+
+  const buttons = allOrganisasi;
+
+  const [active, setActive] = useState("All");
+
+  const filter = (button) => {
+    if (button === "All") {
+      setOrganisasi(ORGANISASI);
+      setActive(button);
+      return;
+    }
+    const filteredData = ORGANISASI.filter((item) => item.jabatan === button);
+    setOrganisasi(filteredData);
+    setActive(button);
+  };
+
+  return (
+    <OrganisasiSite>
+      <div className="organisasi_container">
+        <div className="organisasi_content">
+          <HeadingComponent
+            Heading="Pimpinan Kamis"
+            Text="Jika Anda memiliki pertanyaan atau tidak dapat menemukan apa yang Anda cari, jangan ragu untuk menghubungi kami di:"
+          />
+        </div>
+        <div className="organisasi_page">
+          <div className="button_organisasi">
+            <ButtonFilter filter={filter} button={buttons} active={active} />
+          </div>
+          <motion.div layout className="card_organisasi">
+            <AnimatePresence>
+              {organisasi.map((item, i) => (
+                <Card judul="Bisa 1" items={item} key={i} />
+              ))}
+            </AnimatePresence>
+          </motion.div>
+        </div>
+        <div className="organisasi_download">
+          <a href="#try">Download Struktur Organisasi</a>
+        </div>
+      </div>
+    </OrganisasiSite>
+  );
+};
+
+export { HubungiKami, TentangKami, OrganisasiSection };
