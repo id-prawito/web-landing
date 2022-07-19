@@ -9,6 +9,7 @@ import imgTry3Mobile from "../../assets/img/jago-3-mobile.jpg";
 import Slider from "react-slick";
 import SliderWrapper from "./_SlickSliderStyle";
 import { DetailLayanan, HeadingComponent } from "../atom";
+import imgDetail from "../../assets/img/2.png";
 
 const SimpleSlider = () => {
   const [isMobile, setIsMobile] = useState(
@@ -74,7 +75,7 @@ const SimpleSlider = () => {
 
 export const SimpleSliderFicture = (itemNew) => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -84,12 +85,12 @@ export const SimpleSliderFicture = (itemNew) => {
     autoplaySpeed: 4000,
     cssEase: "linear",
     arrows: true,
-    appendDots: (dots) => <ul>{dots}</ul>,
-    customPaging: (i) => (
-      <div className="ft-slick__dots--custom">
-        <div className="loading" />
-      </div>
-    ),
+    // appendDots: (dots) => <ul>{dots}</ul>,
+    // customPaging: (i) => (
+    //   <div className="ft-slick__dots--custom">
+    //     <div className="loading" />
+    //   </div>
+    // ),
   };
 
   return (
@@ -99,11 +100,9 @@ export const SimpleSliderFicture = (itemNew) => {
         <div className="carousel_container_slide">
           <SliderWrapper>
             <Slider {...settings}>
-              <DetailLayanan item="Label 1" />
-              <DetailLayanan item="Label 2" />
-              <DetailLayanan item="Label 3" />
-              <DetailLayanan item="Label 4" />
-              <DetailLayanan item="Label 5" />
+              <DetailLayanan item="Label 1" imgDetail={imgDetail} />
+              <DetailLayanan item="Label 2" imgDetail={imgDetail} />
+              <DetailLayanan item="Label 3" imgDetail={imgDetail} />
             </Slider>
           </SliderWrapper>
         </div>

@@ -103,7 +103,11 @@ const Header = () => {
                     <div className="closing">
                       <div className="header__item">
                         <div className="text_menu">
-                          <NavLink onClick={() => humberHandle()} to={item.to}>
+                          <NavLink
+                            onClick={() => humberHandle()}
+                            to={item.to}
+                            state={{ from: item.angka }}
+                          >
                             {item.name}
                           </NavLink>
                         </div>

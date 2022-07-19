@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaAccusoft, FaPhone } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { DATA_LAYANAN, ORGANISASI } from "../../config/Data";
+import { ORGANISASI } from "../../config/Data";
 import { HeadingComponent } from "../atom";
 import { ButtonTransparent } from "../form";
 import {
@@ -281,28 +281,86 @@ const TabPanel = ({ children }) => {
 
 Tab.TabPanel = TabPanel;
 
-const LayananSection = ({ judul }) => {
-  const TABS = DATA_LAYANAN;
+const LayananSection = ({ judul, id, DATA_TABS, link }) => {
+  const TABS = DATA_TABS.contentFull;
+  const number = parseInt(id);
 
   return (
     <LayananSite>
       <div className="layanan_container">
         <div className="layanan_content">
           <HeadingComponent
-            Heading="Layanan"
+            Heading={judul}
             Text="Jika Anda memiliki pertanyaan atau tidak dapat menemukan apa yang Anda cari, jangan ragu untuk menghubungi kami di:"
           />
-          <div className="layanan_tabs">
-            <div className="content">
-              <Tab active={0}>
-                {TABS.map((tab, idx) => (
-                  <Tab.TabPanel key={`Tab-${idx}`} tab={tab.judul}>
-                    {tab.content}
-                  </Tab.TabPanel>
-                ))}
-              </Tab>
-            </div>
-          </div>
+
+          {link === "penyimpanan-dana" ? (
+            <>
+              {number === 0 || number === 1 || number === 2 ? (
+                <div className="layanan_tabs">
+                  <div className="content">
+                    {number ? (
+                      <Tab active={number}>
+                        {TABS.map((tab, idx) => (
+                          <Tab.TabPanel key={`Tab-${idx}`} tab={tab.judul}>
+                            {tab.content}
+                          </Tab.TabPanel>
+                        ))}
+                      </Tab>
+                    ) : (
+                      <Tab active={0}>
+                        {TABS.map((tab, idx) => (
+                          <Tab.TabPanel key={`Tab-${idx}`} tab={tab.judul}>
+                            {tab.content}
+                          </Tab.TabPanel>
+                        ))}
+                      </Tab>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div className="layanan_tabs">
+                  <div className="content">Data Tidak Ditemukan</div>
+                </div>
+              )}
+            </>
+          ) : link === "penyaluran-dana" ? (
+            <>
+              {number === 0 ||
+              number === 1 ||
+              number === 2 ||
+              number === 2 ||
+              number === 3 ? (
+                <div className="layanan_tabs">
+                  <div className="content">
+                    {number ? (
+                      <Tab active={number}>
+                        {TABS.map((tab, idx) => (
+                          <Tab.TabPanel key={`Tab-${idx}`} tab={tab.judul}>
+                            {tab.content}
+                          </Tab.TabPanel>
+                        ))}
+                      </Tab>
+                    ) : (
+                      <Tab active={0}>
+                        {TABS.map((tab, idx) => (
+                          <Tab.TabPanel key={`Tab-${idx}`} tab={tab.judul}>
+                            {tab.content}
+                          </Tab.TabPanel>
+                        ))}
+                      </Tab>
+                    )}
+                  </div>
+                </div>
+              ) : (
+                <div className="layanan_tabs">
+                  <div className="content">Data Tidak Ditemukan</div>
+                </div>
+              )}
+            </>
+          ) : (
+            "Data Tidak Ada Juga"
+          )}
         </div>
       </div>
     </LayananSite>

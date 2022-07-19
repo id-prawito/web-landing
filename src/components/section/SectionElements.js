@@ -442,7 +442,7 @@ export const ContentTabSite = styled.div`
         list-style-type: decimal;
 
         li {
-          font-size: 13px;
+          font-size: 14px;
           font-weight: 300;
           line-height: 1.5;
           display: list-item;
