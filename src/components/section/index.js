@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaAccusoft, FaPhone } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { ORGANISASI } from "../../config/Data";
+import { ORGANISASI, TABS } from "../../config/Data";
 import { HeadingComponent } from "../atom";
 import { ButtonTransparent } from "../form";
-import { OrganisasiSite, TentangKamiSite } from "./SectionElements";
+import {
+  LayananSite,
+  OrganisasiSite,
+  Tabs,
+  TentangKamiSite,
+} from "./SectionElements";
 import { motion, AnimatePresence } from "framer-motion";
 
 const HubungiKami = () => {
@@ -194,4 +199,99 @@ const OrganisasiSection = () => {
   );
 };
 
-export { HubungiKami, TentangKami, OrganisasiSection };
+const Tab = ({ children, active = 0 }) => {
+  const [activeTab, setActiveTab] = useState(active);
+  const [tabsData, setTabsData] = useState([]);
+
+  useEffect(() => {
+    let data = [];
+
+    React.Children.forEach(children, (element) => {
+      if (!React.isValidElement(element)) return;
+
+      const {
+        props: { tab, children },
+      } = element;
+      data.push({ tab, children });
+    });
+
+    setTabsData(data);
+  }, [children]);
+
+  return (
+    <Tabs>
+      <ul className="tabs_button">
+        {tabsData.map((tabs, idx) => (
+          <li
+            className={`tabs_nav ${idx === activeTab ? "active" : ""}`}
+            key={idx}
+          >
+            <a href="#try" onClick={() => setActiveTab(idx)}>
+              {tabs.tab}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <div className="tabs_content">
+        <div className="tabs_content_text">
+          {/* {tabsData[activeTab] && tabsData[activeTab].children}
+          {console.log(activeTab)} */}
+          {activeTab === 0 ? (
+            <ContentTab
+              item={tabsData[activeTab] && tabsData[activeTab].children}
+            />
+          ) : activeTab === 1 ? (
+            <ContentTab
+              item={tabsData[activeTab] && tabsData[activeTab].children}
+            />
+          ) : activeTab === 2 ? (
+            <ContentTab
+              item={tabsData[activeTab] && tabsData[activeTab].children}
+            />
+          ) : (
+            "Data Tidak Ditemukan"
+          )}
+        </div>
+      </div>
+    </Tabs>
+  );
+};
+
+const ContentTab = ({ item }) => {
+  return <div>{item}</div>;
+};
+
+const TabPanel = ({ children }) => {
+  return { children };
+};
+
+Tab.TabPanel = TabPanel;
+
+const LayananSection = ({ judul }) => {
+  return (
+    <LayananSite>
+      <div className="layanan_container">
+        <div className="layanan_content">
+          <HeadingComponent
+            Heading="Layanan"
+            Text="Jika Anda memiliki pertanyaan atau tidak dapat menemukan apa yang Anda cari, jangan ragu untuk menghubungi kami di:"
+          />
+          <div className="layanan_tabs">
+            <div className="content">
+              <Tab active={1}>
+                {TABS.map((tab, idx) => (
+                  <Tab.TabPanel key={`Tab-${idx}`} tab={tab.judul}>
+                    {tab.content}
+                  </Tab.TabPanel>
+                ))}
+              </Tab>
+            </div>
+          </div>
+        </div>
+      </div>
+    </LayananSite>
+  );
+};
+
+export { HubungiKami, TentangKami, OrganisasiSection, LayananSection };

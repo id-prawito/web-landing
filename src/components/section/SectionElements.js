@@ -262,3 +262,105 @@ export const OrganisasiSite = styled.section`
     }
   }
 `;
+
+export const LayananSite = styled.section`
+  .layanan {
+    &_container {
+      padding: 0 100px;
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 20;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &_tabs {
+      width: 100%;
+      height: max-content;
+      background: #fff;
+      border: 1px solid #bdbdbd;
+      box-sizing: border-box;
+      border-radius: 20px;
+      transition: box-shadow 1s;
+      width: 100%;
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        padding-top: 30px;
+      }
+    }
+  }
+`;
+
+export const Tabs = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .tabs {
+    &_button {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &_nav {
+      padding: 16px 32px;
+      text-transform: capitalize;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      background-color: #efefef;
+      color: #828282;
+      border-radius: 0px;
+      transition: all 0.3s ease-in-out;
+
+      :hover {
+        color: #7c3aed;
+      }
+
+      :first-child {
+        border-radius: 8px 0px 0px 8px;
+      }
+      :last-child {
+        border-radius: 0px 8px 8px 0px;
+      }
+    }
+
+    &_content {
+      display: inline;
+      transition: all 4s ease-in-out;
+      .fade {
+        display: block;
+      }
+    }
+  }
+
+  .active {
+    padding-top: 30px;
+    margin-top: -15px !important;
+    color: #fff;
+    background-color: #7c3aed;
+    border-radius: 8px 8px 0px 0px;
+    transition: all 0.3s ease-in-out;
+
+    :hover {
+      color: #fff;
+    }
+
+    :first-child {
+      border-radius: 8px 8px 0px 8px;
+    }
+    :last-child {
+      border-radius: 8px 8px 8px 0px;
+    }
+  }
+  .text {
+    transition: all 3s ease-in-out;
+  }
+`;

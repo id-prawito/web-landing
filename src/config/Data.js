@@ -10,7 +10,7 @@ export const NAVLINKS = [
     name: "HOME",
   },
   {
-    to: "experience",
+    to: "/layanan-kami",
     icon: FaEllipsisV,
     name: "PRODUK & LAYANAN",
   },
@@ -153,5 +153,26 @@ export const BERITA = [
     img: blogImg,
     kontenBerita:
       "Bikin anggaran, baik anggaran jangka pendek maupun jangka panjang, itu gampang-gampang susah. Gampang jika tahu apa yang mesti dilakukan, susah karena ada tantangan seperti konsistensi dan kedisiplinan. Kali ini, Jagomin mau bagikan 4 cara yang bisa diikuti supaya kamu jadi selangkah lebih jago membuat anggaran jangka panjang.",
+  },
+];
+
+export const TABS = [
+  {
+    id: 1,
+    judul: "Tabungan iB Wadiyah",
+    content:
+      "1 Bikin anggaran, baik anggaran jangka pendek maupun jangka panjang, itu gampang-gampang susah. Gampang jika tahu apa yang mesti dilakukan, susah karena ada tantangan seperti konsistensi dan kedisiplinan. Kali ini, Jagomin mau bagikan 4 cara yang bisa diikuti supaya kamu jadi selangkah lebih jago membuat anggaran jangka panjang.",
+  },
+  {
+    id: 2,
+    judul: "Tabungan iB Mudharabah",
+    content:
+      "2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has",
+  },
+  {
+    id: 3,
+    judul: "Deposito iB Mudharabah",
+    content:
+      "3 page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now",
   },
 ];
