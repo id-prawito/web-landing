@@ -11,6 +11,10 @@ export const DetailBeritaSite = styled.section`
       ${devices.smartphone} {
         padding: 0 25px;
       }
+
+      ${devices.ipads} {
+        padding: 0 50px;
+      }
     }
 
     &_content {

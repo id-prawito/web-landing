@@ -27,6 +27,11 @@ export const CorouselSectionFicture = styled.section`
   ${devices.smartphone} {
     padding: 50px 0;
   }
+
+  ${devices.ipads} {
+    padding: 25px 0;
+  }
+
   .section_carousel {
     display: flex;
     justify-content: center;
@@ -42,9 +47,16 @@ export const CorouselSectionFicture = styled.section`
       ${devices.smartphone} {
         padding: 0px 25px;
       }
+      ${devices.ipads} {
+        padding: 0px 50px;
+      }
     }
     &_container_slide {
       ${devices.smartphone} {
+        padding: 0px 25px;
+      }
+
+      ${devices.ipads} {
         padding: 0px 25px;
       }
     }

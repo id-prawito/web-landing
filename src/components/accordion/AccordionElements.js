@@ -18,6 +18,10 @@ const AccordionSite = styled.section`
     ${devices.smartphone} {
       padding: 0px 25px;
     }
+
+    ${devices.ipads} {
+      padding: 0px 50px;
+    }
   }
 
   .accordion_pembungkus {
@@ -35,6 +39,18 @@ const AccordionSite = styled.section`
 
     ${devices.smartphone} {
       flex-direction: column-reverse;
+    }
+
+    ${devices.ipads} {
+      flex-direction: column-reverse;
+    }
+
+    .pembungkus {
+      ${devices.ipads} {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 

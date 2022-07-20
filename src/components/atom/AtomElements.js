@@ -5,6 +5,11 @@ export const InformasiSite = styled.section`
   ${devices.smartphone} {
     padding: 50px 0;
   }
+
+  ${devices.ipads} {
+    padding: 25px 0;
+  }
+
   .informasi {
     display: flex;
     flex-direction: row;
@@ -32,6 +37,10 @@ export const InformasiSite = styled.section`
 
       ${devices.smartphone} {
         padding: 0px 25px;
+      }
+
+      ${devices.ipads} {
+        padding: 0px 50px;
       }
     }
   }
@@ -134,11 +143,19 @@ export const CardComponents = styled.section`
   ${devices.smartphone} {
     padding: 50px 0;
   }
+
+  ${devices.ipads} {
+    padding: 25px 0;
+  }
   .card_container {
     padding: 0 100px;
 
     ${devices.smartphone} {
       padding: 0 25px;
+    }
+
+    ${devices.ipads} {
+      padding: 0 50px;
     }
   }
 
@@ -164,22 +181,31 @@ export const CardComponents = styled.section`
 
   .card_content {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
     align-items: flex-start;
     justify-content: center;
     height: 100%;
     gap: 30px;
 
     ${devices.smartphone} {
-      grid-template-columns: repeat(1, auto);
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    ${devices.ipads} {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 `;
 
 export const DetailComponents = styled.section`
   padding: 50px 0;
+
   ${devices.smartphone} {
     padding: 20px 0;
+  }
+
+  ${devices.ipads} {
+    padding: 25px 0;
   }
 
   .detail {
@@ -189,6 +215,10 @@ export const DetailComponents = styled.section`
       ${devices.smartphone} {
         padding: 0px 25px;
       }
+
+      ${devices.ipads} {
+        padding: 0px 50px;
+      }
     }
     &_content {
       display: flex;
@@ -196,6 +226,10 @@ export const DetailComponents = styled.section`
       gap: 20px;
 
       ${devices.smartphone} {
+        flex-direction: column;
+      }
+
+      ${devices.ipads} {
         flex-direction: column;
       }
     }
@@ -211,6 +245,10 @@ export const DetailComponents = styled.section`
       ${devices.smartphone} {
         width: 100%;
       }
+
+      ${devices.ipads} {
+        width: 100%;
+      }
     }
     &_text {
       display: flex;
@@ -222,6 +260,10 @@ export const DetailComponents = styled.section`
       gap: 40px;
 
       ${devices.smartphone} {
+        width: 100%;
+      }
+
+      ${devices.ipads} {
         width: 100%;
       }
 
@@ -247,15 +289,26 @@ export const DetailComponents = styled.section`
 `;
 
 export const OjkComponents = styled.section`
+  padding: 50px 0;
+
   ${devices.smartphone} {
-    padding: 50px 0;
+    padding: 20px 0;
   }
+
+  ${devices.ipads} {
+    padding: 25px 0;
+  }
+
   .ojk {
     &_container {
       padding: 0 100px;
 
       ${devices.smartphone} {
         padding: 0px 25px;
+      }
+
+      ${devices.ipads} {
+        padding: 0px 50px;
       }
     }
 
@@ -305,6 +358,10 @@ export const HeadingAll = styled.div`
     ${devices.smartphone} {
       width: 100%;
       padding: 30px 0px;
+    }
+
+    ${devices.ipads} {
+      width: 100%;
     }
 
     h2 {

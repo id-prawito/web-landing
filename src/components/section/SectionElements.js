@@ -5,12 +5,20 @@ export const TentangKamiSite = styled.section`
   ${devices.smartphone} {
     padding: 50px 0;
   }
+
+  ${devices.ipads} {
+    padding: 25px 0;
+  }
   .tentang {
     &_container {
       padding: 0 100px;
 
       ${devices.smartphone} {
         padding: 0 25px;
+      }
+
+      ${devices.ipads} {
+        padding: 0 50px;
       }
     }
 
@@ -31,6 +39,10 @@ export const TentangKamiSite = styled.section`
       width: 100%;
 
       ${devices.smartphone} {
+        flex-direction: column;
+      }
+
+      ${devices.ipads} {
         flex-direction: column;
       }
 
@@ -112,6 +124,11 @@ export const TentangKamiSite = styled.section`
           grid-row-gap: 40px;
         }
 
+        ${devices.ipads} {
+          grid-template-columns: repeat(2, 1fr);
+          grid-row-gap: 40px;
+        }
+
         .cabang_content {
           display: flex;
           flex-direction: column;
@@ -154,12 +171,20 @@ export const OrganisasiSite = styled.section`
   ${devices.smartphone} {
     padding: 50px 0;
   }
+
+  ${devices.ipads} {
+    padding: 25px 0;
+  }
   .organisasi {
     &_container {
       padding: 0 100px;
 
       ${devices.smartphone} {
         padding: 0 25px;
+      }
+
+      ${devices.ipads} {
+        padding: 0 50px;
       }
     }
 
@@ -197,6 +222,12 @@ export const OrganisasiSite = styled.section`
         ${devices.smartphone} {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
+          place-items: center;
+        }
+
+        ${devices.ipads} {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
           place-items: center;
         }
 
@@ -267,12 +298,20 @@ export const LayananSite = styled.section`
   ${devices.smartphone} {
     padding: 50px 0;
   }
+
+  ${devices.ipads} {
+    padding: 25px 0;
+  }
   .layanan {
     &_container {
       padding: 0 100px;
 
       ${devices.smartphone} {
         padding: 0 25px;
+      }
+
+      ${devices.ipads} {
+        padding: 0 50px;
       }
     }
 
@@ -441,6 +480,10 @@ export const ContentTabSite = styled.div`
         text-align: left;
       }
 
+      ${devices.ipads} {
+        text-align: left;
+      }
+
       h1 {
         font-size: 24px;
         font-weight: 500;
@@ -476,6 +519,10 @@ export const ContentTabSite = styled.div`
       p {
         font-size: 14px;
         line-height: 1.5;
+
+        ${devices.ipads} {
+          text-align: left;
+        }
       }
       ol {
         display: flex;

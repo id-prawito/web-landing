@@ -5,11 +5,18 @@ export const FormSite = styled.section`
   ${devices.smartphone} {
     padding: 50px 0;
   }
+  ${devices.ipads} {
+    padding: 25px 0;
+  }
   .form_container {
     padding: 0 100px;
 
     ${devices.smartphone} {
       padding: 0 25px;
+    }
+
+    ${devices.ipads} {
+      padding: 0 50px;
     }
   }
 
@@ -197,6 +204,10 @@ export const FormContent = styled.div`
           ${devices.smartphone} {
             flex-direction: column;
             gap: 10px;
+          }
+
+          @media only screen and (min-width: 470px) {
+            flex-direction: row;
           }
 
           b {

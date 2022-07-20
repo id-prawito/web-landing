@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { HeaderContainer, HeaderSite } from "./HeaderElements";
 import { FiMenu, FiX } from "react-icons/fi";
 import { NAVLINKS } from "../../config/Data";
-import logoSite from "../../assets/img/logo_site.png";
+import logoSite from "../../assets/img/logo_new.png";
 import ThemeSwitcher from "../../config/ThemeSwitcher";
 import { NavLink } from "react-router-dom";
 

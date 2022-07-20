@@ -16,6 +16,12 @@ export const FooterSite = styled.footer`
         align-items: flex-start;
       }
 
+      ${devices.ipads} {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+      }
+
       &_content {
         display: flex;
         align-items: center;
@@ -38,6 +44,16 @@ export const FooterSite = styled.footer`
               grid-template-columns: repeat(2, auto);
               gap: 15px;
             }
+
+            @media only screen and (min-width: 420px) {
+              grid-template-columns: repeat(3, auto);
+            }
+
+            ${devices.ipads} {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 15px;
+            }
           }
         }
       }
@@ -54,6 +70,11 @@ export const FooterSite = styled.footer`
       gap: 8px;
 
       ${devices.smartphone} {
+        padding: 0;
+        justify-content: flex-start;
+      }
+
+      ${devices.ipads} {
         padding: 0;
         justify-content: flex-start;
       }
@@ -80,6 +101,10 @@ export const FooterSite = styled.footer`
       ${devices.smartphone} {
         justify-content: flex-start;
       }
+
+      ${devices.ipads} {
+        justify-content: flex-end;
+      }
     }
 
     &_desc {
@@ -91,6 +116,12 @@ export const FooterSite = styled.footer`
 
       ${devices.smartphone} {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      ${devices.ipads} {
+        flex-direction: row;
         align-items: flex-start;
         gap: 20px;
       }
@@ -120,6 +151,15 @@ export const FooterSite = styled.footer`
           display: grid;
           grid-template-columns: repeat(2, auto);
           gap: 10px;
+          place-items: baseline;
+          padding: 0;
+        }
+
+        ${devices.ipads} {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          grid-column-gap: 20px;
+          grid-row-gap: 10px;
           place-items: baseline;
           padding: 0;
         }
