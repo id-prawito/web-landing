@@ -48,6 +48,10 @@ export const HeaderContainer = styled.div`
     padding: 0px 25px;
   }
 
+  @media only screen and (max-width: 1024px) {
+    padding: 0px 25px;
+  }
+
   .menuIcon,
   .closeIcon {
     display: flex;
@@ -78,10 +82,10 @@ export const HeaderContainer = styled.div`
   }
   .navOverlay {
     position: absolute;
-    background: #7227f3;
+    background-color: rgba(255, 255, 255, 0.95);
     height: 100vh;
     width: 100vw;
-    opacity: 0.2;
+    opacity: 0.8;
     left: 0;
     top: 0;
   }
@@ -150,6 +154,11 @@ export const HeaderContainer = styled.div`
         font-size: 15px;
       }
 
+      @media only screen and (max-width: 1024px) {
+        font-weight: 500;
+        font-size: 15px;
+      }
+
       .resume {
         display: flex;
         align-items: center;
@@ -209,6 +218,11 @@ export const HeaderContainer = styled.div`
           box-shadow: -1px 4px 10px 3px rgb(0 0 0 / 16%);
           transform: translateX(0);
         }
+
+        @media only screen and (max-width: 1024px) {
+          box-shadow: -1px 4px 10px 3px rgb(0 0 0 / 16%);
+          transform: translateX(0);
+        }
       }
 
       nav {
@@ -217,7 +231,7 @@ export const HeaderContainer = styled.div`
           justify-content: center;
           flex-direction: column;
           background-color: ${({ theme: { theme } }) =>
-            theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
+            theme === themeList.light ? "#ffffff" : "#1a1d29"};
           max-width: 250px;
           overflow: hidden;
           position: fixed;
@@ -235,7 +249,25 @@ export const HeaderContainer = styled.div`
           justify-content: center;
           flex-direction: column;
           background-color: ${({ theme: { theme } }) =>
-            theme === themeList.light ? "#f0f8ff" : "#1a1d29"};
+            theme === themeList.light ? "#ffffff" : "#1a1d29"};
+          max-width: 250px;
+          overflow: hidden;
+          position: fixed;
+          height: 100vh;
+          z-index: 100;
+          width: 90%;
+          right: 0;
+          top: 0;
+          transform: translateX(100%);
+          transition: 0.3s ease-in-out transform;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          background-color: ${({ theme: { theme } }) =>
+            theme === themeList.light ? "#ffffff" : "#1a1d29"};
           max-width: 250px;
           overflow: hidden;
           position: fixed;
@@ -263,6 +295,11 @@ export const HeaderContainer = styled.div`
             gap: 20px;
           }
 
+          @media only screen and (max-width: 1024px) {
+            flex-direction: column;
+            gap: 20px;
+          }
+
           li {
             .closing {
               display: flex;
@@ -285,6 +322,10 @@ export const HeaderContainer = styled.div`
         }
 
         ${devices.ipads} {
+          display: none;
+        }
+
+        @media only screen and (max-width: 1024px) {
           display: none;
         }
       }
