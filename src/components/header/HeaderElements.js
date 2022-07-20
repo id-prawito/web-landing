@@ -56,7 +56,7 @@ export const HeaderContainer = styled.div`
   .closeIcon {
     display: flex;
     align-items: center;
-    margin-right: -10px;
+    /* margin-right: -10px; */
     cursor: pointer;
     svg {
       color: ${({ theme: { theme } }) =>
@@ -94,11 +94,23 @@ export const HeaderContainer = styled.div`
     &__logo_link {
       display: flex;
       justify-content: space-between;
-      flex-direction: row;
+      flex-direction: row-reverse;
       align-items: center;
       height: 50px;
       width: 100%;
-      gap: 10px;
+      /* gap: 10px; */
+
+      ${devices.smartphone} {
+        flex-direction: row;
+      }
+
+      ${devices.ipads} {
+        flex-direction: row;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        flex-direction: row;
+      }
     }
 
     &__logo {
@@ -111,6 +123,19 @@ export const HeaderContainer = styled.div`
       cursor: pointer;
       display: flex;
       width: 100%;
+      /* margin-left: 10px; */
+
+      ${devices.smartphone} {
+        margin-left: 10px;
+      }
+
+      ${devices.ipads} {
+        margin-left: 10px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        margin-left: 10px;
+      }
 
       .logo {
         &__img {
@@ -238,9 +263,9 @@ export const HeaderContainer = styled.div`
           height: 100vh;
           z-index: 100;
           width: 90%;
-          right: 0;
+          left: 0;
           top: 0;
-          transform: translateX(100%);
+          transform: translateX(-100%);
           transition: 0.3s ease-in-out transform;
         }
 
@@ -256,9 +281,9 @@ export const HeaderContainer = styled.div`
           height: 100vh;
           z-index: 100;
           width: 90%;
-          right: 0;
+          left: 0;
           top: 0;
-          transform: translateX(100%);
+          transform: translateX(-100%);
           transition: 0.3s ease-in-out transform;
         }
 
@@ -274,9 +299,9 @@ export const HeaderContainer = styled.div`
           height: 100vh;
           z-index: 100;
           width: 90%;
-          right: 0;
+          left: 0;
           top: 0;
-          transform: translateX(100%);
+          transform: translateX(-100%);
           transition: 0.3s ease-in-out transform;
         }
 

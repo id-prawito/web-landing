@@ -60,30 +60,6 @@ const Header = () => {
     <HeaderSite ref={headerRef}>
       <HeaderContainer>
         <div className="header__logo_link">
-          <div className="header__logo">
-            <NavLink
-              to="/"
-              style={({ isActive }) => {
-                return { color: isActive ? "red" : "grey" };
-              }}
-            >
-              <img alt="logo_header" src={logoSite} className="logo__img" />
-            </NavLink>
-
-            <ThemeSwitcher />
-          </div>
-          {isMobile && (
-            <div
-              className="menuIcon"
-              tabIndex="0"
-              role="button"
-              onKeyDown={() => setIsNavOpen(true)}
-              onClick={() => setIsNavOpen(true)}
-            >
-              <FiMenu />
-            </div>
-          )}
-
           <div className="header__menu">
             <nav className={isMobile && isNavOpen ? "open" : undefined}>
               {isMobile && (
@@ -128,6 +104,28 @@ const Header = () => {
                 onClick={() => setIsNavOpen(false)}
               />
             )}
+          </div>
+          {isMobile && (
+            <div
+              className="menuIcon"
+              tabIndex="0"
+              role="button"
+              onKeyDown={() => setIsNavOpen(true)}
+              onClick={() => setIsNavOpen(true)}
+            >
+              <FiMenu />
+            </div>
+          )}
+          <div className="header__logo">
+            <NavLink
+              to="/"
+              style={({ isActive }) => {
+                return { color: isActive ? "red" : "grey" };
+              }}
+            >
+              <img alt="logo_header" src={logoSite} className="logo__img" />
+            </NavLink>
+            <ThemeSwitcher />
           </div>
         </div>
       </HeaderContainer>
