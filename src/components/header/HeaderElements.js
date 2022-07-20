@@ -48,8 +48,8 @@ export const HeaderContainer = styled.div`
     padding: 0px 25px;
   }
 
-  @media only screen and (max-width: 1024px) {
-    padding: 0px 25px;
+  @media only screen and (min-width: 768px) {
+    padding: 0px 50px;
   }
 
   .menuIcon,
