@@ -3,7 +3,7 @@ import { FaAccusoft, FaPhone } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { ORGANISASI } from "../../config/Data";
 import { HeadingComponent } from "../atom";
-import { ButtonTransparent } from "../form";
+import { Button, ButtonTransparent } from "../form";
 import {
   ContentTabSite,
   LayananSite,
@@ -367,4 +367,123 @@ const LayananSection = ({ judul, id, DATA_TABS, link }) => {
   );
 };
 
-export { HubungiKami, TentangKami, OrganisasiSection, LayananSection };
+const TabPublikasi = ({ children, active }) => {
+  const [activeTab, setActiveTab] = useState(active);
+  const [tabsData, setTabsData] = useState([]);
+
+  useEffect(() => {
+    let data = [];
+
+    React.Children.forEach(children, (element) => {
+      if (!React.isValidElement(element)) return;
+
+      const {
+        props: { tab, children },
+      } = element;
+      data.push({ tab, children });
+    });
+
+    setTabsData(data);
+  }, [children]);
+
+  return (
+    <Tabs>
+      <ul className="tabs_button">
+        {tabsData.map((tabs, idx) => (
+          <li
+            className={`tabs_nav ${idx === activeTab ? "active" : ""}`}
+            key={idx}
+          >
+            <button className="button" onClick={() => setActiveTab(idx)}>
+              {tabs.tab}
+            </button>
+          </li>
+        ))}
+      </ul>
+
+      <div className="tabs_content">
+        <div className="tabs_content_text">
+          <ContentTabPublikasi
+            item={tabsData[activeTab] && tabsData[activeTab].children}
+            judul={tabsData[activeTab] && tabsData[activeTab].tab}
+          />
+        </div>
+      </div>
+    </Tabs>
+  );
+};
+
+const ContentTabPublikasi = (item) => {
+  return (
+    <ContentTabSite>
+      <div className="tab_content">
+        <div className="judul">{item.judul}</div>
+        <div className="value">
+          <h1>Apa yang Dimaksud dengan {item.judul} ?</h1>
+          <p>{item.item && item.item.p}</p>
+          <div className="button_download">
+            {item.item &&
+              item.item.fitur.map((item, i) => (
+                <div key={i} className="card_download">
+                  <div className="text_download">
+                    <h1>{item.judul}</h1>
+                    <p>{item.tanggal}</p>
+                  </div>
+                  <Button
+                    icon={FaAccusoft}
+                    label="Hitung KPR"
+                    to="./berita-kami"
+                  />
+                </div>
+              ))}
+          </div>
+        </div>
+      </div>
+    </ContentTabSite>
+  );
+};
+
+const TabPanelPublikasi = ({ children }) => {
+  return { children };
+};
+
+TabPublikasi.TabPanelPublikasi = TabPanelPublikasi;
+
+const PublikasiSection = ({ judul, DATA_TABS }) => {
+  const TABS = DATA_TABS;
+
+  return (
+    <LayananSite>
+      <div className="layanan_container">
+        <div className="layanan_content">
+          <HeadingComponent
+            Heading={judul}
+            Text="Jika Anda memiliki pertanyaan atau tidak dapat menemukan apa yang Anda cari, jangan ragu untuk menghubungi kami di:"
+          />
+          <div className="layanan_tabs">
+            <div className="content">
+              <TabPublikasi active={0}>
+                {TABS.map((tab, idx) => (
+                  <TabPublikasi.TabPanelPublikasi
+                    key={`Tab-${idx}`}
+                    tab={tab.judul}
+                  >
+                    {tab.content}
+                  </TabPublikasi.TabPanelPublikasi>
+                ))}
+              </TabPublikasi>
+            </div>
+          </div>
+        </div>
+      </div>
+    </LayananSite>
+  );
+};
+
+export {
+  HubungiKami,
+  TentangKami,
+  OrganisasiSection,
+  LayananSection,
+  PublikasiSection,
+};

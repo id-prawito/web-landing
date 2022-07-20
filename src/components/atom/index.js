@@ -315,6 +315,32 @@ const FocusComponentContactUs = ({ img }) => {
   );
 };
 
+const FocusComponentColor = ({ img, backgroundColor }) => {
+  return (
+    <FocusComponentSiteContact>
+      <div className="focus_container">
+        <div
+          className="gambar_bg_tentang"
+          style={{ backgroundColor: backgroundColor }}
+        >
+          <HeadingComponent
+            Style={{
+              textAlign: "start",
+              width: "100%",
+              color: "#fff",
+            }}
+            Heading="Coba simulasi kredit sekarang!"
+            Text="Untuk mengetahui berapa biaya yang harus digunakan untuk melakukan kredit KPR."
+          />
+          <div className="gambar_img">
+            <img src={img} alt="imgContact" />
+          </div>
+        </div>
+      </div>
+    </FocusComponentSiteContact>
+  );
+};
+
 const Organisasi = ({ item }) => {
   return (
     <OrganisasiSite>
@@ -421,4 +447,5 @@ export {
   DetailLayanan,
   DetailLayananPages,
   FocusComponentContactUs,
+  FocusComponentColor,
 };

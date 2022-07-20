@@ -15,7 +15,7 @@ export const NAVLINKS = [
     name: "PRODUK & LAYANAN",
   },
   {
-    to: "work",
+    to: "/simulasi-kpr",
     icon: FaEllipsisV,
     name: "SIMULASI KPR",
   },
@@ -25,7 +25,7 @@ export const NAVLINKS = [
     name: "BERITA KAMI",
   },
   {
-    to: "/project",
+    to: "/publikasi",
     icon: FaEllipsisV,
     name: "PUBLIKASI",
   },
@@ -584,141 +584,43 @@ export const DATA_BARU = {
   ],
 };
 
-export const DATA_LAYANAN = [
+export const DATA_PUBLIKASI = [
   {
     id: 1,
-    judul: "Tabungan iB Wadiyah",
+    judul: "Laporan Triwulan",
     content: {
-      apa: "Apa yang Dimaksud dengan Tabungan Wadiah?",
-      p: "Tabungan iB Wadiah merupakan tabungan yang dikelola dengan sistem titipan (wadiah)",
+      apa: "Seleksi Pemasok dan Perlindungan Hak Kreditur",
+      p: "Jika Anda memiliki pertanyaan atau tidak dapat menemukan apa yang Anda cari, jangan ragu untuk menghubungi kami di:",
       fitur: [
         {
-          judul: "Fitur & Biaya",
-          text_a: "",
-          text: [
-            "Berdasarkan prinsip syariah dengan akad wadiah",
-            "Bonus tabungan kompetitif",
-            "Minimum setoran awal Rp. 25.000",
-            "Minimum setoran berikutnya Rp. 5.000",
-            "Saldo minimum Rp. 10.000",
-            "Biaya tutup rekening Rp. 5.000",
-          ],
+          judul: "Seleksi Pemasok dan Perlindungan Hak Kreditur",
+          tanggal: "2021 | April",
+          buttonDonwload: "link",
         },
         {
-          judul: "Manfaat",
-          text_a: "",
-          text: [
-            "Aman dan sesuai syariah",
-            "Dijamin Lembaga Penjamin Simpanan (LPS)",
-            "Pelayanan jemput bola (antar jemput setoran penarikan khusus untuk nasabah pembiayaan)",
-          ],
-        },
-        {
-          judul: "Apa Saja Persyaratannya?",
-          text_a: "",
-          text: [
-            "Warga Negara Indonesia: KTP/SIM/Paspor, NPWP",
-            "Warga Negara Asing: Paspor dan Kartu Izin Menetap Sementara (KIM/KITAS)",
-          ],
+          judul: "Seleksi Pemasok dan Perlindungan Hak Kreditur",
+          tanggal: "2022 | April",
+          buttonDonwload: "link",
         },
       ],
     },
   },
   {
     id: 2,
-    judul: "Tabungan iB Mudharabah",
+    judul: "Laporan CGC",
     content: {
       apa: "Apa yang Dimaksud dengan Tabungan iB Mudharabah ?",
-      p: "Tabungan iB Mudharabah merupakan tabungan yang dikelola dengan sistem bagi hasil.",
+      p: "Jika Anda memiliki pertanyaan atau tidak dapat menemukan apa yang Anda cari, jangan ragu untuk menghubungi kami di:",
       fitur: [
         {
-          judul: "1. Tabungan iB Haji",
-          text_a:
-            "Membantu mewujudkan niat anda beribadah haji lebih mudah dan terencana. Ketentuan :",
-          text: [
-            "Setoran awal minimal Rp. 100.000",
-            "Setoran selanjutnya minimal Rp. 100.000",
-            "Nisbah bagi hasil ditetapkan sesuai dengan akad perjanjian",
-            "Pengambilan tabungan hanya dapat dilakukan untuk pembayaran ongkos naik haji (ONH)",
-          ],
+          judul: "Seleksi Pemasok dan Perlindungan Hak Kreditur CDC",
+          tanggal: "2021 | April",
+          buttonDonwload: "link",
         },
         {
-          judul: "2. Tabungan iB Qurban",
-          text_a:
-            "Membantu merencanakan dan mewujudkan niat anda untuk melaksanakan Ibadah Qurban. Ketentuan :",
-          text: [
-            "Setoran awal minimal Rp. 50.000",
-            "Setoran selanjutnya minimal Rp. 50.000",
-            "Nisbah bagi hasil ditetapkan sesuai dengan akad perjanjian",
-            "Penarikan tabungan dapat dilakukan pada awal bulan Dzulhijjah atau jika pengendapan sudah sampai satu tahun",
-          ],
-        },
-        {
-          judul: "3. Tabungan iB Masa Depan",
-          text_a:
-            "Membantu anda dalam merencanakan masa depan (rencana pernikahan, persalinan, hari tua, dll). Ketentuan :",
-          text: [
-            "Setoran awal minimal Rp. 100.000",
-            "Setoran selanjutnya minimal Rp. 100.000",
-            "Nisbah bagi hasil ditetapkan sesuai dengan akad perjanjian",
-            "Jangka waktu minimal 3 Tahun.",
-          ],
-        },
-        {
-          judul: "4. Tabungan iB Pendidikan",
-          text_a:
-            "Membantu anda dalam merencanakan biaya pendidikan anak. Ketentuan :",
-          text: [
-            "Setoran awal minimal Rp. 100.000",
-            "Setoran selanjutnya minimal Rp. 50.000",
-            "Nisbah bagi hasil ditetapkan sesuai dengan akad perjanjian",
-            "Jangka waktu menyesuaikan dengan jenjang pendidikan anak.",
-          ],
-        },
-        {
-          judul: "Keunggulan produk tabungan iB Mudharabah",
-          text_a: "",
-          text: [
-            "Dikelola dengan sistem syariah",
-            "Bagi hasil kompetitif",
-            "Bebas biaya administrasi bulanan",
-            "Dijamin oleh LPS (Lembaga Penjamin Simpanan sampai dengan 2 Milyar Rupiah)",
-            "Mendapatkan Souvenir menarik langsung pasa saat pembukaan rekening",
-            "Dapat dijadikan sebagai agunan pembiayaan",
-          ],
-        },
-      ],
-    },
-  },
-  {
-    id: 3,
-    judul: "Deposito iB Mudharabah",
-    content: {
-      apa: "Apa itu Deposito iB Mudharabah ?",
-      p: "Deposito iB Mudharabah merupakan layanan investasi berjangka yang dikelola dengan sistem bagi hasil (Mudharabah).",
-      fitur: [
-        {
-          judul: "1. Deposito iB Mudharabah",
-          text_a:
-            "Deposito iB Mudharabah merupakan layanan investasi berjangka yang dikelola dengan sistem bagi hasil (Mudharabah). Ketentuan :",
-          text: [
-            "Setoran minimal Rp. 1.000.000",
-            "Jangka waktu 3, 6 dan 12 bulan",
-            "Nisbah bagi hasil ditetapkan sesuai dengan akad perjanjian",
-            "Pencairan bisa dilakukan pada saat jatuh tempo.",
-          ],
-        },
-        {
-          judul: "Keunggulan produk Deposito iB Mudharabah",
-          text_a: "",
-          text: [
-            "Dikelola dengan sistem syariah",
-            "Bagi hasil kompetitif",
-            "Bebas biaya administrasi bulanan",
-            "Dijamin oleh LPS (Lembaga Penjamin Simpanan sampai dengan 2 Milyar Rupiah)",
-            "Mendapatkan Souvenir menarik langsung pasa saat pembukaan rekening",
-            "Dapat dijadikan sebagai agunan pembiayaan",
-          ],
+          judul: "Seleksi Pemasok dan Perlindungan Hak Kreditur CDC",
+          tanggal: "2022 | April",
+          buttonDonwload: "link",
         },
       ],
     },
