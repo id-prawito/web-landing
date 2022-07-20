@@ -73,6 +73,13 @@ export const HeaderContainer = styled.div`
     position: absolute;
     right: 35px;
     top: 30px;
+
+    svg {
+      border-radius: 10px;
+      padding: 4px;
+      color: #fff;
+      background-color: #7227f3;
+    }
     &:hover {
       background-color: #8080803b;
       svg {
@@ -253,10 +260,11 @@ export const HeaderContainer = styled.div`
       nav {
         ${devices.smartphone} {
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           flex-direction: column;
           background-color: ${({ theme: { theme } }) =>
             theme === themeList.light ? "#ffffff" : "#1a1d29"};
+          padding: 90px 0px;
           max-width: 250px;
           overflow: hidden;
           position: fixed;
@@ -271,10 +279,11 @@ export const HeaderContainer = styled.div`
 
         ${devices.ipads} {
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           flex-direction: column;
           background-color: ${({ theme: { theme } }) =>
             theme === themeList.light ? "#ffffff" : "#1a1d29"};
+          padding: 90px 0px;
           max-width: 250px;
           overflow: hidden;
           position: fixed;
@@ -289,10 +298,11 @@ export const HeaderContainer = styled.div`
 
         @media only screen and (max-width: 1024px) {
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           flex-direction: column;
           background-color: ${({ theme: { theme } }) =>
             theme === themeList.light ? "#ffffff" : "#1a1d29"};
+          padding: 90px 0px;
           max-width: 250px;
           overflow: hidden;
           position: fixed;
@@ -313,16 +323,22 @@ export const HeaderContainer = styled.div`
           ${devices.smartphone} {
             flex-direction: column;
             gap: 20px;
+            padding: 20px;
+            align-items: flex-start;
           }
 
           ${devices.ipads} {
             flex-direction: column;
             gap: 20px;
+            padding: 20px;
+            align-items: flex-start;
           }
 
           @media only screen and (max-width: 1024px) {
             flex-direction: column;
             gap: 20px;
+            padding: 20px;
+            align-items: flex-start;
           }
 
           li {
