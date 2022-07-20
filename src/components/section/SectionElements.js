@@ -264,9 +264,16 @@ export const OrganisasiSite = styled.section`
 `;
 
 export const LayananSite = styled.section`
+  ${devices.smartphone} {
+    padding: 50px 0;
+  }
   .layanan {
     &_container {
       padding: 0 100px;
+
+      ${devices.smartphone} {
+        padding: 0 25px;
+      }
     }
 
     &_content {
@@ -307,6 +314,11 @@ export const Tabs = styled.div`
     &_button {
       display: flex;
       flex-direction: row;
+
+      ${devices.smartphone} {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
 
     &_nav {
@@ -394,6 +406,10 @@ export const ContentTabSite = styled.div`
     .judul {
       font-size: 32px;
       font-weight: 600;
+
+      ${devices.smartphone} {
+        text-align: left;
+      }
     }
 
     .value {
@@ -402,9 +418,17 @@ export const ContentTabSite = styled.div`
       gap: 20px;
       align-items: flex-start;
 
+      ${devices.smartphone} {
+        text-align: left;
+      }
+
       h1 {
         font-size: 24px;
         font-weight: 500;
+
+        ${devices.smartphone} {
+          font-size: 20px;
+        }
       }
 
       p {

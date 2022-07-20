@@ -155,26 +155,28 @@ const DetailLayanan = ({ item, imgDetail }) => {
 const DetailLayananPages = (item) => {
   return (
     <DetailComponents>
-      <div className="detail_content">
-        <div className="detail_img">
-          <img src={item.imgDetail} alt="imgDetail" />
-        </div>
-        <div className="detail_text">
-          <div className="visi_misi">
-            <div className="detail_text_heading">Visi {item.item}</div>
-            <div className="detail_text_p">
-              Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
-              seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
-            </div>
+      <div className="detail_container">
+        <div className="detail_content">
+          <div className="detail_img">
+            <img src={item.imgDetail} alt="imgDetail" />
           </div>
-          <div className="visi_misi">
-            <div className="detail_text_heading">Misi</div>
-            <div className="detail_text_p">
-              Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
-              seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
+          <div className="detail_text">
+            <div className="visi_misi">
+              <div className="detail_text_heading">Visi {item.item}</div>
+              <div className="detail_text_p">
+                Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
+                seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
+              </div>
             </div>
+            <div className="visi_misi">
+              <div className="detail_text_heading">Misi</div>
+              <div className="detail_text_p">
+                Menjadi BPR yang kuat, dipercaya dan selalu dihati masyarakat di
+                seluruh wilayah kerja Kabupaten Pati dan sekitarnya.
+              </div>
+            </div>
+            <Button icon={item.icon} label={item.label} to={item.to} />
           </div>
-          <Button icon={item.icon} label={item.label} to={item.to} />
         </div>
       </div>
     </DetailComponents>
