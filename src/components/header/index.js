@@ -10,7 +10,8 @@ import styled from "styled-components";
 import { devices } from "../../assets/_respondTo";
 
 const ContentDrop = styled.div`
-  height: 100%;
+  max-height: 340px;
+
   .megamenu {
     position: absolute;
     top: 5rem;
@@ -24,18 +25,20 @@ const ContentDrop = styled.div`
     opacity: 0;
     margin-left: -100px;
 
-    ::before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      top: -20px;
-      bottom: auto;
-      border: 10px solid transparent;
-      border-bottom-color: #fff;
+    ${devices.desktops} {
+      ::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -20px;
+        bottom: auto;
+        border: 10px solid transparent;
+        border-bottom-color: #fff;
+      }
     }
 
     ${devices.smartphone} {
@@ -54,14 +57,13 @@ const ContentDrop = styled.div`
       margin-top: 0px;
       margin-bottom: 0px;
       height: ${(props) => {
-        return `${props.isDropdown ? "280" : "0"}px`;
+        return `${props.isDropdown ? "319" : "0"}px`;
       }};
-
+      /* height: ${(props) => {
+        const inner = document.getElementById(props.itemName);
+        return `${props.isDropdown && inner ? inner.clientHeight : 0}px`;
+      }}; */
       transition: height 0.35s;
-
-      ::before {
-        content: "";
-      }
     }
   }
 
@@ -74,7 +76,7 @@ const ContentDrop = styled.div`
 
     ${devices.smartphone} {
       padding: 4px 20px;
-      border-left: 1px solid #232323;
+      border-left: 1px solid #00000030;
     }
 
     li:first-child {
@@ -106,11 +108,13 @@ const ContentDrop = styled.div`
     .megamenu_item {
       font-size: 13px;
       font-weight: 400;
+      text-align: left;
     }
 
     .header_megamenu {
       font-weight: 600;
       text-transform: uppercase;
+      text-align: left;
     }
   }
 
@@ -239,58 +243,27 @@ const Header = () => {
                               itemName={item.name}
                             >
                               <div className="megamenu">
-                                <ul className="content_name">
-                                  <li className="megamenu_item header_megamenu">
-                                    Design
-                                  </li>
-                                  <li className="megamenu_item">
-                                    <div className="megamenu_link">
-                                      <a className="link" href="#1">
-                                        Ui Bootcamp
-                                      </a>
-                                    </div>
-                                  </li>
-                                  <li className="megamenu_item">
-                                    <div className="megamenu_link">
-                                      <a className="link" href="#2">
-                                        Ui Bootcamp
-                                      </a>
-                                    </div>
-                                  </li>
-                                  <li className="megamenu_item">
-                                    <div className="megamenu_link">
-                                      <a className="link" href="#3">
-                                        Ui Bootcamp
-                                      </a>
-                                    </div>
-                                  </li>
-                                </ul>
-                                <ul className="content_name">
-                                  <li className="megamenu_item header_megamenu">
-                                    Design
-                                  </li>
-                                  <li className="megamenu_item">
-                                    <div className="megamenu_link">
-                                      <a className="link" href="#1">
-                                        Ui Bootcamp
-                                      </a>
-                                    </div>
-                                  </li>
-                                  <li className="megamenu_item">
-                                    <div className="megamenu_link">
-                                      <a className="link" href="#2">
-                                        Ui Bootcamp
-                                      </a>
-                                    </div>
-                                  </li>
-                                  <li className="megamenu_item">
-                                    <div className="megamenu_link">
-                                      <a className="link" href="#3">
-                                        Ui Bootcamp
-                                      </a>
-                                    </div>
-                                  </li>
-                                </ul>
+                                {item.megamenuItem &&
+                                  item.megamenuItem.map((item, i) => (
+                                    <ul key={i} className="content_name">
+                                      <li className="megamenu_item header_megamenu">
+                                        {item.name}
+                                      </li>
+                                      {item.sub &&
+                                        item.sub.map((item, i) => (
+                                          <li key={i} className="megamenu_item">
+                                            <div className="megamenu_link">
+                                              <a
+                                                className="link"
+                                                href={item.to}
+                                              >
+                                                {item.judul}
+                                              </a>
+                                            </div>
+                                          </li>
+                                        ))}
+                                    </ul>
+                                  ))}
                               </div>
                             </ContentDrop>
                           ) : (
