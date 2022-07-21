@@ -25,20 +25,18 @@ const ContentDrop = styled.div`
     opacity: 0;
     margin-left: -100px;
 
-    ${devices.desktops} {
-      ::before {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: -20px;
-        bottom: auto;
-        border: 10px solid transparent;
-        border-bottom-color: #fff;
-      }
+    ::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: -20px;
+      bottom: auto;
+      border: 10px solid transparent;
+      border-bottom-color: #fff;
     }
 
     ${devices.smartphone} {
@@ -64,6 +62,11 @@ const ContentDrop = styled.div`
         return `${props.isDropdown && inner ? inner.clientHeight : 0}px`;
       }}; */
       transition: height 0.35s;
+
+      ::before {
+        content: "";
+        display: none;
+      }
     }
   }
 
