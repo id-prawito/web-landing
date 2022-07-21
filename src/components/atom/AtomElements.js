@@ -10,6 +10,10 @@ export const InformasiSite = styled.section`
     padding: 25px 0;
   }
 
+  ${devices.laptops} {
+    padding: 35px 0;
+  }
+
   .informasi {
     display: flex;
     flex-direction: row;
@@ -44,6 +48,10 @@ export const InformasiSite = styled.section`
       }
 
       ${devices.ipads} {
+        padding: 0px 50px;
+      }
+
+      ${devices.laptops} {
         padding: 0px 50px;
       }
     }
@@ -151,6 +159,10 @@ export const CardComponents = styled.section`
   ${devices.ipads} {
     padding: 25px 0;
   }
+
+  ${devices.laptops} {
+    padding: 35px 0;
+  }
   .card_container {
     padding: 0 100px;
 
@@ -159,6 +171,10 @@ export const CardComponents = styled.section`
     }
 
     ${devices.ipads} {
+      padding: 0 50px;
+    }
+
+    ${devices.laptops} {
       padding: 0 50px;
     }
   }
@@ -195,7 +211,7 @@ export const CardComponents = styled.section`
       grid-template-columns: repeat(1, 1fr);
     }
 
-    @media only screen and (min-width: 560px) {
+    @media only screen and (min-width: 560px) and (max-width: 760px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -216,6 +232,10 @@ export const DetailComponents = styled.section`
     padding: 25px 0;
   }
 
+  ${devices.laptops} {
+    padding: 35px 0;
+  }
+
   .detail {
     &_container {
       padding: 0 100px;
@@ -225,6 +245,10 @@ export const DetailComponents = styled.section`
       }
 
       ${devices.ipads} {
+        padding: 0px 50px;
+      }
+
+      ${devices.laptops} {
         padding: 0px 50px;
       }
     }
@@ -257,7 +281,12 @@ export const DetailComponents = styled.section`
       ${devices.ipads} {
         width: 100%;
       }
+
+      ${devices.laptops} {
+        height: 100%;
+      }
     }
+
     &_text {
       display: flex;
       align-items: center;
@@ -307,6 +336,10 @@ export const OjkComponents = styled.section`
     padding: 25px 0;
   }
 
+  ${devices.laptops} {
+    padding: 35px 0;
+  }
+
   .ojk {
     &_container {
       padding: 0 100px;
@@ -316,6 +349,10 @@ export const OjkComponents = styled.section`
       }
 
       ${devices.ipads} {
+        padding: 0px 50px;
+      }
+
+      ${devices.laptops} {
         padding: 0px 50px;
       }
     }

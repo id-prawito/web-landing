@@ -32,6 +32,10 @@ export const CorouselSectionFicture = styled.section`
     padding: 25px 0;
   }
 
+  ${devices.laptops} {
+    padding: 35px 0;
+  }
+
   .section_carousel {
     display: flex;
     justify-content: center;
@@ -50,6 +54,9 @@ export const CorouselSectionFicture = styled.section`
       ${devices.ipads} {
         padding: 0px 50px;
       }
+      ${devices.laptops} {
+        padding: 0px 50px;
+      }
     }
     &_container_slide {
       ${devices.smartphone} {
@@ -57,6 +64,10 @@ export const CorouselSectionFicture = styled.section`
       }
 
       ${devices.ipads} {
+        padding: 0px 25px;
+      }
+
+      ${devices.laptops} {
         padding: 0px 25px;
       }
     }

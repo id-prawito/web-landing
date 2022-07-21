@@ -22,6 +22,10 @@ const AccordionSite = styled.section`
     ${devices.ipads} {
       padding: 0px 50px;
     }
+
+    ${devices.laptops} {
+      padding: 0px 50px;
+    }
   }
 
   .accordion_pembungkus {
@@ -51,6 +55,9 @@ const AccordionSite = styled.section`
         display: flex;
         flex-direction: column;
       }
+      ${devices.laptops} {
+        width: 100%;
+      }
     }
   }
 
@@ -64,6 +71,10 @@ const AccordionSite = styled.section`
     height: max-content;
 
     ${devices.smartphone} {
+      width: 100%;
+    }
+
+    ${devices.laptops} {
       width: 100%;
     }
 

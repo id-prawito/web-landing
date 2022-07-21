@@ -8,6 +8,9 @@ export const FormSite = styled.section`
   ${devices.ipads} {
     padding: 25px 0;
   }
+  ${devices.ipads} {
+    padding: 35px 0;
+  }
   .form_container {
     padding: 0 100px;
 
@@ -16,6 +19,10 @@ export const FormSite = styled.section`
     }
 
     ${devices.ipads} {
+      padding: 0 50px;
+    }
+
+    ${devices.laptops} {
       padding: 0 50px;
     }
   }

@@ -15,6 +15,10 @@ export const DetailBeritaSite = styled.section`
       ${devices.ipads} {
         padding: 0 50px;
       }
+
+      ${devices.laptops} {
+        padding: 0 50px;
+      }
     }
 
     &_content {

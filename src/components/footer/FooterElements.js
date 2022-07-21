@@ -126,6 +126,11 @@ export const FooterSite = styled.footer`
         gap: 20px;
       }
 
+      ${devices.laptops} {
+        align-items: flex-start;
+        gap: 20px;
+      }
+
       &_img {
         display: flex;
         flex-direction: row;
@@ -159,6 +164,14 @@ export const FooterSite = styled.footer`
           display: grid;
           grid-template-columns: repeat(3, auto);
           place-items: baseline;
+          padding: 0;
+        }
+
+        ${devices.laptops} {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          place-items: baseline;
+          gap: 10px;
           padding: 0;
         }
 

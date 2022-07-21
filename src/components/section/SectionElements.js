@@ -9,6 +9,10 @@ export const TentangKamiSite = styled.section`
   ${devices.ipads} {
     padding: 25px 0;
   }
+
+  ${devices.ipads} {
+    padding: 35px 0;
+  }
   .tentang {
     &_container {
       padding: 0 100px;
@@ -18,6 +22,10 @@ export const TentangKamiSite = styled.section`
       }
 
       ${devices.ipads} {
+        padding: 0 50px;
+      }
+
+      ${devices.laptops} {
         padding: 0 50px;
       }
     }
@@ -134,6 +142,11 @@ export const TentangKamiSite = styled.section`
           grid-row-gap: 40px;
         }
 
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-row-gap: 40px;
+        }
+
         .cabang_content {
           display: flex;
           flex-direction: column;
@@ -180,6 +193,10 @@ export const OrganisasiSite = styled.section`
   ${devices.ipads} {
     padding: 25px 0;
   }
+
+  ${devices.laptops} {
+    padding: 35px 0;
+  }
   .organisasi {
     &_container {
       padding: 0 100px;
@@ -189,6 +206,10 @@ export const OrganisasiSite = styled.section`
       }
 
       ${devices.ipads} {
+        padding: 0 50px;
+      }
+
+      ${devices.laptops} {
         padding: 0 50px;
       }
     }
@@ -230,6 +251,7 @@ export const OrganisasiSite = styled.section`
         justify-content: center;
         align-items: center;
         gap: 20px;
+
         ${devices.smartphone} {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -237,6 +259,18 @@ export const OrganisasiSite = styled.section`
         }
 
         ${devices.ipads} {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          place-items: center;
+        }
+
+        ${devices.laptops} {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          place-items: center;
+        }
+
+        @media only screen and (min-width: 768px) {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           place-items: center;
@@ -317,6 +351,10 @@ export const LayananSite = styled.section`
   ${devices.ipads} {
     padding: 25px 0;
   }
+
+  ${devices.laptops} {
+    padding: 35px 0;
+  }
   .layanan {
     &_container {
       padding: 0 100px;
@@ -326,6 +364,10 @@ export const LayananSite = styled.section`
       }
 
       ${devices.ipads} {
+        padding: 0 50px;
+      }
+
+      ${devices.laptops} {
         padding: 0 50px;
       }
     }
@@ -496,6 +538,10 @@ export const ContentTabSite = styled.div`
       }
 
       ${devices.ipads} {
+        text-align: left;
+      }
+
+      ${devices.laptops} {
         text-align: left;
       }
 
