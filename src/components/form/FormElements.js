@@ -93,6 +93,10 @@ export const FormSite = styled.section`
     ${devices.smartphone} {
       display: none;
     }
+
+    ${devices.ipads} {
+      display: none;
+    }
   }
 `;
 

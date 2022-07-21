@@ -129,6 +129,11 @@ export const TentangKamiSite = styled.section`
           grid-row-gap: 40px;
         }
 
+        @media only screen and (min-width: 600px) and (max-width: 660px) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-row-gap: 40px;
+        }
+
         .cabang_content {
           display: flex;
           flex-direction: column;
@@ -211,6 +216,12 @@ export const OrganisasiSite = styled.section`
           display: grid;
           grid-template-columns: repeat(2, 1fr);
         }
+
+        @media only screen and (min-width: 580px) and (max-width: 780px) {
+          gap: 20px;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
       }
 
       .card_organisasi {
@@ -245,6 +256,10 @@ export const OrganisasiSite = styled.section`
           overflow: hidden;
 
           ${devices.smartphone} {
+            padding: 2px;
+          }
+
+          ${devices.ipads} {
             padding: 2px;
           }
 

@@ -23,6 +23,10 @@ export const InformasiSite = styled.section`
       flex-direction: column;
     }
 
+    @media only screen and (min-width: 540px) and (max-width: 760px) {
+      flex-direction: row;
+    }
+
     .img {
       overflow: hidden;
       height: 150px;
@@ -117,7 +121,7 @@ export const CardItemComponents = styled.div`
         margin-bottom: 10px;
       }
 
-      p {
+      .berita_text {
         line-height: 1.45;
         font-weight: 300;
         font-size: 13px;
@@ -189,6 +193,10 @@ export const CardComponents = styled.section`
 
     ${devices.smartphone} {
       grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media only screen and (min-width: 560px) {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     ${devices.ipads} {
@@ -318,6 +326,10 @@ export const OjkComponents = styled.section`
       align-items: center;
       gap: 20px;
       width: 100%;
+
+      @media only screen and (min-width: 480px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     &_img {
@@ -463,6 +475,13 @@ export const FocusComponentSiteContact = styled.section`
         gap: 0px;
       }
 
+      ${devices.ipads} {
+        padding: 0 25px;
+        flex-direction: column-reverse;
+        height: 450px;
+        gap: 0px;
+      }
+
       .gambar_img {
         width: 100%;
         display: flex;
@@ -473,6 +492,11 @@ export const FocusComponentSiteContact = styled.section`
         height: 100%;
 
         ${devices.smartphone} {
+          margin-top: 35px;
+          padding: 0;
+        }
+
+        ${devices.ipads} {
           margin-top: 35px;
           padding: 0;
         }

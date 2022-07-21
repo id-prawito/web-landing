@@ -13,7 +13,7 @@ import imgDetail from "../../assets/img/2.png";
 
 const SimpleSlider = () => {
   const [isMobile, setIsMobile] = useState(
-    window.matchMedia("(max-width: 768px)").matches
+    window.matchMedia("(max-width: 600px)").matches
   );
   const settings = {
     dots: true,
@@ -36,7 +36,7 @@ const SimpleSlider = () => {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
+      setIsMobile(window.matchMedia("(max-width: 600px)").matches);
     });
   }, []);
 

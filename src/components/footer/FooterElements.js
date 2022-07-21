@@ -121,7 +121,7 @@ export const FooterSite = styled.footer`
       }
 
       ${devices.ipads} {
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
         gap: 20px;
       }
@@ -157,9 +157,7 @@ export const FooterSite = styled.footer`
 
         ${devices.ipads} {
           display: grid;
-          grid-template-columns: repeat(2, auto);
-          grid-column-gap: 20px;
-          grid-row-gap: 10px;
+          grid-template-columns: repeat(3, auto);
           place-items: baseline;
           padding: 0;
         }
@@ -192,6 +190,12 @@ export const FooterSite = styled.footer`
         text-align: left;
 
         ${devices.smartphone} {
+          width: 100%;
+          line-height: 1.5;
+          font-size: 12px;
+        }
+
+        ${devices.ipads} {
           width: 100%;
           line-height: 1.5;
           font-size: 12px;

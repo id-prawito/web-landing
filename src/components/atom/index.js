@@ -24,6 +24,7 @@ import { ORGANISASI } from "../../config/Data";
 import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
 import SliderWrapper from "../carousel/_SlickSliderStyle";
+import DOMPurify from "dompurify";
 
 const Informasi = () => {
   return (
@@ -60,7 +61,13 @@ const CardItem = ({ item }) => {
         </div>
         <div className="card_body">
           <h4>{item.judul}</h4>
-          <p>{item.kontenBerita}</p>
+
+          <div
+            className="berita_text"
+            dangerouslySetInnerHTML={{
+              __html: DOMPurify.sanitize(item.kontenBerita),
+            }}
+          />
         </div>
         <div className="card_footer">{item.date}</div>
       </a>
@@ -70,8 +77,6 @@ const CardItem = ({ item }) => {
 
 const Card = ({ itemBerita }) => {
   const items = itemBerita;
-
-  console.log(items);
 
   return (
     <CardComponents>
