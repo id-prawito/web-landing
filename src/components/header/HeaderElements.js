@@ -214,9 +214,17 @@ export const HeaderContainer = styled.div`
             ? "var(--light-text-black)"
             : "var(--dark-text-white)"};
         cursor: pointer;
-        &:hover {
-          color: var(--colorMain);
+
+        .navmenu {
+          display: flex;
+          flex-direction: row;
+          height: 50px;
+          align-items: center;
+          &:hover {
+            color: var(--colorMain);
+          }
         }
+
         width: max-content;
         font-weight: 500;
 
@@ -229,6 +237,20 @@ export const HeaderContainer = styled.div`
             theme === themeList.light
               ? "var(--light-text-black)"
               : "var(--dark-text-white)"};
+        }
+
+        :hover {
+          .megamenu {
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.3s ease;
+          }
+
+          /* ${devices.smartphone} {
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+          } */
         }
       }
     }
@@ -315,28 +337,28 @@ export const HeaderContainer = styled.div`
           transition: 0.3s ease-in-out transform;
         }
 
-        ul {
+        .bisa {
           display: flex;
           flex-direction: row;
           align-items: center;
 
           ${devices.smartphone} {
             flex-direction: column;
-            gap: 20px;
+            /* gap: 20px; */
             padding: 20px;
             align-items: flex-start;
           }
 
           ${devices.ipads} {
             flex-direction: column;
-            gap: 20px;
+            /* gap: 20px; */
             padding: 20px;
             align-items: flex-start;
           }
 
           @media only screen and (max-width: 1024px) {
             flex-direction: column;
-            gap: 20px;
+            /* gap: 20px; */
             padding: 20px;
             align-items: flex-start;
           }

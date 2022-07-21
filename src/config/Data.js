@@ -8,31 +8,37 @@ export const NAVLINKS = [
     to: "",
     icon: FaEllipsisV,
     name: "HOME",
+    megamenu: false,
   },
   {
     to: "/layanan-kami",
     icon: FaEllipsisV,
     name: "PRODUK & LAYANAN",
+    megamenu: true,
   },
   {
     to: "/simulasi-kpr",
     icon: FaEllipsisV,
     name: "SIMULASI KPR",
+    megamenu: false,
   },
   {
     to: "/berita-kami",
     icon: FaEllipsisV,
     name: "BERITA KAMI",
+    megamenu: false,
   },
   {
     to: "/publikasi",
     icon: FaEllipsisV,
     name: "PUBLIKASI",
+    megamenu: false,
   },
   {
     to: "/we-contact-us",
     icon: FaEllipsisV,
     name: "TENTANG KAMI",
+    megamenu: false,
   },
 ];
 
