@@ -286,7 +286,7 @@ export const HeaderContainer = styled.div`
           flex-direction: column;
           background-color: ${({ theme: { theme } }) =>
             theme === themeList.light ? "#ffffff" : "#1a1d29"};
-          padding: 90px 0px;
+          padding: 50px 0px;
           max-width: 250px;
           overflow: hidden;
           position: fixed;
@@ -305,7 +305,7 @@ export const HeaderContainer = styled.div`
           flex-direction: column;
           background-color: ${({ theme: { theme } }) =>
             theme === themeList.light ? "#ffffff" : "#1a1d29"};
-          padding: 90px 0px;
+          padding: 50px 0px;
           max-width: 250px;
           overflow: hidden;
           position: fixed;
@@ -324,7 +324,7 @@ export const HeaderContainer = styled.div`
           flex-direction: column;
           background-color: ${({ theme: { theme } }) =>
             theme === themeList.light ? "#ffffff" : "#1a1d29"};
-          padding: 90px 0px;
+          padding: 50px 0px;
           max-width: 250px;
           overflow: hidden;
           position: fixed;
