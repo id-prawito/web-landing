@@ -333,7 +333,7 @@ export const OrganisasiSite = styled.section`
       padding: 8px 15px;
       border-radius: 8px;
       width: max-content;
-      color: #a606ae;
+      color: var(--colorMain);
       margin: auto;
       margin-top: 60px;
       a:hover {
@@ -438,7 +438,7 @@ export const Tabs = styled.div`
       }
 
       :hover {
-        color: #7c3aed;
+        color: var(--colorMain);
       }
 
       :first-child {
@@ -471,7 +471,7 @@ export const Tabs = styled.div`
     padding-top: 30px;
     margin-top: -15px !important;
     color: #fff;
-    background-color: #7c3aed;
+    background-color: var(--colorMain);
     border-radius: 8px 8px 0px 0px;
     transition: all 0.3s ease-in-out;
 
@@ -621,8 +621,8 @@ export const ContentTabSite = styled.div`
         color: #b8b8b8;
 
         :hover {
-          border: 1px solid #7c3aed;
-          color: #7c3aed;
+          border: 1px solid var(--colorMain);
+          color: var(--colorMain);
         }
 
         ${devices.smartphone} {

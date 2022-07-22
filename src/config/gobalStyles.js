@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import themeList from "./themeList";
 
 const GlobalStyles = createGlobalStyle`
+  
   :root{
     // Color
     --dark-background: #1A1D29;
@@ -17,14 +18,18 @@ const GlobalStyles = createGlobalStyle`
     --darkText: #ccd6f6;
     --lightTab : #1f2937;
     --darkTab : #979797;
-    --colorMain : #7c3aed; // Ungu
+    --colorMain : #0B9608; // Ungu #7c3aed, Hijau #0B9608
     --colorWhite : #ffffff; // White
   }
+  
   body {
     background-color: ${({ theme: { theme } }) =>
       theme === themeList.light
         ? "var(--light-background)"
         : "var(--dark-background)"};
+    font-family: "Rubik", sans-serif;
+    color: #000;
+    text-align: center;
   }
   
   html {

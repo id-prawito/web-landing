@@ -324,7 +324,7 @@ const FormKpr = () => {
                 <div className="class_table">
                   <table>
                     <thead>
-                      <tr style={{ background: "#7c3aed" }}>
+                      <tr style={{ background: "var(--colorMain)" }}>
                         <th>Bulan</th>
                         <th>Pokok</th>
                         <th>Bunga</th>

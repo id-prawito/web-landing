@@ -166,7 +166,7 @@ const SliderWrapper = styled.div`
     line-height: 1;
 
     opacity: 0.75;
-    color: #7c3aed;
+    color: var(--colorMain);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

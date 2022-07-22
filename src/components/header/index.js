@@ -203,7 +203,7 @@ const ContentDrop = styled.div`
 
   .megamenu_link {
     a:hover {
-      color: #d48317;
+      color: var(--colorMain);
     }
   }
 

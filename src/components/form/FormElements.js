@@ -160,7 +160,7 @@ export const FormContent = styled.div`
     transition: 0.3s all ease;
 
     &:hover {
-      background-color: #7227f3;
+      background-color: #038100;
       transition: 0.3s all ease;
       transform: scale(1.05);
     }
@@ -176,7 +176,7 @@ export const FormContent = styled.div`
     transition: box-shadow 1s;
 
     :hover {
-      border: 1px solid #a606ae;
+      border: 1px solid var(--colorMain);
       box-shadow: 0 0 10px rgb(0 0 0 / 15%);
     }
   }
@@ -338,7 +338,7 @@ export const ButtonAll = styled.div`
     transition: 0.3s all ease;
 
     &:hover {
-      background-color: #7227f3;
+      background-color: #038100;
       transition: 0.3s all ease;
       transform: scale(1.05);
     }
@@ -362,7 +362,7 @@ export const ButtonTransparentAll = styled.div`
     transition: 0.3s all ease;
 
     &:hover {
-      background-color: #7227f3;
+      background-color: var(--colorMain);
       color: #fff;
       transition: 0.3s all ease;
       transform: scale(1.05);
@@ -370,7 +370,7 @@ export const ButtonTransparentAll = styled.div`
   }
 
   .active {
-    background-color: #7227f3;
+    background-color: var(--colorMain);
     color: #fff;
     transition: 0.3s all ease;
     transform: scale(1.05);

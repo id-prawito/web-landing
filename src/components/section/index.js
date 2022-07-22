@@ -110,7 +110,7 @@ const ButtonFilter = ({ filter, button, active }) => {
         <ButtonTransparent
           active={active === buttonItem ? "active" : ""}
           key={i}
-          style={{ fontWeight: "400", border: "2px solid var(--colorMain)" }}
+          style={{ fontWeight: "400", border: "1px solid var(--colorMain)" }}
           icon={FaAccusoft}
           label={buttonItem}
           onClick={() => filter(buttonItem)}

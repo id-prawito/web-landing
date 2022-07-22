@@ -101,7 +101,7 @@ export const CardItemComponents = styled.div`
       border: 1px solid transparent;
 
       :hover {
-        border: 1px solid #a606ae;
+        border: 1px solid var(--colorMain);
         box-shadow: 0 0 10px rgb(0 0 0 / 15%);
       }
     }

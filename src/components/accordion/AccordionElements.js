@@ -79,7 +79,7 @@ const AccordionSite = styled.section`
     }
 
     &:hover {
-      border: 1px solid #7c3aed;
+      border: 1px solid var(--colorMain);
     }
   }
 
@@ -112,7 +112,7 @@ const Header = styled.div`
   font-size: 14px;
   text-align: left;
   cursor: pointer;
-  color: ${(props) => (props.isActive ? "#7c3aed" : "#222")};
+  color: ${(props) => (props.isActive ? "var(--colorMain);" : "#222")};
   font-weight: 500;
 `;
 
@@ -140,7 +140,6 @@ const Gambar = styled.div`
 `;
 
 const AccordionContent = ({ onClick, itemName, itemContent, isActive }) => {
-  // console.log(onClick, itemName, itemContent, isActive);
   return (
     <React.Fragment>
       <div className="content_accordion">

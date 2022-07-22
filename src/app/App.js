@@ -6,7 +6,6 @@ import { RouteSite } from "../app/route";
 import { useContext } from "react";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import "../assets/app.css";
 
 function App() {
   const { theme } = useContext(ThemeContext);

@@ -220,7 +220,7 @@ export const FooterSite = styled.footer`
   .footer {
     z-index: 1;
     height: 100%;
-    background-color: #7c3aed;
+    background-color: var(--colorMain);
     color: #fff;
     padding: 40px 50px;
 

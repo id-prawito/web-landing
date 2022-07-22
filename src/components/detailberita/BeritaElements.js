@@ -45,7 +45,7 @@ export const DetailBeritaSite = styled.section`
 
           a {
             :hover {
-              color: #7c3aed;
+              color: var(--colorMain);
             }
           }
 

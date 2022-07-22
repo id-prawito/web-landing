@@ -229,7 +229,7 @@ export const HeaderContainer = styled.div`
         font-weight: 500;
 
         .active {
-          color: #7227f3;
+          color: var(--colorMain);
         }
 
         ${devices.smartphone} {
