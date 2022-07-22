@@ -349,7 +349,7 @@ export const OjkComponents = styled.section`
       gap: 20px;
       width: 100%;
 
-      @media only screen and (min-width: 480px) {
+      @media only screen and (min-width: 480px) and (max-width: 1024px) {
         grid-template-columns: repeat(2, 1fr);
       }
     }
