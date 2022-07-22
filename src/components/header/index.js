@@ -23,7 +23,7 @@ const ContentDrop = styled.div`
     border-radius: 10px;
     visibility: hidden;
     opacity: 0;
-    margin-left: -100px;
+    margin-left: -200px;
 
     ::before {
       content: "";
@@ -244,13 +244,11 @@ const Header = () => {
     setIsNavOpen(false);
   };
 
-  const humberHandle2 = () => {
+  const humberHandle2 = (item) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     // // setIsNavOpen(true);
-    setDropdown((value) => !value);
+    setDropdown(item.name === dropdown ? null : item.name);
   };
-
-  console.log(dropdown);
 
   useEffect(() => {
     function disableScroll() {
@@ -291,72 +289,82 @@ const Header = () => {
                 </div>
               )}
               <ul className="bisa">
-                {NAVLINKS.map((item, i) => (
-                  <li key={i}>
-                    <div className="closing">
-                      <div className="header__item">
-                        <div className="text_menu">
-                          {item.megamenu === true ? (
-                            <>
+                {NAVLINKS.map((item, i) => {
+                  let isDropdown = dropdown === item.name;
+                  return (
+                    <li key={i}>
+                      <div className="closing">
+                        <div className="header__item">
+                          <div className="text_menu">
+                            {item.megamenu === true ? (
+                              <>
+                                <NavLink
+                                  className="navmenu"
+                                  onClick={() => humberHandle2(item)}
+                                  to={item.to}
+                                  state={{ from: item.angka }}
+                                >
+                                  {item.name}
+                                  {item.megamenu === true ? (
+                                    <BiCaretDown />
+                                  ) : (
+                                    ""
+                                  )}
+                                </NavLink>
+                              </>
+                            ) : (
                               <NavLink
                                 className="navmenu"
-                                onClick={() => humberHandle2()}
+                                onClick={() => humberHandle()}
                                 to={item.to}
                                 state={{ from: item.angka }}
                               >
                                 {item.name}
                                 {item.megamenu === true ? <BiCaretDown /> : ""}
                               </NavLink>
-                            </>
-                          ) : (
-                            <NavLink
-                              className="navmenu"
-                              onClick={() => humberHandle()}
-                              to={item.to}
-                              state={{ from: item.angka }}
-                            >
-                              {item.name}
-                              {item.megamenu === true ? <BiCaretDown /> : ""}
-                            </NavLink>
-                          )}
+                            )}
 
-                          {item.megamenu === true ? (
-                            <ContentDrop
-                              isDropdown={dropdown}
-                              itemName={item.name}
-                            >
-                              <div className="megamenu">
-                                {item.megamenuItem &&
-                                  item.megamenuItem.map((item, i) => (
-                                    <ul key={i} className="content_name">
-                                      <li className="megamenu_item header_megamenu">
-                                        {item.name}
-                                      </li>
-                                      {item.sub &&
-                                        item.sub.map((item, i) => (
-                                          <li key={i} className="megamenu_item">
-                                            <div className="megamenu_link">
-                                              <a
-                                                className="link"
-                                                href={item.to}
-                                              >
-                                                {item.judul}
-                                              </a>
-                                            </div>
-                                          </li>
-                                        ))}
-                                    </ul>
-                                  ))}
-                              </div>
-                            </ContentDrop>
-                          ) : (
-                            ""
-                          )}
+                            {item.megamenu === true ? (
+                              <ContentDrop
+                                isDropdown={isDropdown}
+                                itemName={item.name}
+                              >
+                                <div className="megamenu">
+                                  {item.megamenuItem &&
+                                    item.megamenuItem.map((item, i) => (
+                                      <ul key={i} className="content_name">
+                                        <li className="megamenu_item header_megamenu">
+                                          {item.name}
+                                        </li>
+                                        {item.sub &&
+                                          item.sub.map((item, i) => (
+                                            <li
+                                              key={i}
+                                              className="megamenu_item"
+                                            >
+                                              <div className="megamenu_link">
+                                                <a
+                                                  className="link"
+                                                  href={item.to}
+                                                >
+                                                  {item.judul}
+                                                </a>
+                                              </div>
+                                            </li>
+                                          ))}
+                                      </ul>
+                                    ))}
+                                </div>
+                              </ContentDrop>
+                            ) : (
+                              ""
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
+                    </li>
+                  );
+                })}
               </ul>
             </nav>
 

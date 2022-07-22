@@ -140,6 +140,7 @@ const Gambar = styled.div`
 `;
 
 const AccordionContent = ({ onClick, itemName, itemContent, isActive }) => {
+  // console.log(onClick, itemName, itemContent, isActive);
   return (
     <React.Fragment>
       <div className="content_accordion">

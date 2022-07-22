@@ -245,12 +245,6 @@ export const HeaderContainer = styled.div`
             opacity: 1;
             transition: all 0.3s ease;
           }
-
-          /* ${devices.smartphone} {
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.3s ease;
-          } */
         }
       }
     }
@@ -347,6 +341,7 @@ export const HeaderContainer = styled.div`
             /* gap: 20px; */
             padding: 20px;
             align-items: flex-start;
+            overflow: auto;
           }
 
           ${devices.ipads} {
@@ -354,6 +349,7 @@ export const HeaderContainer = styled.div`
             /* gap: 20px; */
             padding: 20px;
             align-items: flex-start;
+            overflow: auto;
           }
 
           @media only screen and (max-width: 1024px) {
@@ -361,6 +357,7 @@ export const HeaderContainer = styled.div`
             /* gap: 20px; */
             padding: 20px;
             align-items: flex-start;
+            overflow: auto;
           }
 
           li {
@@ -505,6 +502,32 @@ export const HeaderContainer = styled.div`
         display: block;
         height: 90px;
         width: 1px;
+      }
+    }
+  }
+
+  .bisa {
+    li {
+      :last-child {
+        .megamenu {
+          margin-left: -300px;
+
+          ${devices.smartphone} {
+            margin-left: 0px;
+          }
+
+          ${devices.ipads} {
+            margin-left: 0px;
+          }
+
+          @media only screen and (max-width: 1024px) {
+            margin-left: 0px;
+          }
+
+          ::before {
+            left: 200px;
+          }
+        }
       }
     }
   }

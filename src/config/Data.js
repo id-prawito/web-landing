@@ -76,13 +76,101 @@ export const NAVLINKS = [
     to: "/publikasi",
     icon: FaEllipsisV,
     name: "PUBLIKASI",
-    megamenu: false,
+    megamenu: true,
+    megamenuItem: [
+      {
+        id: 1,
+        to: "/penyimpanan-dana",
+        name: "PENYIMPANAN DANA",
+        sub: [
+          {
+            to: "./layanan-kami/penyimpanan-dana/0",
+            judul: "Tabungan iB Wadiah",
+          },
+          {
+            to: "./layanan-kami/penyimpanan-dana/1",
+            judul: "Tabungan iB Mudharabah",
+          },
+          {
+            to: "./layanan-kami/penyimpanan-dana/2",
+            judul: "Deposito iB Mudharabah",
+          },
+        ],
+      },
+      {
+        id: 2,
+        to: "/penyaluran-dana",
+        name: "PENYALURAN DANA",
+        sub: [
+          {
+            to: "./layanan-kami/penyaluran-dana/0",
+            judul: "Pembiayaan iB Wadiah",
+          },
+          {
+            to: "./layanan-kami/penyaluran-dana/1",
+            judul: "Pembiayaan iB Musyarakah",
+          },
+          {
+            to: "./layanan-kami/penyaluran-dana/2",
+            judul: "Pembiayaan iB Multijasa",
+          },
+          {
+            to: "./layanan-kami/penyaluran-dana/3",
+            judul: "iB Gadai Emas",
+          },
+        ],
+      },
+    ],
   },
   {
     to: "/we-contact-us",
     icon: FaEllipsisV,
     name: "TENTANG KAMI",
-    megamenu: false,
+    megamenu: true,
+    megamenuItem: [
+      {
+        id: 1,
+        to: "/penyimpanan-dana",
+        name: "PENYIMPANAN DANA",
+        sub: [
+          {
+            to: "./layanan-kami/penyimpanan-dana/0",
+            judul: "Tabungan iB Wadiah",
+          },
+          {
+            to: "./layanan-kami/penyimpanan-dana/1",
+            judul: "Tabungan iB Mudharabah",
+          },
+          {
+            to: "./layanan-kami/penyimpanan-dana/2",
+            judul: "Deposito iB Mudharabah",
+          },
+        ],
+      },
+      {
+        id: 2,
+        to: "/penyaluran-dana",
+        name: "PENYALURAN DANA",
+        sub: [
+          {
+            to: "./layanan-kami/penyaluran-dana/0",
+            judul: "Pembiayaan iB Wadiah",
+          },
+          {
+            to: "./layanan-kami/penyaluran-dana/1",
+            judul: "Pembiayaan iB Musyarakah",
+          },
+          {
+            to: "./layanan-kami/penyaluran-dana/2",
+            judul: "Pembiayaan iB Multijasa",
+          },
+          {
+            to: "./layanan-kami/penyaluran-dana/3",
+            judul: "iB Gadai Emas",
+          },
+        ],
+      },
+    ],
   },
 ];
 
