@@ -25,7 +25,7 @@ const Home = () => {
         judul="Produk dan Layanan Kami"
         deskripsi="Kami percaya bahwa pengalaman transaksi perbankan yang pada produk unggulan kami."
       />
-      <FocusComponent />
+      <FocusComponent backgroundColor="#06aed5" />
       <Accordion />
       <Informasi />
       <Card itemBerita={BERITA} />

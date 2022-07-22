@@ -274,14 +274,11 @@ const HeadingComponent = (item) => {
   );
 };
 
-const FocusComponent = () => {
+const FocusComponent = ({ backgroundColor }) => {
   return (
     <FocusComponentSite>
       <div className="focus_container">
-        <div
-          className="gambar_bg"
-          style={{ backgroundImage: `url(${bgGopay})` }}
-        >
+        <div className="gambar_bg" style={{ backgroundColor: backgroundColor }}>
           <HeadingComponent
             Style={{ textAlign: "center", width: "100%", color: "#fff" }}
             Heading="Coba simulasi kredit sekarang!"

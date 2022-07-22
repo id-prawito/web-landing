@@ -78,7 +78,7 @@ export const HeaderContainer = styled.div`
       border-radius: 10px;
       padding: 4px;
       color: #fff;
-      background-color: #7227f3;
+      background-color: var(--colorMain);
     }
     &:hover {
       background-color: #8080803b;
