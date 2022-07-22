@@ -3,6 +3,7 @@ import { DetailBeritaSite } from "./BeritaElements";
 import DOMPurify from "dompurify";
 
 const DetailBeritaComponents = ({ newItem }) => {
+  console.log(newItem);
   return (
     <DetailBeritaSite>
       {newItem ? (

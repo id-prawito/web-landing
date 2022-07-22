@@ -55,9 +55,12 @@ const CardItem = ({ item }) => {
   let text = item.judul;
   let result = text.toLowerCase();
   const judulBerita = result.split(" ").join("-");
+  const idNumber = item.id.toString();
+  const gabunganJudul = idNumber + "-" + judulBerita;
+
   return (
     <CardItemComponents>
-      <a href={`./berita-kami/${judulBerita}`} className="card_item">
+      <a href={`./berita-kami/${gabunganJudul}`} className="card_item">
         <div className="card_img">
           <img src={item.img} alt="blog_img" />
         </div>
@@ -117,8 +120,6 @@ const Card = ({ itemBerita, text }) => {
       top: cardRef.current.offsetTop,
     });
   };
-
-  console.log(posts);
 
   const ShowLess = () => {
     setStart(3);
