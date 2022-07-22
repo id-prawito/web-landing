@@ -109,13 +109,16 @@ const Card = ({ itemBerita, text }) => {
   const cardRef = useRef();
   // console.log(cardRef.current.offsetTop);
   const LoadMore = () => {
-    setStart(start + 3);
+    setStart((prevValue) => prevValue + 3);
+
     setActive(true);
     window.scrollTo({
       behavior: "smooth",
       top: cardRef.current.offsetTop,
     });
   };
+
+  console.log(posts);
 
   const ShowLess = () => {
     setStart(3);

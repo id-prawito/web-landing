@@ -294,7 +294,7 @@ export const BERITA = [
   },
   {
     id: 5,
-    judul: "Membuat adonan kue 4",
+    judul: "Membuat adonan kue 5",
     date: "17 Juli 2020",
     img: blogImg,
     kontenBerita:
@@ -302,7 +302,7 @@ export const BERITA = [
   },
   {
     id: 6,
-    judul: "Membuat adonan kue 4",
+    judul: "Membuat adonan kue 6",
     date: "17 Juli 2020",
     img: blogImg,
     kontenBerita:
@@ -310,7 +310,7 @@ export const BERITA = [
   },
   {
     id: 7,
-    judul: "Membuat adonan kue 4",
+    judul: "Membuat adonan kue 7",
     date: "17 Juli 2020",
     img: blogImg,
     kontenBerita:
