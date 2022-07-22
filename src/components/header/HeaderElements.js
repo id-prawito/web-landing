@@ -341,7 +341,6 @@ export const HeaderContainer = styled.div`
             /* gap: 20px; */
             padding: 20px;
             align-items: flex-start;
-            overflow: auto;
           }
 
           ${devices.ipads} {
@@ -349,7 +348,6 @@ export const HeaderContainer = styled.div`
             /* gap: 20px; */
             padding: 20px;
             align-items: flex-start;
-            overflow: auto;
           }
 
           @media only screen and (max-width: 1024px) {
@@ -357,7 +355,6 @@ export const HeaderContainer = styled.div`
             /* gap: 20px; */
             padding: 20px;
             align-items: flex-start;
-            overflow: auto;
           }
 
           li {
