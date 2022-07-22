@@ -12,6 +12,10 @@ export const FormSite = styled.section`
   ${devices.ipads} {
     padding: 35px 0;
   }
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
   .form_container {
     padding: 0 100px;
 

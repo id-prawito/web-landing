@@ -14,6 +14,11 @@ export const TentangKamiSite = styled.section`
   ${devices.ipads} {
     padding: 35px 0;
   }
+
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
   .tentang {
     &_container {
       padding: 0 100px;
@@ -28,6 +33,10 @@ export const TentangKamiSite = styled.section`
 
       ${devices.laptops} {
         padding: 0 50px;
+      }
+
+      ${devices.screen_large} {
+        padding: 0 100px;
       }
     }
 
@@ -198,6 +207,11 @@ export const OrganisasiSite = styled.section`
   ${devices.laptops} {
     padding: 35px 0;
   }
+
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
   .organisasi {
     &_container {
       padding: 0 100px;
@@ -212,6 +226,10 @@ export const OrganisasiSite = styled.section`
 
       ${devices.laptops} {
         padding: 0 50px;
+      }
+
+      ${devices.screen_large} {
+        padding: 0 100px;
       }
     }
 
@@ -370,6 +388,11 @@ export const LayananSite = styled.section`
   ${devices.laptops} {
     padding: 35px 0;
   }
+
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
   .layanan {
     &_container {
       padding: 0 100px;
@@ -384,6 +407,10 @@ export const LayananSite = styled.section`
 
       ${devices.laptops} {
         padding: 0 50px;
+      }
+
+      ${devices.screen_large} {
+        padding: 0 100px;
       }
     }
 

@@ -4,6 +4,7 @@ const breakpoints = {
   md: "768px",
   ml: "1120px",
   lg: "1200px",
+  lgx: "1580px",
 };
 
 export const devices = {
@@ -11,5 +12,5 @@ export const devices = {
   ipads: `@media only screen and (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md})`,
   laptops: `@media only screen and (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.ml})`,
   desktops: `@media only screen and (min-width: ${breakpoints.ml}) and (max-width: ${breakpoints.lg})`,
-  screen_large: `@media only screen and (min-width: ${breakpoints.lg})`,
+  screen_large: `@media only screen and (min-width: ${breakpoints.lgx})`,
 };

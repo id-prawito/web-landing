@@ -4,6 +4,11 @@ import { devices } from "../../assets/_respondTo";
 export const DetailBeritaSite = styled.section`
   padding: 40px 0;
 
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
+
   .berita {
     &_container {
       padding: 0 200px;
@@ -18,6 +23,10 @@ export const DetailBeritaSite = styled.section`
 
       ${devices.laptops} {
         padding: 0 50px;
+      }
+
+      ${devices.screen_large} {
+        padding: 0 200px;
       }
     }
 

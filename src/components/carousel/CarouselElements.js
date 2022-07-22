@@ -36,6 +36,11 @@ export const CorouselSectionFicture = styled.section`
     padding: 35px 0;
   }
 
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
+
   .section_carousel {
     display: flex;
     justify-content: center;
@@ -56,6 +61,9 @@ export const CorouselSectionFicture = styled.section`
       }
       ${devices.laptops} {
         padding: 0px 50px;
+      }
+      ${devices.screen_large} {
+        padding: 0px 100px;
       }
     }
     &_container_slide {

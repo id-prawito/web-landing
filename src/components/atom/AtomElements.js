@@ -15,6 +15,11 @@ export const InformasiSite = styled.section`
     padding: 35px 0;
   }
 
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
+
   .informasi {
     display: flex;
     flex-direction: row;
@@ -55,6 +60,10 @@ export const InformasiSite = styled.section`
 
       ${devices.laptops} {
         padding: 0px 50px;
+      }
+
+      ${devices.screen_large} {
+        padding: 0px 100px;
       }
     }
   }
@@ -169,6 +178,11 @@ export const CardComponents = styled.section`
   ${devices.laptops} {
     padding: 35px 0;
   }
+
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
   .card_container {
     padding: 0 100px;
 
@@ -182,6 +196,10 @@ export const CardComponents = styled.section`
 
     ${devices.laptops} {
       padding: 0 50px;
+    }
+
+    ${devices.screen_large} {
+      padding: 0px 100px;
     }
   }
 
@@ -221,6 +239,11 @@ export const DetailComponents = styled.section`
     padding: 35px 0;
   }
 
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
+
   .detail {
     &_container {
       padding: 0 100px;
@@ -235,6 +258,10 @@ export const DetailComponents = styled.section`
 
       ${devices.laptops} {
         padding: 0px 50px;
+      }
+
+      ${devices.screen_large} {
+        padding: 0px 100px;
       }
     }
     &_content {
@@ -325,6 +352,11 @@ export const OjkComponents = styled.section`
     padding: 35px 0;
   }
 
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
+
   .ojk {
     &_container {
       padding: 0 100px;
@@ -339,6 +371,10 @@ export const OjkComponents = styled.section`
 
       ${devices.laptops} {
         padding: 0px 50px;
+      }
+
+      ${devices.screen_large} {
+        padding: 0px 100px;
       }
     }
 

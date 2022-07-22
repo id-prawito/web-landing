@@ -12,6 +12,11 @@ const AccordionSite = styled.section`
   min-height: 80vh;
   padding: 0px;
 
+  ${devices.screen_large} {
+    padding: 100px 0;
+    max-width: 1580px;
+  }
+
   .accordion_container {
     padding: 0 100px;
     width: 100%;
@@ -26,6 +31,10 @@ const AccordionSite = styled.section`
 
     ${devices.laptops} {
       padding: 0px 50px;
+    }
+
+    ${devices.screen_large} {
+      padding: 0px 100px;
     }
   }
 
@@ -59,6 +68,10 @@ const AccordionSite = styled.section`
       ${devices.laptops} {
         width: 100%;
       }
+
+      ${devices.screen_large} {
+        width: 100%;
+      }
     }
   }
 
@@ -81,6 +94,10 @@ const AccordionSite = styled.section`
     }
 
     ${devices.laptops} {
+      width: 100%;
+    }
+
+    ${devices.screen_large} {
       width: 100%;
     }
 
