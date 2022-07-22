@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../../assets/_respondTo";
+import themeList from "../../config/themeList";
 
 export const TentangKamiSite = styled.section`
   ${devices.smartphone} {
@@ -281,7 +282,10 @@ export const OrganisasiSite = styled.section`
         }
 
         .card_component {
-          background: #fff;
+          background-color: ${({ theme: { theme } }) =>
+            theme === themeList.light
+              ? "var(--light-background)"
+              : "var(--dark-background)"};
           max-width: 320px;
           height: auto;
           border-radius: 20px;
@@ -315,11 +319,19 @@ export const OrganisasiSite = styled.section`
             h1 {
               font-size: 18px;
               font-weight: 600;
+              color: ${({ theme: { theme } }) =>
+                theme === themeList.light
+                  ? "var(--lightText)"
+                  : "var(--darkText)"};
             }
 
             p {
               font-size: 12px;
               font-weight: 300;
+              color: ${({ theme: { theme } }) =>
+                theme === themeList.light
+                  ? "var(--lightText)"
+                  : "var(--darkText)"};
             }
           }
         }
@@ -329,7 +341,10 @@ export const OrganisasiSite = styled.section`
     &_download {
       font-size: 13px;
       font-weight: 400;
-      background-color: #f4f4f4;
+
+      background-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#f4f4f4" : "var(--mediumColor)"};
+
       padding: 8px 15px;
       border-radius: 8px;
       width: max-content;
@@ -383,11 +398,15 @@ export const LayananSite = styled.section`
     &_tabs {
       width: 100%;
       height: max-content;
-      background: #fff;
-      border: 1px solid #bdbdbd;
+      /* background: #fff; */
+
+      background-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#fff" : "var(--mediumColor)"};
+      border: 1px solid
+        ${({ theme: { theme } }) =>
+          theme === themeList.light ? "#bdbdbd" : "var(--mediumColor)"};
       box-sizing: border-box;
       border-radius: 20px;
-      transition: box-shadow 1s;
       width: 100%;
 
       .content {
@@ -460,7 +479,7 @@ export const Tabs = styled.div`
 
     &_content {
       display: inline;
-      transition: all 4s ease-in-out;
+      /* transition: all 4s ease-in-out; */
       .fade {
         display: block;
       }

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../../assets/_respondTo";
+import themeList from "../../config/themeList";
 
 export const InformasiSite = styled.section`
   ${devices.smartphone} {
@@ -18,7 +19,8 @@ export const InformasiSite = styled.section`
     display: flex;
     flex-direction: row;
     padding: 30px;
-    background: #ffefd4;
+    background-color: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "#ffefd4" : "var(--mediumColor)"};
     width: 100%;
     border-radius: 8px;
     gap: 20px;
@@ -95,7 +97,10 @@ export const CardItemComponents = styled.div`
       flex-direction: column;
       min-width: 0;
       word-wrap: break-word;
-      background-color: #fff;
+
+      background-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#fff" : "var(--mediumColor)"};
+
       background-clip: border-box;
       overflow: hidden;
       border: 1px solid transparent;
@@ -146,7 +151,8 @@ export const CardItemComponents = styled.div`
       text-align: left;
       font-size: 12px;
       font-weight: 400;
-      background-color: #f8f9fa;
+      background-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#f8f9fa" : "#282d34"};
     }
   }
 `;

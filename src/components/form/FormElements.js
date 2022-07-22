@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { devices } from "../../assets/_respondTo";
+import themeList from "../../config/themeList";
 
 export const FormSite = styled.section`
   ${devices.smartphone} {
@@ -49,7 +50,11 @@ export const FormSite = styled.section`
 
   .form_currency {
     padding: 14px 26px;
-    border: 1.2px solid #aaa;
+    /* border: 1.2px solid #aaa; */
+
+    border: 1px solid
+      ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#bdbdbd" : "var(--mediumColor)"};
     box-sizing: border-box;
     border-radius: 8px;
     color: #00193e;
@@ -128,7 +133,7 @@ export const FormContent = styled.div`
   select {
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: transparent;
+    /* background: transparent; */
     background-image: url("data:image/svg+xml;utf8,<svg stroke='currentColor' fill='none' stroke-width='2' viewBox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' height='1em' width='1em' xmlns='http://www.w3.org/2000/svg'><polyline points='6 9 12 15 18 9'></polyline></svg>");
     background-repeat: no-repeat;
     background-position-x: 97%;
@@ -169,8 +174,11 @@ export const FormContent = styled.div`
   .card_form {
     height: max-content;
     /* border-radius: 8px; */
-    background: #fff;
-    border: 1px solid #bdbdbd;
+    background-color: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "#fff" : "var(--mediumColor)"};
+    border: 1px solid
+      ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#bdbdbd" : "var(--mediumColor)"};
     box-sizing: border-box;
     border-radius: 20px;
     transition: box-shadow 1s;

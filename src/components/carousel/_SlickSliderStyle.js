@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import themeList from "../../config/themeList";
 
 const SliderWrapper = styled.div`
   height: 100%;
@@ -270,14 +271,18 @@ const SliderWrapper = styled.div`
     text-align: center;
 
     opacity: 0.25;
-    color: black;
+    color: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "#000" : "#fff"};
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   .slick-dots li.slick-active button:before {
     opacity: 0.75;
-    color: black;
+    /* color: black; */
+
+    color: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "#000" : "#fff"};
   }
 
   /* Custom Slick Dots */

@@ -54,7 +54,7 @@ export const DetailBeritaSite = styled.section`
             width: 4px;
             height: 4px;
             content: ">";
-            color: #1d639d;
+            color: var(--colorMain);
           }
 
           :last-child {
@@ -99,6 +99,15 @@ export const DetailBeritaSite = styled.section`
         line-height: 1.5;
         font-weight: 300;
         text-align: left;
+      }
+    }
+
+    &_gambar {
+      overflow: hidden;
+      border-radius: 10px;
+      object-fit: contain;
+      img {
+        object-fit: contain;
       }
     }
   }

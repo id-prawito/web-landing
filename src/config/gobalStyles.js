@@ -5,8 +5,6 @@ const GlobalStyles = createGlobalStyle`
   
   :root{
     // Color
-    --dark-background: #1A1D29;
-    --light-background: #fff;
     --mediumSlateBlue: #6C62E2;
     --dark-components: #7C3AED; // Ungu
     --darkCardComponent : #7C3AED; // Ungu
@@ -20,6 +18,16 @@ const GlobalStyles = createGlobalStyle`
     --darkTab : #979797;
     --colorMain : #0B9608; // Ungu #7c3aed, Hijau #0B9608
     --colorWhite : #ffffff; // White
+
+    --colorMain : #0B9608; // Ungu #7c3aed, Hijau #0B9608
+    
+    --lightText: #000;
+    --darkText: #fff;
+
+    --dark-background: #161c24;
+    --light-background: #fff;
+
+    --mediumColor: #2a3039; // example in card
   }
   
   body {
@@ -28,7 +36,8 @@ const GlobalStyles = createGlobalStyle`
         ? "var(--light-background)"
         : "var(--dark-background)"};
     font-family: "Rubik", sans-serif;
-    color: #000;
+    color: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "var(--lightText)" : "var(--darkText)"};
     text-align: center;
   }
   

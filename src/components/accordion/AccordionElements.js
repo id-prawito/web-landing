@@ -2,6 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { devices } from "../../assets/_respondTo";
+import themeList from "../../config/themeList";
 
 const AccordionSite = styled.section`
   display: flex;
@@ -63,10 +64,15 @@ const AccordionSite = styled.section`
 
   .content_accordion {
     margin-bottom: 20px;
-    background-color: #fff;
-    border: 1px solid #969696;
+    background-color: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "#fff" : "var(--mediumColor)"};
+    border: 1px solid
+      ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#969696" : "var(--mediumColor)"};
     border-radius: 8px;
-    box-shadow: 0 8px 24px rgb(185 185 185 / 25%);
+    box-shadow: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "0 8px 24px rgb(185 185 185 / 25%)" : ""};
+    /* box-shadow: 0 8px 24px rgb(185 185 185 / 25%); */
     width: 500px;
     height: max-content;
 
@@ -99,7 +105,7 @@ const AccordionContainer = styled.div`
 const Inner = styled.div`
   position: absolute;
   padding: 16px;
-  color: #222;
+  /* color: #222; */
 `;
 
 const Header = styled.div`
@@ -112,7 +118,11 @@ const Header = styled.div`
   font-size: 14px;
   text-align: left;
   cursor: pointer;
-  color: ${(props) => (props.isActive ? "var(--colorMain);" : "#222")};
+  color: ${(props) =>
+    props.isActive
+      ? "var(--colorMain);"
+      : ({ theme: { theme } }) =>
+          theme === themeList.light ? "#000" : "#fff"};
   font-weight: 500;
 `;
 
