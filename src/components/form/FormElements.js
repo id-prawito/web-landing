@@ -282,7 +282,11 @@ export const FormContent = styled.div`
       tr {
         th {
           padding: 0.75rem;
-          border: 1px solid #fff !important;
+          border: 1px solid
+            ${({ theme: { theme } }) =>
+              theme === themeList.light
+                ? "#fff"
+                : "var(--mediumColor)"} !important;
           font-size: 14px;
           font-weight: 400;
           text-align: center;
@@ -302,7 +306,9 @@ export const FormContent = styled.div`
     }
 
     td {
-      border: 1px solid #fff;
+      border: 1px solid
+        ${({ theme: { theme } }) =>
+          theme === themeList.light ? "#fff" : "var(--mediumColor)"};
       padding: 0.75rem;
       color: #000;
       line-height: 1.3;

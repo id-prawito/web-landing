@@ -3,6 +3,7 @@ import { FooterSite, Media } from "./FooterElements";
 import { MEDIA_SOSIAL } from "../../config/data";
 import gambarOjk from "../../assets/img/ojk.png";
 import gambarLps from "../../assets/img/lps.png";
+import logoSite from "../../assets/img/logo_new.png";
 
 const Footer = () => {
   return (

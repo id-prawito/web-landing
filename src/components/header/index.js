@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 import { BiCaretDown } from "react-icons/bi";
 import styled from "styled-components";
 import { devices } from "../../assets/_respondTo";
+import themeList from "../../config/themeList";
 
 const ContentDrop = styled.div`
   max-height: 340px;
@@ -15,7 +16,9 @@ const ContentDrop = styled.div`
   .megamenu {
     position: absolute;
     top: 5rem;
-    background-color: #fff;
+    background-color: ${({ theme: { theme } }) =>
+      theme === themeList.light ? "#fff" : "#1b1d29"};
+
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -36,7 +39,8 @@ const ContentDrop = styled.div`
       top: -20px;
       bottom: auto;
       border: 10px solid transparent;
-      border-bottom-color: #fff;
+      border-bottom-color: ${({ theme: { theme } }) =>
+        theme === themeList.light ? "#fff" : "#1b1d29"};
     }
 
     ${devices.smartphone} {
@@ -127,17 +131,24 @@ const ContentDrop = styled.div`
 
     ${devices.smartphone} {
       padding: 4px 20px;
-      border-left: 1px solid #00000030;
+
+      border-left: 1px solid
+        ${({ theme: { theme } }) =>
+          theme === themeList.light ? "#00000030" : "#bfbfbf5e"};
     }
 
     ${devices.ipads} {
       padding: 4px 20px;
-      border-left: 1px solid #00000030;
+      border-left: 1px solid
+        ${({ theme: { theme } }) =>
+          theme === themeList.light ? "#00000030" : "#bfbfbf5e"};
     }
 
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       padding: 4px 20px;
-      border-left: 1px solid #00000030;
+      border-left: 1px solid
+        ${({ theme: { theme } }) =>
+          theme === themeList.light ? "#00000030" : "#bfbfbf5e"};
     }
 
     li:first-child {
