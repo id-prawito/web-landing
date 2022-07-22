@@ -8,7 +8,7 @@ const Berita = () => {
   return (
     <>
       <FocusComponentColor backgroundColor="#f9b418" img={imgContact} />
-      <Card itemBerita={itemBerita} />
+      <Card itemBerita={itemBerita} text="Load More" />
     </>
   );
 };

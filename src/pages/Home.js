@@ -28,7 +28,7 @@ const Home = () => {
       <FocusComponent backgroundColor="#06aed5" />
       <Accordion />
       <Informasi />
-      <Card itemBerita={BERITA} />
+      <Card itemBerita={BERITA} text="Lihat Lebih" />
       <OrganisasiSection />
       <FormKpr />
     </div>

@@ -204,27 +204,6 @@ export const CardComponents = styled.section`
       line-height: 1.5;
     }
   }
-
-  .card_content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-    gap: 30px;
-
-    ${devices.smartphone} {
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    @media only screen and (min-width: 560px) and (max-width: 760px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    ${devices.ipads} {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
 `;
 
 export const DetailComponents = styled.section`

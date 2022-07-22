@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   CardComponents,
   CardItemComponents,
@@ -25,6 +25,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
 import SliderWrapper from "../carousel/_SlickSliderStyle";
 import DOMPurify from "dompurify";
+import styled from "styled-components";
+import { devices } from "../../assets/_respondTo";
 
 const Informasi = () => {
   return (
@@ -75,28 +77,102 @@ const CardItem = ({ item }) => {
   );
 };
 
-const Card = ({ itemBerita }) => {
-  const items = itemBerita;
+const BeritaContent = styled.div`
+  .card_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    gap: 30px;
+    transition: all 0.35s ease-in-out;
+
+    ${devices.smartphone} {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media only screen and (min-width: 560px) and (max-width: 760px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    ${devices.ipads} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+`;
+
+const Card = ({ itemBerita, text }) => {
+  const [start, setStart] = useState(3);
+  const posts = itemBerita;
+  const [isActive, setActive] = useState(false);
+  const testRef = useRef();
+  const cardRef = useRef();
+  // console.log(cardRef.current.offsetTop);
+  const LoadMore = () => {
+    setStart(start + 3);
+    setActive(true);
+    window.scrollTo({
+      behavior: "smooth",
+      top: cardRef.current.offsetTop,
+    });
+  };
+
+  const ShowLess = () => {
+    setStart(3);
+    window.scrollTo({ behavior: "smooth", top: testRef.current.offsetTop });
+  };
 
   return (
     <CardComponents>
-      <div className="card_container">
+      <div ref={testRef} className="card_container">
         <HeadingComponent
           Heading="Berita Kami"
           Text="Kami percaya bahwa pengalaman transaksi perbankan yang berfokus pada
           kehidupan Anda akan memungkinkan Anda untuk terus bertumbuh."
         />
-        <div className="card_content">
-          {items ? (
-            <>
-              {items.map((item, i) => (
-                <CardItem key={i} item={item} />
-              ))}
-            </>
-          ) : (
-            "Tidak ada data"
-          )}
-        </div>
+        {text === "Lihat Lebih" ? (
+          <BeritaContent isActive={isActive}>
+            <div className="card_content">
+              {posts ? (
+                <>
+                  {posts.slice(0, 6).map((item, i) => (
+                    <CardItem key={i} item={item} />
+                  ))}
+                </>
+              ) : (
+                "Tidak ada data"
+              )}
+            </div>
+            <Button
+              icon={FaAccusoft}
+              label={text}
+              style={{ margin: "auto", marginTop: "40px" }}
+              to="./berita-kami"
+            />
+          </BeritaContent>
+        ) : (
+          <BeritaContent>
+            <div className="card_content">
+              {posts ? (
+                <>
+                  {posts.slice(0, start).map((item, i) => (
+                    <CardItem key={i} item={item} />
+                  ))}
+                </>
+              ) : (
+                "Tidak ada data"
+              )}
+            </div>
+            <div ref={cardRef} className="class_baru">
+              <Button
+                icon={FaAccusoft}
+                label={start >= posts.length + 1 ? "Show Less" : text}
+                style={{ margin: "auto", marginTop: "40px" }}
+                onClick={start >= posts.length + 1 ? ShowLess : LoadMore}
+              />
+            </div>
+          </BeritaContent>
+        )}
       </div>
     </CardComponents>
   );
