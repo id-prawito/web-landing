@@ -57,10 +57,58 @@ const ContentDrop = styled.div`
       height: ${(props) => {
         return `${props.isDropdown ? "319" : "0"}px`;
       }};
-      /* height: ${(props) => {
-        const inner = document.getElementById(props.itemName);
-        return `${props.isDropdown && inner ? inner.clientHeight : 0}px`;
-      }}; */
+      transition: height 0.35s;
+
+      ::before {
+        content: "";
+        display: none;
+      }
+    }
+
+    ${devices.ipads} {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      position: static;
+      box-shadow: none;
+      /* visibility: visible; */
+      overflow: hidden;
+      visibility: visible;
+      opacity: 1;
+      height: 0;
+      max-width: 200px;
+      margin-left: 0px;
+      gap: 20px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      height: ${(props) => {
+        return `${props.isDropdown ? "319" : "0"}px`;
+      }};
+      transition: height 0.35s;
+
+      ::before {
+        content: "";
+        display: none;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      position: static;
+      box-shadow: none;
+      /* visibility: visible; */
+      overflow: hidden;
+      visibility: visible;
+      opacity: 1;
+      height: 0;
+      max-width: 200px;
+      margin-left: 0px;
+      gap: 20px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      height: ${(props) => {
+        return `${props.isDropdown ? "319" : "0"}px`;
+      }};
       transition: height 0.35s;
 
       ::before {
@@ -82,6 +130,16 @@ const ContentDrop = styled.div`
       border-left: 1px solid #00000030;
     }
 
+    ${devices.ipads} {
+      padding: 4px 20px;
+      border-left: 1px solid #00000030;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      padding: 4px 20px;
+      border-left: 1px solid #00000030;
+    }
+
     li:first-child {
       align-items: flex-start;
       text-align: left;
@@ -96,6 +154,28 @@ const ContentDrop = styled.div`
         margin-top: 8px;
 
         ${devices.smartphone} {
+          border-left: 1px solid #ababab;
+          border-bottom: 0px solid #ababab;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 150px;
+          margin-top: 8px;
+          content: "";
+        }
+
+        ${devices.ipads} {
+          border-left: 1px solid #ababab;
+          border-bottom: 0px solid #ababab;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 150px;
+          margin-top: 8px;
+          content: "";
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
           border-left: 1px solid #ababab;
           border-bottom: 0px solid #ababab;
           display: flex;

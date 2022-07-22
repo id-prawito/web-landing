@@ -1,6 +1,6 @@
 import React from "react";
 import SimpleSlider, { SimpleSliderFicture } from "../components/carousel";
-import Accordion from "../components/accordion";
+import { Accordion, FormKpr } from "../components";
 import { BERITA } from "../config/data";
 import {
   Card,
@@ -9,7 +9,6 @@ import {
   Informasi,
   OjkInformasi,
 } from "../components/atom";
-import FormKpr from "../components/form";
 import { OrganisasiSection } from "../components/section";
 
 const Home = () => {

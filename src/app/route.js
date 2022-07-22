@@ -1,9 +1,6 @@
 import React from "react";
 import Home from "../pages/Home";
-import {
-  Routes, // instead of "Switch"
-  Route,
-} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NotFound from "../pages/404";
 import Berita from "../pages/Berita";
 import DetailBerita from "../pages/DetailBerita";

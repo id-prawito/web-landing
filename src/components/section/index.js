@@ -13,10 +13,6 @@ import {
 } from "./SectionElements";
 import { motion, AnimatePresence } from "framer-motion";
 
-const HubungiKami = () => {
-  return <div>Hubungi Kami</div>;
-};
-
 const TentangKami = () => {
   return (
     <TentangKamiSite>
@@ -480,10 +476,4 @@ const PublikasiSection = ({ judul, DATA_TABS }) => {
   );
 };
 
-export {
-  HubungiKami,
-  TentangKami,
-  OrganisasiSection,
-  LayananSection,
-  PublikasiSection,
-};
+export { TentangKami, OrganisasiSection, LayananSection, PublikasiSection };
