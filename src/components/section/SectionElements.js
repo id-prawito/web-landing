@@ -669,3 +669,68 @@ export const ContentTabSite = styled.div`
     }
   }
 `;
+
+export const ErrorSite = styled.section`
+  .error {
+    &_container {
+      padding: 0 100px;
+
+      ${devices.smartphone} {
+        padding: 0 25px;
+      }
+
+      ${devices.ipads} {
+        padding: 0 25px;
+      }
+
+      ${devices.laptops} {
+        padding: 0 35px;
+      }
+    }
+
+    &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+
+      .angka {
+        font-size: 160px;
+        font-weight: 500;
+
+        ${devices.smartphone} {
+          font-size: 100px;
+        }
+
+        ${devices.ipads} {
+          font-size: 100px;
+        }
+
+        ${devices.laptops} {
+          padding: 0 130px;
+        }
+
+        b {
+          color: var(--colorMain);
+        }
+      }
+      .text {
+        font-size: 26px;
+        font-weight: 500;
+
+        ${devices.smartphone} {
+          font-size: 18px;
+        }
+
+        ${devices.ipads} {
+          font-size: 18px;
+        }
+
+        ${devices.laptops} {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+`;

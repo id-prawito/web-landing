@@ -3,7 +3,7 @@ import { FooterSite, Media } from "./FooterElements";
 import { MEDIA_SOSIAL } from "../../config/data";
 import gambarOjk from "../../assets/img/ojk.png";
 import gambarLps from "../../assets/img/lps.png";
-import logoSite from "../../assets/img/logo_new.png";
+import logoSite from "../../assets/img/logo_bawah.png";
 
 const Footer = () => {
   return (
@@ -11,7 +11,9 @@ const Footer = () => {
       <div className="footer">
         <div className="footer_content">
           <div className="footer_header">
-            <div className="footer_logo">Logo Bank</div>
+            <div className="footer_logo">
+              <img src={logoSite} alt="logo_bawah" />
+            </div>
             <div className="footer_header_content">
               <nav>
                 <ul>

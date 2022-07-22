@@ -9,22 +9,35 @@ import { Layanan, LayananDua, LayananSatu } from "../pages/Layanan";
 import Simulasi from "../pages/Simulasi";
 import Publikasi from "../pages/Publikasi";
 
+import { Outlet } from "react-router-dom";
+import { Footer, Header } from "../components";
+
+const PageLayout = () => (
+  <>
+    <Header />
+    <Outlet />
+    <Footer />
+  </>
+);
+
 export const RouteSite = () => {
   return (
     <Routes>
-      <Route index element={<Home />} />
-      <Route exact path="/we-contact-us" element={<ContactUs />} />
+      <Route element={<PageLayout />}>
+        <Route index element={<Home />} />
+        <Route exact path="/we-contact-us" element={<ContactUs />} />
 
-      <Route exact path="/layanan-kami" element={<LayananSatu />} />
-      <Route exact path="/layanan-kami/:id" element={<LayananDua />} />
-      <Route exact path="/layanan-kami/:id/:index" element={<Layanan />} />
+        <Route exact path="/layanan-kami" element={<LayananSatu />} />
+        <Route exact path="/layanan-kami/:id" element={<LayananDua />} />
+        <Route exact path="/layanan-kami/:id/:index" element={<Layanan />} />
 
-      <Route exact path="/berita-kami" element={<Berita />} />
-      <Route exact path="/berita-kami/:id" element={<DetailBerita />} />
+        <Route exact path="/berita-kami" element={<Berita />} />
+        <Route exact path="/berita-kami/:id" element={<DetailBerita />} />
 
-      <Route exact path="/simulasi-kpr" element={<Simulasi />} />
+        <Route exact path="/simulasi-kpr" element={<Simulasi />} />
 
-      <Route exact path="/publikasi" element={<Publikasi />} />
+        <Route exact path="/publikasi" element={<Publikasi />} />
+      </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

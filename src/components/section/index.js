@@ -6,6 +6,7 @@ import { HeadingComponent } from "../atom";
 import { Button, ButtonTransparent } from "../form";
 import {
   ContentTabSite,
+  ErrorSite,
   LayananSite,
   OrganisasiSite,
   Tabs,
@@ -476,4 +477,26 @@ const PublikasiSection = ({ judul, DATA_TABS }) => {
   );
 };
 
-export { TentangKami, OrganisasiSection, LayananSection, PublikasiSection };
+const ErrorSection = () => {
+  return (
+    <ErrorSite>
+      <div className="error_container">
+        <div className="error_content">
+          <div className="angka">
+            4<b>0</b>4
+          </div>
+          <div className="text">Maaf, Halaman Tidak Ditemukan !</div>
+          <Button icon={FaAccusoft} label="Kembali ke Beranda" to="./" />
+        </div>
+      </div>
+    </ErrorSite>
+  );
+};
+
+export {
+  TentangKami,
+  OrganisasiSection,
+  LayananSection,
+  PublikasiSection,
+  ErrorSection,
+};

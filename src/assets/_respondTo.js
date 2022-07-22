@@ -4,7 +4,6 @@ const breakpoints = {
   md: "768px",
   ml: "1120px",
   lg: "1200px",
-  xl: "1824px",
 };
 
 export const devices = {

@@ -215,6 +215,16 @@ export const FooterSite = styled.footer`
         }
       }
     }
+
+    &_logo {
+      --size: 40px;
+      height: var(--size);
+      overflow: hidden;
+
+      img {
+        object-fit: contain;
+      }
+    }
   }
 
   .footer {
