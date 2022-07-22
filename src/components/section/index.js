@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaAccusoft, FaPhone } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
-import { ORGANISASI } from "../../config/Data";
+import { ORGANISASI } from "../../config/data";
 import { HeadingComponent } from "../atom";
 import { Button, ButtonTransparent } from "../form";
 import {

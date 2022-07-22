@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import DetailBeritaComponents from "../components/detailberita";
-import { BERITA } from "../config/Data";
+import { BERITA } from "../config";
 
 const DetailBerita = () => {
   const { id } = useParams();

@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, FocusComponentColor } from "../components/atom";
-import { BERITA } from "../config/Data";
+import { BERITA } from "../config";
 import imgContact from "../assets/img/contact-us.png";
 
 const Berita = () => {

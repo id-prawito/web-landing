@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { HeaderContainer, HeaderSite } from "./HeaderElements";
 import { FiMenu, FiX } from "react-icons/fi";
-import { NAVLINKS } from "../../config/Data";
+import { NAVLINKS } from "../../config/data";
 import logoSite from "../../assets/img/logo_new.png";
-import ThemeSwitcher from "../../config/ThemeSwitcher";
+import ThemeSwitcher from "../../config/themeSwitcher";
 import { NavLink } from "react-router-dom";
 import { BiCaretDown } from "react-icons/bi";
 import styled from "styled-components";

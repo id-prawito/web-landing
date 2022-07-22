@@ -1,15 +1,12 @@
-import { BrowserRouter } from "react-router-dom";
+import { GlobalStyles, ThemeContext } from "../config/index";
 import { ThemeProvider } from "styled-components";
+import { BrowserRouter } from "react-router-dom";
+import { Footer, Header } from "../components";
+import { RouteSite } from "../app/route";
 import { useContext } from "react";
-import GlobalStyles from "../config/GlobalStyles";
-import ThemeContext from "../config/ThemeContext.js";
-import { RouteSite } from "../config/Route";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-import "./app.css";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import "slick-carousel/slick/slick.css";
+import "../assets/app.css";
 
 function App() {
   const { theme } = useContext(ThemeContext);

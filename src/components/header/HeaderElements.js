@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { devices } from "../../assets/_respondTo";
-import themeList from "../../config/ThemeList";
+import themeList from "../../config/themeList";
 
 export const HeaderSite = styled.header`
   display: flex;

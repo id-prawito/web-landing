@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import themeList from "./ThemeList";
+import themeList from "./themeList";
 
 const GlobalStyles = createGlobalStyle`
   :root{

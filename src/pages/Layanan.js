@@ -8,7 +8,7 @@ import { LayananSection } from "../components/section";
 import imgContact from "../assets/img/contact-us.png";
 import imgDetail from "../assets/img/2.png";
 import { FaAccusoft } from "react-icons/fa";
-import { DATA_BARU } from "../config/Data";
+import { DATA_BARU } from "../config/data";
 import NotFound from "../pages/404";
 
 const Layanan = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import SimpleSlider, { SimpleSliderFicture } from "../components/carousel";
 import Accordion from "../components/accordion";
-import { BERITA } from "../config/Data";
+import { BERITA } from "../config/data";
 import {
   Card,
   Detail,

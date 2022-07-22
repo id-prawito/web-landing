@@ -20,7 +20,7 @@ import imgAyo from "../../assets/img/ayobank.png";
 import bgGopay from "../../assets/img/kemudahan-gopay-bg.png";
 import { Button, ButtonTransparent } from "../form";
 import { FaAccusoft } from "react-icons/fa";
-import { ORGANISASI } from "../../config/Data";
+import { ORGANISASI } from "../../config/data";
 import { motion, AnimatePresence } from "framer-motion";
 import Slider from "react-slick";
 import SliderWrapper from "../carousel/_SlickSliderStyle";
