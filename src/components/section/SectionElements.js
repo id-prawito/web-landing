@@ -334,7 +334,7 @@ export const OrganisasiSite = styled.section`
             flex-direction: column;
             gap: 10px;
 
-            h1 {
+            span {
               font-size: 18px;
               font-weight: 600;
               color: ${({ theme: { theme } }) =>

@@ -136,7 +136,7 @@ const Card = (item) => {
           <img src={item.items.img} alt={item.items.label} />
         </div>
         <div className="text_nama">
-          <h1>{item.items.label}</h1>
+          <span>{item.items.label}</span>
           <p>{item.items.jabatan}</p>
         </div>
       </div>

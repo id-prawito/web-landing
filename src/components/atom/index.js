@@ -38,7 +38,7 @@ const Informasi = () => {
           </div>
           <div className="text_content">
             <div className="content">
-              <h1>LAPORKAN!</h1>
+              <h1>AYO LAPORKAN SEGERA!</h1>
               <p className="text_p">
                 Jika anda melihat dan mendengar Pelanggaran/Kecurangan yang
                 dilakukan oleh Pejabat/Pegawai di lingkungan Bank Jago.
@@ -65,7 +65,7 @@ const CardItem = ({ item }) => {
           <img src={item.img} alt="blog_img" />
         </div>
         <div className="card_body">
-          <h4>{item.judul}</h4>
+          <h3>{item.judul}</h3>
 
           <div
             className="berita_text"

@@ -137,7 +137,7 @@ export const CardItemComponents = styled.div`
       text-align: left;
       height: 200px;
 
-      h4 {
+      h3 {
         font-size: 15px;
         font-weight: 500;
         margin-bottom: 10px;
