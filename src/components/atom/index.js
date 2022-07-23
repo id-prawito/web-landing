@@ -527,7 +527,7 @@ const ReactHelmet = (item) => {
         name="description"
         content="Ini adalah halaman Baru Here you can find all the basic elements that should never report any issue, in every page of the website."
       />
-      <link rel="canonical" href="/web-landing" />
+      <link rel="canonical" href={item.url} />
       <meta property="og:type" content="Text" />
       <meta property="og:title" content="Bank Artha Mas Abadi | Home" />
       <meta
