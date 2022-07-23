@@ -10,7 +10,7 @@ const Berita = () => {
   return (
     <>
       <ReactHelmet
-        title="Bank Artha Mas Abadi | Berita Test Pertama"
+        title="Bank Artha Mas Abadi | Berita"
         url={location.pathname}
       />
       <FocusComponentColor backgroundColor="#f9b418" img={imgContact} />
