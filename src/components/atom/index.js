@@ -27,6 +27,7 @@ import SliderWrapper from "../carousel/_SlickSliderStyle";
 import DOMPurify from "dompurify";
 import styled from "styled-components";
 import { devices } from "../../assets/_respondTo";
+import { Helmet } from "react-helmet-async";
 
 const Informasi = () => {
   return (
@@ -518,6 +519,30 @@ const DetailOrganisasi = () => {
   );
 };
 
+const ReactHelmet = () => {
+  return (
+    <Helmet prioritizeSeoTags>
+      <title>Bank Artha Mas Abadi | Home</title>
+      <meta
+        name="description"
+        content="Ini adalah halaman Baru Here you can find all the basic elements that should never report any issue, in every page of the website."
+      />
+      <link rel="canonical" href="/web-landing" />
+      <meta property="og:type" content="Text" />
+      <meta property="og:title" content="Bank Artha Mas Abadi | Home" />
+      <meta property="og:url" content="/web-landing" />
+      <meta
+        property="og:image"
+        content="https://id-prawito.github.io/web-landing/static/media/jago-3.6318b27de2998085a42f.jpg"
+      />
+      <meta
+        property="og:description"
+        content="hIni adalah halaman Baru Here you can find all the basic elements that should never report any issue, in every page of the website."
+      />
+    </Helmet>
+  );
+};
+
 export {
   Informasi,
   Card,
@@ -530,4 +555,5 @@ export {
   DetailLayananPages,
   FocusComponentContactUs,
   FocusComponentColor,
+  ReactHelmet,
 };
