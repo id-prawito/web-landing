@@ -519,10 +519,10 @@ const DetailOrganisasi = () => {
   );
 };
 
-const ReactHelmet = () => {
+const ReactHelmet = (item) => {
   return (
     <Helmet prioritizeSeoTags>
-      <title>Bank Artha Mas Abadi | Home</title>
+      <title>{item.title}</title>
       <meta
         name="description"
         content="Ini adalah halaman Baru Here you can find all the basic elements that should never report any issue, in every page of the website."
@@ -530,7 +530,6 @@ const ReactHelmet = () => {
       <link rel="canonical" href="/web-landing" />
       <meta property="og:type" content="Text" />
       <meta property="og:title" content="Bank Artha Mas Abadi | Home" />
-      <meta property="og:url" content="/web-landing" />
       <meta
         property="og:image"
         content="https://id-prawito.github.io/web-landing/static/media/jago-3.6318b27de2998085a42f.jpg"
@@ -539,6 +538,7 @@ const ReactHelmet = () => {
         property="og:description"
         content="hIni adalah halaman Baru Here you can find all the basic elements that should never report any issue, in every page of the website."
       />
+      <meta property="og:url" content={item.url} />
     </Helmet>
   );
 };

@@ -11,12 +11,16 @@ import {
   ReactHelmet,
 } from "../components/atom";
 import { OrganisasiSection } from "../components/section";
-import { Helmet } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
+  const location = useLocation();
   return (
     <>
-      <ReactHelmet />
+      <ReactHelmet
+        title="Bank Artha Mas Abadi | Home"
+        url={location.pathname}
+      />
       <SimpleSlider />
       <Detail
         judul="Visi"

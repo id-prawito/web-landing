@@ -5,7 +5,7 @@ import blogImg from "../assets/img/blog.jpg";
 
 export const NAVLINKS = [
   {
-    to: "",
+    to: "/",
     icon: FaEllipsisV,
     name: "HOME",
     megamenu: false,
