@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 function App() {
   const { theme } = useContext(ThemeContext);
   return (
-    <BrowserRouter basename="">
+    <BrowserRouter basename="/">
       <ThemeProvider theme={{ theme }}>
         <GlobalStyles />
         <RouteSite />
